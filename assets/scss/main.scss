@@ -1,0 +1,520 @@
+
+@mixin mp0 {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin w960 {
+	width: 960px;
+	margin: auto;
+}
+@mixin cf {
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+		height: 0;
+	}
+}
+$blue: #0081d1;
+$text_color: #253D6D;
+
+@font-face {
+    font-family: mgenplus;  /* フォントにフォント集合名を付ける */
+    src: url(../font/rounded-mgenplus-2pp-medium.ttf);  /* フォントのURLを指定する */
+}
+
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+address {
+	font-style: normal;
+}
+body {
+	line-height: 1.6;
+	font-size: 120%;
+	color: $text_color;
+	background-color: #E7EDF7;
+	font-family: mgenplus, sans-serif;
+}
+img {
+	vertical-align: middle;
+}
+
+figure {
+	@include mp0;
+	figcaption {
+		font-size: 80%;
+	}
+}
+
+#container {
+	//background: url(/assets/img/bg_top.png) top center no-repeat, linear-gradient(#008dff, #002843);
+	
+	//background-color: #efefef;
+	text-align: center;
+	&.corporate {
+		background: #fff;
+		text-align: left;
+		color: #333;
+	}
+}
+
+.social_btns {
+	float: right;
+	margin-top: 20px;
+	a {
+		font-size: 160%;
+		background-color: lighten( $blue, 10% );;
+		line-height: 1;
+		color: white;
+		border-radius: 50%;
+		float: left;
+		margin-left: 10px;
+		width: 1.8em;
+		height: 1.8em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		&:hover {
+			opacity: .7;
+		}
+	}
+}
+
+header {
+	position: fixed;
+	color: white;
+	width: 100%;
+	background-color: rgba(0, 129, 209, .8);
+	border-bottom: 3px solid rgb(0, 129, 209);
+	box-shadow: 0 1px 3px gray;
+	.inner {
+		height: 90px;
+		overflow: hidden;
+		text-align: left;
+		@include w960;
+	}
+	h1 {
+		@include mp0;
+		float: left;
+		.natch {
+			width: 80px;
+		}
+		.header_logo {
+			width: 150px;
+			vertical-align: top;
+			margin-top: 20px;
+		}
+	}
+	.summary {
+		float: left;
+		margin: 1.6rem 0 0 1rem;
+		font-weight: bold;
+		line-height: 1.4;
+		font-size: 80%;
+	}
+}
+
+#main_visual {
+	background-color: $blue;
+	padding-top: 20px;
+	.inner {
+		height: 600px;
+		max-width: 1026px;
+		margin: auto;
+		background: url(/assets/img/top_visual_window.png) center no-repeat;
+		background-size: cover;
+	}
+}
+
+.wideslider {
+	ul, li {
+		@include mp0;
+	}
+}
+
+.titles {
+	img {
+		width: 200px;
+	}
+}
+.title_visual {
+	transform: scale(.5);
+	width: 960px;
+	margin: auto;
+	position: relative;
+	text-align: center;
+	top: -20px;
+	margin-bottom: 50px;
+	z-index: 1;
+	img {
+		z-index: 1;
+		position: relative;
+	}
+	.tank_anime {
+		position: absolute;
+		top: 20px;
+		left: 50%;
+		margin-left: -120px;
+		z-index: 2;
+	}
+	ul, li { 
+		@include mp0;
+	}
+}
+
+#main_menu {
+	@include mp0;
+	/* position: fixed;
+	top: 0;
+	z-index: 2;
+	width: 100%; */
+	background-color: rgba(255 ,255, 255, 0.8);
+	ul {
+		@include mp0;
+		text-align: right;
+		@include w960;
+	}
+	li {
+		display: inline-block;
+		a {
+			text-align: center;
+			color: #008dff;
+			display: block;
+			padding: .5em;
+			text-decoration: none;
+			font-weight: bold;
+		}
+	}
+}
+
+main {
+	&>section {
+		.inner {
+			@include w960;
+			margin-bottom: 2.5rem;
+			padding-bottom: 2.5rem;
+		}
+		h1 {
+			/* border: 1px solid #5467ac;
+			padding: .5em;
+			border-radius: 50px;
+			background-color: #263a72; */
+			font-family: "モトヤstアポロ Std W6", sans-serif;
+			font-size: 220%;/* 
+			text-shadow: 0 2px 1px #000; */
+			font-weight: bold;
+			//padding: 5% 0 5% 15%;
+			line-height: 1.2;
+			margin-bottom: 1em;
+		}
+		.promo_image {
+			width: 300px;
+			height: 300px;
+			margin: 5em auto 0;
+			/* overflow: hidden;
+			border-radius: 50%; */
+			img {
+				position: relative;
+				left: -25%;
+				height: 100%;
+			}
+		}
+	}
+
+	.get_to_touch {
+		figure {
+			img {
+				border-radius: 10px;
+				border: 10px solid #999;
+			}
+		}
+	}
+	.discover_sakana {
+	}
+	.bg_blue {
+		background: $blue url(/assets/img/bg_slope_white.gif) top center no-repeat;
+		.inner {
+		padding-top: 120px;
+		margin-bottom: 0;
+		color: white;
+		}
+	}
+	.bg_white {
+		background: #fff url(/assets/img/bg_slope_blue.gif) top center no-repeat;
+		.inner {
+			padding-top: 120px;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+	.dictionary {
+		overflow: hidden;
+		list-style-type: none;
+		@include mp0;
+		li {
+			@include mp0;
+			float: left;
+			width: 25%;
+			.wrap {
+				padding: .5em;
+			}
+			img {
+				max-width: 160px;
+			}
+			h2 {
+				margin: 0;
+				font-size: 80%;
+			}
+			.desc {
+				font-size: 70%;
+				text-align: left;
+			}
+		}
+	}
+}
+
+.fig250 {
+	width: 250px;
+}
+.bagde {
+	text-align: center;
+}
+.icon_natch {
+	min-height: 80px;
+	text-align: left;
+	padding-left: 70px;
+	background: url(../img/icon_thumb_natch.png) left top no-repeat;
+	background-size: 50px 50px;
+	display: inline-block;
+	.natch_content {
+		display: inline-block;
+		border-radius: 15px;
+		border: 2px dotted #ccc;
+		padding: 1em 1em 0;
+		p {
+			margin-bottom: 1em;
+			margin-top: 0;
+		}
+	}
+}
+#many_biology figure img {
+	
+}
+#mission_gyold figure img {
+}
+.block_box {
+	display: flex;
+	text-align: left;
+	figure {
+		text-align: center;
+		img {
+			margin-bottom: 1em;
+		}
+		figcaption {
+			text-align: left;
+		}
+	}
+}
+
+footer {
+	color: white;
+	text-align: left;
+	background-color: darken($blue, 10%);
+	font-size: 70%;
+	p {
+		margin: 0;
+	}
+	.inner {
+		@include w960;
+		padding: 2em 0;
+	}
+	.thanks {
+		font-size: 80%;
+		dt, dd {
+			display: inline-block;
+			margin: 0;
+		}
+		dt::after {
+			content: ":";
+		}
+		a {	
+			color: #CAE6F7;
+		}
+	}
+	small {
+		color: white;
+	}
+}
+ 
+@media screen and (max-width: 700px) {
+	* {
+		box-sizing: border-box;
+	}
+	body, h1, h2 {
+		font-size: 100%;
+	}
+	body {
+		background-color: #fff;
+	}
+	#container {
+		text-align: left;
+	}
+   @mixin w960 {
+		width: 100%!important;
+		margin: auto;
+	}
+	header {
+		position: relative;
+		line-height: 1;
+		border-bottom: none;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+		.inner {
+			@include w960;
+			height: 60px;
+			text-align: center;
+		}
+		h1 {
+			float: none;
+			.natch {
+				display: inline;
+				width: 48px;
+				height: auto;
+				margin-top: 3px;
+			}
+			.header_logo {
+				display: inline;
+				width: 120px;
+				height: auto;
+				margin: 10px 0 0;
+			}
+		}
+	}
+	main {
+		padding: 0;
+		&>section {
+			@include w960;
+			h1 {
+				font-size: 120%;
+			}
+		}
+		.inner {
+			padding: 0 1rem;
+		}
+		.dictionary {
+			ul {
+				display: block;
+			}
+			li {
+				width: auto;
+				float: none;
+				@include cf;
+				.content_wrap {
+					float: right;
+					width: 70%;
+					padding-left: 1em;
+				}
+				img {
+					width: 30%;
+					float: left;
+				}
+			}
+		}
+	}
+	#main_visual {
+		padding: 0;
+		text-align: center;
+		.inner {
+			height: auto;
+		}
+		img {
+			width: 30%;
+			margin: 1em 0;
+		}
+	}
+	#main_menu {
+		ul {
+			@include w960;
+		}
+	}
+	.promo_visual {
+		width: 100%;
+	}
+	.get_to_touch {
+		figure {
+			img {
+				box-shadow: none;
+				width: 80%;
+				height: auto;
+			}
+		}
+	}
+
+
+	.title_visual {
+		transform: scale(1);
+		width: 100%;
+		margin: 1em auto;
+		position: relative;
+		text-align: center;
+		top: 0;
+		margin-bottom: 1em;
+		z-index: 1;
+		background: url(../img/top_visual_window.png) center no-repeat;
+		background-size: contain;
+		img {
+			z-index: 1;
+			position: relative;
+			width: 100%;
+		}
+		.tank_anime {
+			margin: auto;
+			width: 45%;
+			top: 0;
+			left: 0;
+		}
+		ul, li { 
+			@include mp0;
+		}
+		.img_wrap {
+			position: relative;
+			top: 0;
+			left: 0;
+			text-align: center;
+			img {
+				position: relative;
+			}
+		}
+	}
+
+	figure {
+		@include mp0;
+		text-align: center;
+		margin: 1em 0;
+		img {
+			width: 90%;
+			height: auto;
+		}
+		.fig250 {
+			width: 60%;
+		}
+		figcaption {
+			text-align: left;
+			font-size: 80%;
+		}
+	}
+	.block_box {
+		display: block;
+	}
+	.fig250 {
+		width: 100%;
+	}
+	.inner {
+		@include w960;
+	}
+}
