@@ -66,7 +66,13 @@ figure {
 .social_btns {
 	float: right;
 	margin-top: 20px;
+	.twitter_share {
+		display: inline-block;
+		margin-top: 15px;
+		margin-left: 10px;
+	}
 	a {
+		display: inline-block;
 		font-size: 160%;
 		background-color: lighten( $blue, 10% );;
 		line-height: 1;
