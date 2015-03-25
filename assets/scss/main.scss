@@ -99,6 +99,7 @@ header {
 	background-color: rgba(0, 129, 209, .8);
 	border-bottom: 3px solid rgb(0, 129, 209);
 	box-shadow: 0 1px 3px gray;
+	z-index: 1;
 	.inner {
 		height: 90px;
 		overflow: hidden;
@@ -129,12 +130,45 @@ header {
 #main_visual {
 	background-color: $blue;
 	padding-top: 20px;
+	position: relative;
 	.inner {
 		height: 600px;
 		max-width: 1026px;
 		margin: auto;
 		background: url(/assets/img/top_visual_window.png) center no-repeat;
 		background-size: cover;
+	}
+	.visual_nav {
+		position: absolute;
+		margin: auto;
+		bottom: 0;
+		width: 100%;
+		ul {
+			text-align: center;
+			@include mp0;
+		}
+		li {
+			display: inline-block;
+			@include mp0;
+			a {
+				position: relative;
+				transition: .2s;
+				transform-origin: center bottom;
+				display: block;
+				top: 0;
+				img {
+					border: 10px solid rgba(0, 50, 100, .5);
+					border-bottom: none;
+				}
+				&:hover {
+					opacity: 0.8;
+					transform: scale(1.02);
+					box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
+					
+				}
+			}
+			
+		}
 	}
 }
 
@@ -340,6 +374,10 @@ footer {
 		@include w960;
 		padding: 2em 0;
 	}
+
+	a {	
+		color: #CAE6F7;
+	}
 	.thanks {
 		font-size: 80%;
 		dt, dd {
@@ -348,9 +386,6 @@ footer {
 		}
 		dt::after {
 			content: ":";
-		}
-		a {	
-			color: #CAE6F7;
 		}
 	}
 	small {
@@ -383,10 +418,16 @@ footer {
 		line-height: 1;
 		border-bottom: none;
 		box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+		background-color: rgba(0,129,209,1);
 		.inner {
 			@include w960;
-			height: 60px;
+			height: auto;
 			text-align: center;
+		}
+		.summary {
+			margin: -1.5em 0 0;
+			text-align: center;
+			float: none;
 		}
 		h1 {
 			float: none;
@@ -402,6 +443,27 @@ footer {
 				height: auto;
 				margin: 10px 0 0;
 			}
+		}
+	}
+
+	.social_btns {
+		float: none;
+		margin-top: 7px;
+		padding-bottom: 10px;
+		.twitter_share {
+			display: inline-block;
+			margin-top: 0;
+			position: relative;
+			top: 5px;
+			margin-left: 10px;
+		}
+		a {
+			font-size: 100%;
+			background-color: lighten( $blue, 30% );
+			width: 1.8em;
+			height: 1.8em;
+			float: none;
+			display: inline-flex;
 		}
 	}
 
@@ -451,6 +513,24 @@ footer {
 			width: 30%;
 			margin: 1em 0;
 		}
+		.visual_nav {
+			li {
+				width: 30%;
+				a {
+
+					img {
+						width: 100%;
+						border-width: 3px;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+	.more_screenshot {
+		img {
+			width: 100%;
+		}
 	}
 	#main_menu {
 		ul {
@@ -469,7 +549,6 @@ footer {
 			}
 		}
 	}
-
 
 	.title_visual {
 		transform: scale(1);
