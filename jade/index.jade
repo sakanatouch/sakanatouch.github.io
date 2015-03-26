@@ -1,0 +1,188 @@
+doctype html
+html(lang="ja")
+  head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#")
+    include ./temp_header
+
+  body
+    .gtm.
+      <!-- Google Tag Manager -->
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K66ZST"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-K66ZST');</script>
+      <!-- End Google Tag Manager -->
+    //include ./temp_menu
+    #fb-root
+    #container
+
+      header
+        .inner
+          h1
+            img.natch(src="assets/img/nacchi.png" alt="サカナタッチのキャラクターの画像です" )
+            img.header_logo(src="assets/img/logo_sakanatouch.png" alt="サカナタッチのロゴ画像です" )
+          p.summary 100種類以上のサカナ達をスマホで飼える。
+            br
+            | 新感覚・位置ゲーム+知育図鑑系スマホアプリ！！
+          .social_btns
+            
+            a.twitter(href="https://twitter.com/sakanatouch" target="_blank")
+              i.fa.fa-twitter
+            a.youtube(href="https://www.youtube.com/channel/UCO5QIDEw6KWEO5QjlLQlufQ" target="_blank")
+              i.fa.fa-youtube
+            .twitter_share.
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.sakanatouch.com/" data-text="サカナタッチ 新感覚・位置ゲーム+知育図鑑系スマホアプリ" data-via="sakanatouch" data-hashtags="sakanatouch">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      #main_visual
+        .inner
+          img.tank_anime(src="assets/img/tank_anime.gif" width="260" alt="" )
+        .visual_nav
+          nav
+            ul
+              li
+                a(href="https://twitter.com/sakanatouch" target="_blank")
+                  img(src="assets/img/btn_searchfish_twitter.png" alt="サカナタッチの公式Twitterアカウントへのリンクバナーです")
+              li
+                a(href="https://www.youtube.com/embed/-DI7QuLgSEQ?feature=player_embedded&rel=0&autoplay=1" rel="shadowbox;width=640;height=360")
+                  img(src="assets/img/btn_searchfish_youtube.png" alt="開発中のサカナタッチでサカナを探している動画のサムネイルです")
+              li
+                a(href="https://www.youtube.com/channel/UCO5QIDEw6KWEO5QjlLQlufQ" target="_blank")
+                  img(src="assets/img/btn_searchfish_youtube_ch.png" alt="サカナタッチの公式Youtubeチャンネルへのリンクバナーです")
+      .wideslider
+        ul
+          li
+            a(href="#1")
+              img(src="assets/img/main_visual/promo_umeiromodoki.jpg" alt="プロモーション画像" )
+          li
+            a(href="#2")
+              img(src="assets/img/main_visual/promo_lookdown.jpg" alt="プロモーション画像" )
+          li
+            a(href="#3")
+              img(src="assets/img/main_visual/promo_osu_mesu.jpg" alt="プロモーション画像" )
+
+      //p.bagde
+        a(href="#")
+          img(src="assets/img/Download_on_the_App_Store_JP_135x40.svg")
+
+      main
+        section.get_to_touch.bg_white
+          .inner
+            h1 泳ぐ魚をタッチでつかまえよう！
+            h2 カメラ越しの風景に浮かぶサカナ達をタッチでゲットしよう！
+            p サカナの体力をタッチで奪って最後は捕獲できるのだ！
+                br
+                | サカナは自分の水槽で飼うか、売ってもっと大きな水槽やきれいな壁紙を買うことができるよ。
+            figure
+              img(src="assets/img/touch_get_demo.gif" width="280" alt="タッチしてサカナをつかまえているスクリーンショット")
+              //figcaption 
+        
+        section.discover_sakana.bg_blue
+          .inner
+            h1 遠ければ遠いほど出会える生物たち！
+            p サカナタッチを初めて立ち上げた場所を、あなたの「ホーム」とします。
+              br
+              | 「ホーム」から離れれば離れるほど、新しいサカナなどの生物に出会える確率が高くなります。
+            p サカナタッチに出てくる生物は100種類以上！多種多様のサカナをどんどんつかまえてコレクションしよう！
+            figure
+              img(src="assets/img/fig_fartoget.png" height="450" width="580" alt="")
+              figcaption 例えば旅行先など、いつも行かない遠くの場所だと珍しい生物をゲットできるかも！
+
+            
+        section#many_biology.bg_white
+          .inner
+            h1 なんと100種類以上の生物が登場！
+            .block_box
+              .block_a
+                h2 あの観賞魚や深海生物まで！
+                .icon_natch
+                  .natch_content
+                    p ごく普通の魚だけじゃなく、すごく大きな魚とか大きなヒレをもったヤツとか！
+                      br
+                      |水族館に行かないとお目にかかれないような生き物が、サカナタッチの世界では100種類くらいいるんだ！
+                    p しかもその数はどんどん増え続けていくから、いっぱいつかまえてね！
+              figure.block_b
+                  img(src="assets/img/fig_many_biology.gif" class="fig250" alt="")
+                  figcaption サカナタッチの世界にはたくさんの生物が生息しているぞ！
+
+        section#mission_gyold.bg_blue
+          .inner
+            h1 ミッション・クリアでギョールド（お金）を貯めて水槽をゲット！
+            .block_box
+              .block_a
+                .icon_natch
+                  .natch_content
+                    p
+                      |サカナタッチの世界では「ギョールド」っていう通貨があって、それで新しい水槽を追加することができるんだ！
+                      br
+                      |ギョールドをかせぐにはつかまえた魚を売ったり、「ミッション」をクリアするといいよ。
+                      p
+                      |ミッションクリアすると水槽や壁紙、将来は色々なアイテムがもらえるかも！
+                      br 
+                      |キミだけのステキな水槽をたくさんつくっていっぱい魚を入れてね！
+              figure.block_b
+                img(src="assets/img/fig_mission.jpg" class="fig250" alt="")
+                figcaption
+                  「よろず屋 ナッチの店」では、もっと大きな水槽や雰囲気のいい壁紙などが売っているよ！魚を売ったギョールドで買ってね！！
+
+        section.bg_white
+          .inner
+            h1 夏休みの自由研究にも役立つぞ！
+            .icon_natch
+              .natch_content
+                p サカナタッチでつかまえた魚種は図鑑に登録されるから、サカナの研究にもつかえるよ！
+                  br
+                  | 自由研究などにもつかってね！
+            ul.dictionary
+              li
+                .wrap
+                  img(src="assets/img/zukan_demo/indokingyohanadai.png" alt="インドキンギョハナダイの画像")
+                  .content_wrap
+                    h2 インドキンギョハナダイ
+                    p.desc 太平洋のキンギョハナダイより色が鮮やかなのが特徴！
+                      br
+                      | 雌性先熟雌雄同体で、生まれたときは全て雌なんだけど、成長すると雄に性転換するんだ！
+                      br
+                      | 美しいから観賞魚として飼育されることがあるよ！
+              li
+                .wrap
+                  img(src="assets/img/zukan_demo/niseflychouchouuo.png" alt="ニセフライチョウチョウウオの画像")
+                  .content_wrap
+                    h2 ニセフライチョウチョウウオ
+                    p.desc 体長約20cm位になるんだ、チョウチョウウオ科のなかでは大型だよ。
+                      br
+                      | 和名の由来でもある成魚の背びれの後方が糸状に長く伸びるんだよ！オスは争いなどでしばしば体側にこれがうろこに突き刺さっていることがあるんだ。意外と、この部分は硬いんだよ！
+              li
+                .wrap
+                  img(src="assets/img/zukan_demo/Pirarucu.png" alt="ピラルクの画像")
+                  .content_wrap
+                    h2 ピラルク
+                    p.desc 成魚の体長は2m～3mほどなんだけどね、最大のものは4.5mとも5.2mともいわれているんだ！
+                      br
+                      | 世界最大の淡水魚として有名で、水族館などでも人気があるんだよね！
+              li
+                .wrap
+                  img(src="assets/img/zukan_demo/traditionalbetagreen.png" alt="トラディショナル ベタ(緑)の画像")
+                  .content_wrap
+                    h2 トラディショナル ベタ(緑)
+                    p.desc 2匹のオスを瓶などで仕切りにいれると互いに背ビレや尾ビレやエラを最大限まで広げて体を震えさせてに威嚇し合うんだ。
+                      br
+                      | これを「フレアリング」と言うんだよ！品種改良の結果、より気性が荒い、強い品種ができていったんだ！
+            
+
+        section.bg_blue
+          .inner
+            h1 2015年春公開！
+            p 今がんばって開発中です！もうちょっと待っててね！
+            .icon_natch
+                  .natch_content
+                    p 
+                      a(href="https://twitter.com/sakanatouch" target="_blank") サカナタッチのTwitter公式アカウント
+                      | をフォローミー！
+                      br
+                      | いち早く最新情報を伝えるよ！！
+            .more_screenshot
+              img(src="assets/img/more_screenshot.png" alt="開発中のサカナタッチのスクリーンショットを並べた画像です")
+
+
+      include ./temp_footer
