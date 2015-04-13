@@ -53,7 +53,7 @@ figure {
 
 #container {
 	//background: url(/assets/img/bg_top.png) top center no-repeat, linear-gradient(#008dff, #002843);
-	
+
 	//background-color: #efefef;
 	text-align: center;
 	&.corporate {
@@ -164,10 +164,10 @@ header {
 					opacity: 0.8;
 					transform: scale(1.02);
 					box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
-					
+
 				}
 			}
-			
+
 		}
 	}
 }
@@ -203,7 +203,7 @@ header {
 		margin-left: -120px;
 		z-index: 2;
 	}
-	ul, li { 
+	ul, li {
 		@include mp0;
 	}
 }
@@ -246,7 +246,7 @@ main {
 			border-radius: 50px;
 			background-color: #263a72; */
 			font-family: "モトヤstアポロ Std W6", sans-serif;
-			font-size: 220%;/* 
+			font-size: 220%;/*
 			text-shadow: 0 2px 1px #000; */
 			font-weight: bold;
 			//padding: 5% 0 5% 15%;
@@ -335,8 +335,13 @@ main {
 	.natch_content {
 		display: inline-block;
 		border-radius: 15px;
-		border: 2px dotted #ccc;
+		border: 4px solid rgba(51, 73, 102, 0.38);
+		background-color: #b2f1eb;
+		color: #2a3b59;
 		padding: 1em 1em 0;
+		a {
+			color: #d16507;
+		}
 		p {
 			margin-bottom: 1em;
 			margin-top: 0;
@@ -344,7 +349,7 @@ main {
 	}
 }
 #many_biology figure img {
-	
+
 }
 #mission_gyold figure img {
 }
@@ -375,7 +380,7 @@ footer {
 		padding: 2em 0;
 	}
 
-	a {	
+	a {
 		color: #CAE6F7;
 	}
 	.thanks {
@@ -400,7 +405,29 @@ footer {
 .pagination {
 	display: none;
 }
- 
+
+.common_articles {
+	font-size: 90%;
+	text-align: left;
+	width: 960px;
+	margin: auto;
+	padding: 5em 0 2em;
+	dt, dd {
+		margin-bottom: 1rem;
+	}
+	dt {
+		border-left: 10px solid #ccc;
+		padding-left: 1rem;
+	}
+	table {
+		border-collapse: collapse;
+		th, td {
+			border: 1px solid #ccc;
+			padding: .5rem;
+		}
+	}
+}
+
 @media screen and (max-width: 700px) {
 	* {
 		box-sizing: border-box;
@@ -577,7 +604,7 @@ footer {
 			top: 0;
 			left: 0;
 		}
-		ul, li { 
+		ul, li {
 			@include mp0;
 		}
 		.img_wrap {
