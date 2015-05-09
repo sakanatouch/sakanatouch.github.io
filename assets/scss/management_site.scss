@@ -1,0 +1,101 @@
+header {
+	top: 0;
+	position: static;		
+}
+h2 {
+	width: 960px;
+	font-size: 2em;
+	margin: auto;
+	padding: 1em 0;
+	line-height: 2em;
+	text-align: center;
+	background: #0081d1;
+	color: #fff;
+}
+main {
+	width: 960px;
+	margin: 0 auto;
+	h3 {
+		font-size: 35px;
+	}
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+		width: 100%;
+	}
+	#news,
+	#event {
+		.banner {
+			width: 47%;
+			float: left;
+			background: #E7EDF7;
+			border-radius: 10px;
+			text-decoration: none;
+			color: #000;
+			display: block;
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				border-radius: 10px 10px 0 0;
+			}
+			&:nth-child(even) {
+				margin: 0 1% 20px 2%;
+			}
+			&:nth-child(odd) {
+				margin: 0 2% 20px 1%;
+			}
+		}
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+			width: 100%;
+		}
+	}
+	#other {
+		padding-bottom: 50px;
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+			width: 100%;
+		}
+		.banner {
+			float: left;
+			width: 23%;
+			margin: 1%;
+			display: block;
+			border-radius: 10px;
+			box-shadow: 0px 1px 15px rgba(0,0,0,1);
+			transition: .3s;
+			img {
+				width: 100%;
+				border-radius: 10px;
+			}
+			&:hover {
+				box-shadow: 0px 0px 0px rgba(0,0,0,0);
+			}
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	h2 {
+		width: 100%;
+	}
+	main {
+		width: 100%;
+		#news,
+		#event,
+		#other {
+			.banner {
+				width: 100%;
+				float: none;
+				p {
+					padding: 0 10px 10px 10px;
+				}
+			}
+		}
+	}
+}
