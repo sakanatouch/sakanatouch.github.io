@@ -1,0 +1,62 @@
+doctype html
+html(lang="ja")
+  head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#")
+    include ./temp_head
+    link(rel="stylesheet" href="assets/css/management_site.css")
+
+  body
+    .gtm.
+      <!-- Google Tag Manager -->
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K66ZST"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-K66ZST');</script>
+      <!-- End Google Tag Manager -->
+    //include ./temp_menu
+    #fb-root
+    #container
+
+      include ./temp_header
+      h2 サカナタッチ運営サイト
+      .wideslider
+        ul
+          li
+            a(href="#1")
+              img(src="assets/img/main_visual/promo_umeiromodoki.jpg" alt="プロモーション画像" )
+          li
+            a(href="#2")
+              img(src="assets/img/main_visual/promo_lookdown.jpg" alt="プロモーション画像" )
+          li
+            a(href="#3")
+              img(src="assets/img/main_visual/promo_osu_mesu.jpg" alt="プロモーション画像" )
+
+      main
+        section.get_to_touch.bg_white
+          .inner#news
+            h1 お知らせ
+            a.banner(href="#")
+              img(src="assets/img/management_img/event/release.png" alt="サカナタッチのロゴ画像です")
+              p ios版サカナタッチがリリースされました
+
+        section.get_to_touch.bg_blue
+          .inner#event
+            h1 イベント
+            a.banner(href="#")
+              img(src="assets/img/management_img/event/ayu.jpg" alt="サカナタッチのロゴ画像です")
+              p 6/1(月)12:00 ~ 6/30(火)23:59
+        section.get_to_touch.bg_white
+          .inner#other
+            h1 その他
+            a.banner(href="/")
+              img(src="assets/img/management_img/site_banner.jpg" alt="公式サイトのバナー画像です。")
+            a.banner(href="#")
+              img(src="assets/img/management_img/twitter_banner.jpg" alt="Twitterのバナー画像です。")
+            a.banner(href="#")
+              img(src="assets/img/management_img/youtube_banner.jpg" alt="YouTubeのバナー画像です。")
+            a.banner(href="#")
+              img(src="assets/img/management_img/toiawase_banner.jpg" alt="お問い合わせはこちら")
+
+      include ./temp_footer
