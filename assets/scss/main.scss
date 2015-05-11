@@ -473,8 +473,10 @@ footer {
 }
 .dl_button {
 	width: 100%;
-	display: block;
 	margin-bottom: 1em;
+	img {
+		display: block;
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -734,6 +736,12 @@ footer {
 				border: 1px solid #ccc;
 				padding: .5rem;
 			}
+		}
+	}
+	.dl_button {
+		img {
+			width: 50%;
+			margin: auto;
 		}
 	}
 }

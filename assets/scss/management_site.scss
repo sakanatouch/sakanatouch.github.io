@@ -90,7 +90,6 @@ main {
 //article 
 #article {
 	width: 100%;
-	max-width: 800px;
 	background:#0081d1;
 	.inner {
 		width: 100%;
@@ -100,9 +99,11 @@ main {
 	#article_img {
 		width: 100%;
 		height: auto;
-		background: #E7EDF7;
+		background: #0081d1;
 		img {
 			width: 100%;
+			height: auto;
+			margin: auto;
 		}
 	}
 	#meta {
@@ -120,6 +121,11 @@ main {
 			float: right;
 			color: white;
 		}
+	}
+}
+#back_list {
+	a {
+		color: white;
 	}
 }
 

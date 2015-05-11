@@ -393,8 +393,9 @@ footer {
 
 .dl_button {
   width: 100%;
-  display: block;
   margin-bottom: 1em; }
+  .dl_button img {
+    display: block; }
 
 @media screen and (max-width: 700px) {
   * {
@@ -593,4 +594,7 @@ footer {
       border-collapse: collapse; }
       .common_articles table th, .common_articles table td {
         border: 1px solid #ccc;
-        padding: .5rem; } }
+        padding: .5rem; }
+  .dl_button img {
+    width: 50%;
+    margin: auto; } }
