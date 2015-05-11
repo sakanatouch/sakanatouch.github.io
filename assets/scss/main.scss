@@ -472,7 +472,7 @@ footer {
 	}
 }
 .dl_button {
-	width: 100%;
+	width: 50%;
 	margin-bottom: 1em;
 	img {
 		display: block;
@@ -482,7 +482,7 @@ footer {
 .catchcopy_btn {
 	text-align: center;
 	a {
-		width: 50%;
+		width: 25%;
 		display: inline-block;
 		img {
 			width: 100%;
@@ -743,9 +743,12 @@ footer {
 			}
 		}
 	}
-	.dl_button {
-		img {
+	.catchcopy_btn {
+		.dl_button {
 			width: 50%;
+			img {
+				width: 100%;
+			}
 		}
 	}
 }

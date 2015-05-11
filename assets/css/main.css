@@ -395,7 +395,7 @@ footer {
       padding: .5rem; }
 
 .dl_button {
-  width: 100%;
+  width: 50%;
   margin-bottom: 1em; }
   .dl_button img {
     display: block;
@@ -404,7 +404,7 @@ footer {
 .catchcopy_btn {
   text-align: center; }
   .catchcopy_btn a {
-    width: 50%;
+    width: 25%;
     display: inline-block; }
     .catchcopy_btn a img {
       width: 100%; }
@@ -604,5 +604,7 @@ footer {
       .common_articles table th, .common_articles table td {
         border: 1px solid #ccc;
         padding: .5rem; }
-  .dl_button img {
-    width: 50%; } }
+  .catchcopy_btn .dl_button {
+    width: 50%; }
+    .catchcopy_btn .dl_button img {
+      width: 100%; } }
