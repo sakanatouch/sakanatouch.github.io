@@ -136,3 +136,12 @@ main {
 		}
 	}
 }
+#article {
+	#meta {
+		#day,
+		#title {
+			float: none;
+			display: inline-block;
+		}
+	}
+}

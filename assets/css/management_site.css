@@ -100,3 +100,7 @@ main {
       float: none; }
       main #news .banner p, main #event .banner p, main #other .banner p {
         padding: 0 10px 10px 10px; } }
+
+#article #meta #day, #article #meta #title {
+  float: none;
+  display: inline-block; }
