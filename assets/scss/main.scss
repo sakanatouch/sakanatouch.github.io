@@ -392,11 +392,6 @@ main {
 		}
 	}
 }
-#many_biology figure img {
-
-}
-#mission_gyold figure img {
-}
 .block_box {
 	display: flex;
 	text-align: left;
@@ -476,6 +471,7 @@ footer {
 	margin-bottom: 1em;
 	img {
 		display: block;
+		margin: auto;
 	}
 }
 
@@ -741,7 +737,6 @@ footer {
 	.dl_button {
 		img {
 			width: 50%;
-			margin: auto;
 		}
 	}
 }
