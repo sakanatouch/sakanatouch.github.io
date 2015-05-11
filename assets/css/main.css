@@ -144,7 +144,7 @@ header {
       #main_visual .inner .catchcopy a {
         margin-top: -30px; }
         #main_visual .inner .catchcopy a img {
-          widows: 300px; }
+          width: 300px; }
   #main_visual .visual_nav {
     position: absolute;
     margin: auto;
