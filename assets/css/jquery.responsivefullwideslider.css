@@ -44,8 +44,8 @@
 	z-index: 100;
 	cursor: pointer;
 }
-.slider_prev {background: #fff url(../img/arrow_right.png) no-repeat right center;}
-.slider_next {background: #fff url(../img/arrow_left.png) no-repeat left center;}
+.slider_prev {background: #fff url(../img/arrow_right.png) no-repeat 90% center;}
+.slider_next {background: #fff url(../img/arrow_left.png) no-repeat 10% center;}
 
 .pagination {
 	bottom: 10px;

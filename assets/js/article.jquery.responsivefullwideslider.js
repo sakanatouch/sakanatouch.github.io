@@ -9,7 +9,7 @@ $(function(){
 	slideSpeed = 400;
 	delayTime = 8000;
 	easing = 'linear';
-	autoPlay = '1'; // notAutoPlay = '0'
+	autoPlay = '0'; // notAutoPlay = '0'
 
 	flickMove = '0'; // notFlick = '0'
 

@@ -378,6 +378,11 @@ footer {
       border: 1px solid #ccc;
       padding: .5rem; }
 
+.dl_button {
+  width: 100%;
+  display: block;
+  margin-bottom: 1em; }
+
 @media screen and (max-width: 700px) {
   * {
     -webkit-box-sizing: border-box;
