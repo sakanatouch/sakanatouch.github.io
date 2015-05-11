@@ -3,7 +3,7 @@ header {
   position: static; }
 
 h2 {
-  width: 960px;
+  width: 100%;
   font-size: 2em;
   margin: auto;
   padding: 1em 0;
@@ -13,7 +13,7 @@ h2 {
   color: #fff; }
 
 main {
-  width: 960px;
+  width: 100%;
   margin: 0 auto; }
   main h3 {
     font-size: 35px; }
