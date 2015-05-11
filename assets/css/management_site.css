@@ -29,7 +29,11 @@ main {
     border-radius: 10px;
     text-decoration: none;
     color: #000;
-    display: block; }
+    display: block;
+    -webkit-box-shadow: 0px 1px 15px black;
+    box-shadow: 0px 1px 15px black;
+    -webkit-transition: .3s;
+    transition: .3s; }
     main #news .banner img, main #event .banner img {
       display: block;
       width: 100%;
@@ -39,6 +43,9 @@ main {
       margin: 0 1% 20px 2%; }
     main #news .banner:nth-child(odd), main #event .banner:nth-child(odd) {
       margin: 0 2% 20px 1%; }
+    main #news .banner:hover, main #event .banner:hover {
+      -webkit-box-shadow: 0px 0px 0px transparent;
+      box-shadow: 0px 0px 0px transparent; }
   main #news:after, main #event:after {
     content: "";
     display: block;
@@ -56,10 +63,17 @@ main {
       width: 23%;
       margin: 1%;
       display: block;
-      border-radius: 10px; }
+      border-radius: 10px;
+      -webkit-box-shadow: 0px 1px 15px black;
+      box-shadow: 0px 1px 15px black;
+      -webkit-transition: .3s;
+      transition: .3s; }
       main #other .banner img {
         width: 100%;
         border-radius: 10px; }
+      main #other .banner:hover {
+        -webkit-box-shadow: 0px 0px 0px transparent;
+        box-shadow: 0px 0px 0px transparent; }
 
 #article {
   width: 100%;
