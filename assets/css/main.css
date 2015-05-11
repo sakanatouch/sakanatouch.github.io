@@ -91,7 +91,8 @@ header {
     padding: 0;
     float: left; }
     header h1 .natch {
-      width: 80px; }
+      width: 80px;
+      margin-top: 5px; }
     header h1 .header_logo {
       width: 150px;
       vertical-align: top;
