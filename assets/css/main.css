@@ -132,6 +132,17 @@ header {
           -ms-transform: scale(1.1);
           transform: scale(1.1);
           color: rgba(169, 238, 255, 0.5); }
+    #main_visual .inner .catchcopy {
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      margin: 100px 0 0 0;
+      width: 100%; }
+      #main_visual .inner .catchcopy img {
+        margin: auto; }
+      #main_visual .inner .catchcopy a {
+        margin-top: -30px; }
   #main_visual .visual_nav {
     position: absolute;
     margin: auto;
@@ -475,6 +486,19 @@ footer {
     text-align: center; }
     #main_visual .inner {
       height: auto; }
+      #main_visual .inner .catchcopy {
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        margin-top: 10%;
+        width: 100%; }
+        #main_visual .inner .catchcopy img {
+          width: 100%;
+          margin: auto; }
+        #main_visual .inner .catchcopy a img {
+          margin-top: 10px;
+          width: 50%; }
     #main_visual img {
       width: 30%;
       margin: 1em 0; }
