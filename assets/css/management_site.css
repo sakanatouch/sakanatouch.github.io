@@ -56,17 +56,10 @@ main {
       width: 23%;
       margin: 1%;
       display: block;
-      border-radius: 10px;
-      -webkit-box-shadow: 0px 1px 15px black;
-      box-shadow: 0px 1px 15px black;
-      -webkit-transition: .3s;
-      transition: .3s; }
+      border-radius: 10px; }
       main #other .banner img {
         width: 100%;
         border-radius: 10px; }
-      main #other .banner:hover {
-        -webkit-box-shadow: 0px 0px 0px transparent;
-        box-shadow: 0px 0px 0px transparent; }
 
 #article {
   width: 100%;

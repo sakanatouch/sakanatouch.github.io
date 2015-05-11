@@ -4,13 +4,22 @@ var autoprefixer = require("gulp-autoprefixer")
 var uglify = require("gulp-uglify");
 var browser = require("browser-sync");
 var plumber = require("gulp-plumber");
+var jade = require('gulp-jade')
 
 // gulp監視
 gulp.task("default", function() {
     gulp.watch(['*.html'],['html']);    //htmlファイルを監視
+    gulp.watch(['./jade/*.jade', '!./jade/temp_*.jade']);    //jadeファイルを監視
 	gulp.watch(['./assets/scss/*.scss'],['sass']); //scssファイルを監視
 	gulp.watch(['./assets/css/*.css'],['html']); //cssファイルを監視
 	gulp.watch(['./assets/edit_js/*.js'],['js_compress']); //jsファイルを監視
+});
+
+// Jadeビルドタスク
+gulp.task('jade', function () {
+  gulp.src(['./jade/*.jade', '!./jade/temp_*.jade'])
+    .pipe(jade({pretty:true}))
+    .pipe(gulp.dest('./'))
 });
 
 //　自動更新
