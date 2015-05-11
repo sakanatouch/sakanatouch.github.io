@@ -511,10 +511,12 @@ footer {
         #main_visual .inner .catchcopy img {
           width: 100%;
           margin: auto; }
-        #main_visual .inner .catchcopy .catchcopy_btn a {
-          width: 50%; }
-          #main_visual .inner .catchcopy .catchcopy_btn a img {
-            width: 100%; }
+        #main_visual .inner .catchcopy .catchcopy_btn {
+          margin-top: 10px; }
+          #main_visual .inner .catchcopy .catchcopy_btn a {
+            width: 50%; }
+            #main_visual .inner .catchcopy .catchcopy_btn a img {
+              width: 100%; }
     #main_visual img {
       width: 30%;
       margin: 1em 0; }
