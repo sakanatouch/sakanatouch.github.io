@@ -113,12 +113,14 @@ main {
 		margin: auto;
 		padding: 1em 0;
 		box-sizing:border-box;
+		overflow: hidden;
+		#day,
 		#title {
-			float: left;
+			display: inline-block;
 		}
-		#day {
-			float: right;
-		}
+	}
+	h3 {
+		border-bottom: dotted 1px #0081d1;
 	}
 }
 #back_list {
