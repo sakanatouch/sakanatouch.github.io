@@ -111,15 +111,13 @@ main {
 		width: 100%;
 		display: block;
 		margin: auto;
-		padding: 1em;
+		padding: 1em 0;
 		box-sizing:border-box;
 		#title {
 			float: left;
-			color: white;
 		}
 		#day {
 			float: right;
-			color: white;
 		}
 	}
 }
@@ -127,6 +125,9 @@ main {
 	a {
 		color: white;
 	}
+}
+.center {
+	text-align: center;
 }
 
 @media screen and (max-width: 700px) {
@@ -156,14 +157,15 @@ main {
 }
 #article {
 	#meta {
+		padding: auto 0;
 		#day,
 		#title {
 			float: none;
 			display: inline-block;
+			margin: 0;
 		}
 		#day {
 			font-size: 10px;
-			margin: 0;
 		}
 	}
 }

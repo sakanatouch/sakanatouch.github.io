@@ -95,18 +95,19 @@ main {
     width: 100%;
     display: block;
     margin: auto;
-    padding: 1em;
+    padding: 1em 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
     #article #meta #title {
-      float: left;
-      color: white; }
+      float: left; }
     #article #meta #day {
-      float: right;
-      color: white; }
+      float: right; }
 
 #back_list a {
   color: white; }
+
+.center {
+  text-align: center; }
 
 @media screen and (max-width: 700px) {
   h2 {
@@ -123,9 +124,11 @@ main {
     main #other .banner {
       width: 47%; } }
 
-#article #meta #day, #article #meta #title {
-  float: none;
-  display: inline-block; }
-#article #meta #day {
-  font-size: 10px;
-  margin: 0; }
+#article #meta {
+  padding: auto 0; }
+  #article #meta #day, #article #meta #title {
+    float: none;
+    display: inline-block;
+    margin: 0; }
+  #article #meta #day {
+    font-size: 10px; }
