@@ -401,10 +401,13 @@ footer {
     display: block;
     margin: auto; }
 
-.catchcopy_btn a {
-  width: 50%; }
-  .catchcopy_btn a img {
-    width: 100%; }
+.catchcopy_btn {
+  text-align: center; }
+  .catchcopy_btn a {
+    width: 50%;
+    display: inline-block; }
+    .catchcopy_btn a img {
+      width: 100%; }
 
 @media screen and (max-width: 700px) {
   * {
