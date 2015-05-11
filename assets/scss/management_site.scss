@@ -125,14 +125,18 @@ main {
 	main {
 		width: 100%;
 		#news,
-		#event,
-		#other {
+		#event {
 			.banner {
 				width: 100%;
 				float: none;
 				p {
 					padding: 0 10px 10px 10px;
 				}
+			}
+		}
+		#other {
+			.banner {
+				width: 47%;
 			}
 		}
 	}
@@ -143,6 +147,10 @@ main {
 		#title {
 			float: none;
 			display: inline-block;
+		}
+		#day {
+			font-size: 10px;
+			margin: 0;
 		}
 	}
 }

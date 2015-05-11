@@ -96,12 +96,17 @@ main {
     font-size: 100%; }
   main {
     width: 100%; }
-    main #news .banner, main #event .banner, main #other .banner {
+    main #news .banner, main #event .banner {
       width: 100%;
       float: none; }
-      main #news .banner p, main #event .banner p, main #other .banner p {
-        padding: 0 10px 10px 10px; } }
+      main #news .banner p, main #event .banner p {
+        padding: 0 10px 10px 10px; }
+    main #other .banner {
+      width: 47%; } }
 
 #article #meta #day, #article #meta #title {
   float: none;
   display: inline-block; }
+#article #meta #day {
+  font-size: 10px;
+  margin: 0; }
