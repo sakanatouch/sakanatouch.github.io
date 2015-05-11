@@ -112,7 +112,8 @@ main {
     width: 100%; }
     main #news .banner, main #event .banner {
       width: 100%;
-      float: none; }
+      float: none;
+      margin: auto; }
       main #news .banner p, main #event .banner p {
         padding: 0 10px 10px 10px; }
     main #other .banner {
