@@ -154,22 +154,23 @@ main {
 			}
 		}
 	}
-}
-#article {
-	h2 {
-		position: absolute;
-		padding: 0;
-	}
-	#meta {
-		padding: auto 0;
-		#day,
-		#title {
-			float: none;
-			display: inline-block;
-			margin: 0;
+	#article {
+		h2 {
+			position: absolute;
+			padding: 0;
 		}
-		#day {
-			font-size: 10px;
+		#meta {
+			padding: auto 0;
+			#day,
+			#title {
+				float: none;
+				display: inline-block;
+				margin: 0;
+			}
+			#day {
+				font-size: 10px;
+			}
 		}
 	}
 }
+
