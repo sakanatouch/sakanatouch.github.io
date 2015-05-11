@@ -156,6 +156,10 @@ main {
 	}
 }
 #article {
+	h2 {
+		position: absolute;
+		padding: 0;
+	}
 	#meta {
 		padding: auto 0;
 		#day,

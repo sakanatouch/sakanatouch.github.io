@@ -124,6 +124,9 @@ main {
     main #other .banner {
       width: 47%; } }
 
+#article h2 {
+  position: absolute;
+  padding: 0; }
 #article #meta {
   padding: auto 0; }
   #article #meta #day, #article #meta #title {
