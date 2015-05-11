@@ -141,9 +141,11 @@ header {
       width: 100%; }
       #main_visual .inner .catchcopy img {
         margin: auto; }
-      #main_visual .inner .catchcopy a {
-        margin-top: -30px; }
-        #main_visual .inner .catchcopy a img {
+      #main_visual .inner .catchcopy .catchcopy_btn a {
+        margin-top: -30px;
+        display: inline-block;
+        width: 300px; }
+        #main_visual .inner .catchcopy .catchcopy_btn a img {
           width: 300px; }
   #main_visual .visual_nav {
     position: absolute;
@@ -310,6 +312,7 @@ main .dictionary {
 
 .icon_natch {
   min-height: 80px;
+  margin-bottom: 50px;
   text-align: left;
   padding-left: 70px;
   background: url(../img/icon_thumb_natch.png) left top no-repeat;
@@ -500,8 +503,10 @@ footer {
         #main_visual .inner .catchcopy img {
           width: 100%;
           margin: auto; }
-        #main_visual .inner .catchcopy a img {
+        #main_visual .inner .catchcopy .catchcopy_btn a {
           width: 50%; }
+          #main_visual .inner .catchcopy .catchcopy_btn a img {
+            width: 100%; }
     #main_visual img {
       width: 30%;
       margin: 1em 0; }
