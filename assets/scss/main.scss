@@ -167,13 +167,13 @@ header {
 			img {
 				margin: auto;
 			}
-			.catchcopy_btn {
+			.catchcopy_dl_btn {
 				a {
 					margin-top: -30px;
-					display: inline-block;
-					width: 300px;
+					display: block;
 					img {
-						width: 300px;
+						height: 89px;
+						width: auto;
 					}
 				}
 			}
@@ -472,15 +472,15 @@ footer {
 	}
 }
 .dl_button {
-	width: 50%;
 	margin-bottom: 1em;
 	img {
 		display: block;
 		margin: auto;
 	}
 }
-.catchcopy_btn {
+.catchcopy_dl_btn {
 	text-align: center;
+	display: inline-block;
 	a {
 		width: 25%;
 		display: inline-block;
@@ -489,7 +489,16 @@ footer {
 		}
 	}
 }
-
+.dl_btn {
+	text-align: center;
+	a {
+		max-height: 70px;
+		display: inline-block;
+		img {
+			max-height: 70px;
+		}
+	}
+}
 @media screen and (max-width: 700px) {
 	* {
 		box-sizing: border-box;
@@ -614,12 +623,17 @@ footer {
 					width: 100%;
 					margin: auto;
 				}
-				.catchcopy_btn {
+				.catchcopy_dl_btn {
 					margin-top: 10px;
+					width: 45%;
 					a { 
-						width: 50%;
+						width: auto;
+						max-height: 45px;
+						display: inline-block;
 						img {
-							width: 100%;
+							width: auto;
+							max-height: 45px;
+							// height: 100%;
 						}
 					}
 				}
@@ -752,11 +766,15 @@ footer {
 			}
 		}
 	}
-	.catchcopy_btn {
-		.dl_button {
-			width: 50%;
+	.dl_btn {
+		width: 100%;
+		display: inline-block;
+		a {
+			width: auto;
+			max-height: 45px;
 			img {
-				width: 100%;
+				width: auto;
+				max-height: 45px;
 			}
 		}
 	}

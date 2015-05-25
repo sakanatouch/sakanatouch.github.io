@@ -141,12 +141,12 @@ header {
       width: 100%; }
       #main_visual .inner .catchcopy img {
         margin: auto; }
-      #main_visual .inner .catchcopy .catchcopy_btn a {
+      #main_visual .inner .catchcopy .catchcopy_dl_btn a {
         margin-top: -30px;
-        display: inline-block;
-        width: 300px; }
-        #main_visual .inner .catchcopy .catchcopy_btn a img {
-          width: 300px; }
+        display: block; }
+        #main_visual .inner .catchcopy .catchcopy_dl_btn a img {
+          height: 89px;
+          width: auto; }
   #main_visual .visual_nav {
     position: absolute;
     margin: auto;
@@ -395,19 +395,27 @@ footer {
       padding: .5rem; }
 
 .dl_button {
-  width: 50%;
   margin-bottom: 1em; }
   .dl_button img {
     display: block;
     margin: auto; }
 
-.catchcopy_btn {
-  text-align: center; }
-  .catchcopy_btn a {
+.catchcopy_dl_btn {
+  text-align: center;
+  display: inline-block; }
+  .catchcopy_dl_btn a {
     width: 25%;
     display: inline-block; }
-    .catchcopy_btn a img {
+    .catchcopy_dl_btn a img {
       width: 100%; }
+
+.dl_btn {
+  text-align: center; }
+  .dl_btn a {
+    max-height: 70px;
+    display: inline-block; }
+    .dl_btn a img {
+      max-height: 70px; }
 
 @media screen and (max-width: 700px) {
   * {
@@ -511,12 +519,16 @@ footer {
         #main_visual .inner .catchcopy img {
           width: 100%;
           margin: auto; }
-        #main_visual .inner .catchcopy .catchcopy_btn {
-          margin-top: 10px; }
-          #main_visual .inner .catchcopy .catchcopy_btn a {
-            width: 50%; }
-            #main_visual .inner .catchcopy .catchcopy_btn a img {
-              width: 100%; }
+        #main_visual .inner .catchcopy .catchcopy_dl_btn {
+          margin-top: 10px;
+          width: 45%; }
+          #main_visual .inner .catchcopy .catchcopy_dl_btn a {
+            width: auto;
+            max-height: 45px;
+            display: inline-block; }
+            #main_visual .inner .catchcopy .catchcopy_dl_btn a img {
+              width: auto;
+              max-height: 45px; }
     #main_visual img {
       width: 30%;
       margin: 1em 0; }
@@ -610,7 +622,12 @@ footer {
       .common_articles table th, .common_articles table td {
         border: 1px solid #ccc;
         padding: .5rem; }
-  .catchcopy_btn .dl_button {
-    width: 50%; }
-    .catchcopy_btn .dl_button img {
-      width: 100%; } }
+  .dl_btn {
+    width: 100%;
+    display: inline-block; }
+    .dl_btn a {
+      width: auto;
+      max-height: 45px; }
+      .dl_btn a img {
+        width: auto;
+        max-height: 45px; } }
