@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="sakanatouch-ranking" lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+	<script src="../assets/js/ng-ranking.js"></script>
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+	<div id="ranking">
+		<div class="ranking-result-wrapper" ng-controller="RankingCtrl as ctrs">
+			<!-- 
+				RankingCtrl as ctrs
+				scopeをthisで参照できる
+			 -->
+			<ul>
+				<li ng-repeat="result in ctrs.rankingCatchList | limitTo:10">
+					<div class="count">{{result.rank}}</div>
+					<div class="capture-value">{{result.value}}</div>
+				</li>
+			</ul>
+			-----------------
+			<button ng-click="ctrs.change()">change</button>
+			<select ng-change="ctrs.limitNum(ctrs.limit)" ng-model="ctrs.limit" ng-options="num.value as num.label for num in ctrs.limitData"><!-- 
+				num.value as num.label　で option要素が成立する
+				http://plnkr.co/edit/m4PMSuVnkhwxrFijcOsb?p=info
+				http://www.axlight.com/mt/sundayhacking/2013/06/angularjs-1.html
+				 -->
+			</select>
+			<ul>
+				<li ng-repeat="result in ctrs.rankingFishkindList | limitTo:ctrs.limit | orderBy: 'value':ctrs.up">
+					<div class="count">{{result.rank}}</div>
+					<div class="capture-value">{{result.value}}</div>
+				</li>
+			</ul>
+			<button ng-click="ctrs.say()">say</button>
+		</div>
+	</div>
+	
+</body>
+</html>
