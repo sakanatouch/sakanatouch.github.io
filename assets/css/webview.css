@@ -642,6 +642,42 @@ footer {
 	rangking
 	--------------------------------------------
 */
+#news {
+  font-family: Arista2, sans-serif;
+  background-color: #0081d1;
+  color: white;
+  font-size: 80%;
+  height: 100%; }
+  #news .list_view ul {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2); }
+  #news .list_view li {
+    list-style-type: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: .5rem 1rem;
+    vertical-align: middle; }
+    #news .list_view li a {
+      text-decoration: none;
+      color: white; }
+  #news header img {
+    width: 100%; }
+  #news .fa {
+    display: none;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    color: #E6C846;
+    font-size: 250%; }
+  #news li h2 {
+    position: relative; }
+  #news li.new_content .fa {
+    display: block; }
+  #news li.new_content h2 {
+    padding-left: 2em; }
+  #news li .summery {
+    font-size: 90%; }
+
 #ranking {
   font-family: Arista2, sans-serif;
   background-color: #0081d1;
@@ -656,6 +692,9 @@ footer {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: .5rem 1rem;
     vertical-align: middle; }
+    #ranking .list_view li a {
+      text-decoration: none;
+      color: white; }
   #ranking .summery {
     padding: 1em; }
     #ranking .summery p {

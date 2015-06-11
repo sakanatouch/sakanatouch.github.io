@@ -15,8 +15,16 @@
 			border-bottom: 1px solid rgba(0, 0, 0, .2);
 			padding: .5rem 1rem;
 			vertical-align: middle;
+			a {
+				text-decoration: none;
+				color: white;
+			}
 		}
 	}
+	font-family: Arista2, sans-serif;
+	background-color: $blue;
+	color: white;
+	font-size: 80%;
 }
 
 @keyframes grow {
@@ -33,12 +41,42 @@
 	--------------------------------------------
 */
 
+#news {
+	@include webview;
+	height: 100%;
+	header {
+		img {
+			width: 100%;
+		}
+	}
+	.fa {
+		display: none;
+		position: absolute;
+		top: -10px;
+		left: -10px;
+		color: #E6C846;
+		font-size: 250%;
+	}
+	li {
+		h2 {
+			position: relative;
+		}
+		&.new_content {
+			.fa{
+				display: block;
+			}
+			h2 {
+				padding-left: 2em;
+			}
+		}
+		.summery {
+			font-size: 90%;
+		}
+	}
+}
+
 #ranking {
 	@include webview;
-	font-family: Arista2, sans-serif;
-	background-color: $blue;
-	color: white;
-	font-size: 80%;
 	.summery {
 		padding: 1em;
 		p {
