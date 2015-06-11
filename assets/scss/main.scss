@@ -23,6 +23,10 @@ $text_color: #253D6D;
     font-family: mgenplus;  /* フォントにフォント集合名を付ける */
     src: url(../font/rounded-mgenplus-2pp-medium.ttf);  /* フォントのURLを指定する */
 }
+@font-face {
+    font-family: Arista2;  /* フォントにフォント集合名を付ける */
+    src: url(../font/Arista2.0Alternate.ttf);  /* フォントのURLを指定する */
+}
 
 body, html {
 	height: 100%;
@@ -489,6 +493,7 @@ footer {
 		}
 	}
 }
+
 
 @media screen and (max-width: 700px) {
 	* {
