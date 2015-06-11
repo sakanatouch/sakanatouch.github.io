@@ -7,37 +7,58 @@
 	<title>Document</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
 	<script src="../assets/js/ng-ranking.js"></script>
-	<link rel="stylesheet" href="../assets/css/main.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../assets/css/webview.css">
+
 </head>
-<body>
-	<div id="ranking">
-		<div class="ranking-result-wrapper" ng-controller="RankingCtrl as ctrs">
-			<!-- 
-				RankingCtrl as ctrs
-				scopeをthisで参照できる
-			 -->
-			<ul>
-				<li ng-repeat="result in ctrs.rankingCatchList | limitTo:10">
-					<div class="count">{{result.rank}}</div>
-					<div class="capture-value">{{result.value}}</div>
-				</li>
-			</ul>
-			-----------------
-			<button ng-click="ctrs.change()">change</button>
-			<select ng-change="ctrs.limitNum(ctrs.limit)" ng-model="ctrs.limit" ng-options="num.value as num.label for num in ctrs.limitData"><!-- 
-				num.value as num.label　で option要素が成立する
-				http://plnkr.co/edit/m4PMSuVnkhwxrFijcOsb?p=info
-				http://www.axlight.com/mt/sundayhacking/2013/06/angularjs-1.html
-				 -->
-			</select>
-			<ul>
-				<li ng-repeat="result in ctrs.rankingFishkindList | limitTo:ctrs.limit | orderBy: 'value':ctrs.up">
-					<div class="count">{{result.rank}}</div>
-					<div class="capture-value">{{result.value}}</div>
-				</li>
-			</ul>
-			<button ng-click="ctrs.say()">say</button>
-		</div>
+<body ng-controller="RankingCtrl as ctrs">
+	<div id="ranking" ng-class="ctrs.ranking_view_classname">
+
+		<main>
+			<div class="ranking-result-wrapper">
+				<header>
+					<h1><img src="../assets/img/ranking/tit_webview_ranking.png" alt=""></h1>
+				</header>
+				
+				<nav class="ranking_tab">
+					<button class="catch" ng-click="ctrs.viewChange('catch_view')">ユーザーランク</button>
+					<button class="kind" ng-click="ctrs.viewChange('kind_view')">サカナランク</button>
+				</nav>
+
+				<div class="ranking_all_wrap">
+					<div class="ranking_all_wrap_inner">
+						<div class="ranking_list_view list_view">
+							<div class="summery inner">
+								<img src="../assets/img/icon_thumb_natch.png" alt="ナッチアイコン">
+								<p>この一週間で一番多くサカナをつかまえた人のランキングだよ！！すごいね！キミも一位を目指してみないかい！？</p>
+							</div>
+							<ul>
+								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:10" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}">
+									<div class="count">Rank. {{result.rank}}</div>
+									<div class="capture-value">{{result.value}}<span>匹</span></div>
+									<i class="fa fa-trophy"></i>
+								</li>
+							</ul>
+						</div>
+						<div class="ranking_list_view list_view">
+							<div class="summery inner">
+								<img src="../assets/img/icon_thumb_natch.png" alt="ナッチアイコン">
+								<p>どのサカナが一番つかまえられたか！？この一週間で集計してみたよ！</p>
+							</div>
+							<ul>
+								<li ng-repeat="result in ctrs.rankingFishkindList | limitTo:10 | orderBy: 'value':true" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}">
+									<div class="count">{{result.rank}}</div>
+									<div class="capture-value">{{result.value}}</div>
+									<i class="fa fa-trophy"></i>
+								</li>
+							</ul>
+						</div>
+					</div><!-- ranking_all_wrap_inner -->
+				</div><!-- ranking_all_wrap -->
+				
+			</div>
+		</main>
+		
 	</div>
 	
 </body>

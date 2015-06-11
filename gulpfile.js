@@ -4,14 +4,7 @@ var autoprefixer = require("gulp-autoprefixer")
 var uglify = require("gulp-uglify");
 var browser = require("browser-sync");
 var plumber = require("gulp-plumber");
-
-// gulp監視
-gulp.task("default", function() {
-    gulp.watch(['*.html'],['html']);    //htmlファイルを監視
-	gulp.watch(['./assets/scss/*.scss'],['sass']); //scssファイルを監視
-	gulp.watch(['./assets/css/*.css'],['html']); //cssファイルを監視
-	gulp.watch(['./assets/edit_js/*.js'],['js_compress']); //jsファイルを監視
-});
+var jade = require('gulp-jade');
 
 //　自動更新
 gulp.task("server", function() {
@@ -20,6 +13,17 @@ gulp.task("server", function() {
             baseDir: "./"
         }
     });
+});
+
+// jadeタスク
+gulp.task('jade', function() {
+  var YOUR_LOCALS = {};
+  gulp.src(['./jade/*.jade', '!./jade/temp_*.jade'])
+    .pipe(jade({
+      locals: YOUR_LOCALS
+    }))
+    .pipe(gulp.dest('./'))
+    .pipe(browser.reload({stream:true}))
 });
 
 //htmlタスク
@@ -50,8 +54,30 @@ gulp.task("sass", function() {
         .pipe(gulp.dest("./assets/css"))
         .pipe(browser.reload({stream:true}))
 });
- 
+
+// gulp監視
 gulp.task("default",['server'], function() {
     gulp.watch(["./assets/js/*.js","!./assets/js/min/*.js"],["js"]);
     gulp.watch("./assets/scss/*.scss",["sass"]);
+    gulp.watch(['*.html'],['html']);    //htmlファイルを監視
+    gulp.watch(['./assets/scss/*.scss'],['sass']); //scssファイルを監視
+    gulp.watch(['./assets/css/*.css'],['html']); //cssファイルを監視
+    gulp.watch(['./jade/*.jade'],['jade']); //jadeファイルを監視
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
