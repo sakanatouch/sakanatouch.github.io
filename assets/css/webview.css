@@ -642,12 +642,17 @@ footer {
 	rangking
 	--------------------------------------------
 */
+.webview_html, .webview_html body {
+  background-color: transparent; }
+
 #news {
   font-family: Arista2, sans-serif;
   background-color: #0081d1;
   color: white;
   font-size: 80%;
-  height: 100%; }
+  height: 100%;
+  width: 90%;
+  margin: auto; }
   #news .list_view ul {
     margin: 0;
     padding: 0;
