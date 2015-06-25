@@ -40,17 +40,39 @@
 	rangking
 	--------------------------------------------
 */
+
+header {
+	img {
+		width: 100%;
+	}
+}
+#closebtn {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	-webkit-appearance: none;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	text-decoration: none;
+	img {
+		width: 30px;
+		height: 29px;
+	}
+	span {
+		font-size: 12px;
+		text-decoration: none;
+		font-weight: bold;
+		color: white;
+	}
+}
 .webview_html, .webview_html body {
 	background-color: transparent;
 }
 #news {
 	@include webview;
 	height: 100%;
-	header {
-		img {
-			width: 100%;
-		}
-	}
+	position: relative;
 	.fa {
 		display: none;
 		position: absolute;
@@ -79,28 +101,9 @@
 
 #ranking {
 	@include webview;
-	.summery {
-		padding: 1em;
-		p {
-			margin-top: 0;
-			margin-bottom: .3em;
-			float: right;
-			width: 70%;
-			font-weight: bold;
-		}
-		img {
-			float: left;
-			width: 20%;
-			height: auto;
-		}
-		@include cf;
-	}
-	header {
-		h1 {
-			margin: 0;
-			img {
-				width: 100%;
-			}
+	.ranking_header {
+		.ranking_tit {
+			width: 100%;
 		}
 	}
 	.ranking_tab {
@@ -118,9 +121,14 @@
 			font-weight: bold;
 			color: white;
 			background-color: darken($blue, 10%);
-			font-size: 100%;
+			font-size: 110%;
 			margin: 0;
 			position: relative;
+			i {
+				font-size: 180%;
+				vertical-align: middle;
+				margin-right: .5em;
+			}
 			&::after {
 				content: "";
 				display: block;
@@ -212,6 +220,23 @@
 				font-size: 120%;
 				color: #C27400;
 				animation: grow 1s infinite;
+			}
+		}
+	}
+	.related {
+		ul {
+			border-top: none;
+		}
+		li {
+			background-color: transparent;
+			h1 {
+				margin-bottom: 0;
+				i {
+					margin-right: .5em;
+				}
+			}
+			.desc {
+				font-size: 90%;
 			}
 		}
 	}

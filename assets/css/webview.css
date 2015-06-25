@@ -642,6 +642,27 @@ footer {
 	rangking
 	--------------------------------------------
 */
+header img {
+  width: 100%; }
+
+#closebtn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  -webkit-appearance: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-decoration: none; }
+  #closebtn img {
+    width: 30px;
+    height: 29px; }
+  #closebtn span {
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white; }
+
 .webview_html, .webview_html body {
   background-color: transparent; }
 
@@ -650,7 +671,8 @@ footer {
   background-color: #0081d1;
   color: white;
   font-size: 80%;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
   #news .list_view ul {
     margin: 0;
     padding: 0;
@@ -663,8 +685,6 @@ footer {
     #news .list_view li a {
       text-decoration: none;
       color: white; }
-  #news header img {
-    width: 100%; }
   #news .fa {
     display: none;
     position: absolute;
@@ -698,27 +718,8 @@ footer {
     #ranking .list_view li a {
       text-decoration: none;
       color: white; }
-  #ranking .summery {
-    padding: 1em; }
-    #ranking .summery p {
-      margin-top: 0;
-      margin-bottom: .3em;
-      float: right;
-      width: 70%;
-      font-weight: bold; }
-    #ranking .summery img {
-      float: left;
-      width: 20%;
-      height: auto; }
-    #ranking .summery::after {
-      content: "";
-      display: block;
-      clear: both;
-      height: 0; }
-  #ranking header h1 {
-    margin: 0; }
-    #ranking header h1 img {
-      width: 100%; }
+  #ranking .ranking_header .ranking_tit {
+    width: 100%; }
   #ranking .ranking_tab {
     margin: .8em 0 0;
     display: -webkit-box;
@@ -739,9 +740,13 @@ footer {
       font-weight: bold;
       color: white;
       background-color: #00629e;
-      font-size: 100%;
+      font-size: 110%;
       margin: 0;
       position: relative; }
+      #ranking .ranking_tab button i {
+        font-size: 180%;
+        vertical-align: middle;
+        margin-right: .5em; }
       #ranking .ranking_tab button::after {
         content: "";
         display: block;
@@ -821,3 +826,13 @@ footer {
         color: #C27400;
         -webkit-animation: grow 1s infinite;
         animation: grow 1s infinite; }
+  #ranking .related ul {
+    border-top: none; }
+  #ranking .related li {
+    background-color: transparent; }
+    #ranking .related li h1 {
+      margin-bottom: 0; }
+      #ranking .related li h1 i {
+        margin-right: .5em; }
+    #ranking .related li .desc {
+      font-size: 90%; }
