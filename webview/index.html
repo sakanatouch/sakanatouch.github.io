@@ -34,7 +34,7 @@
 									<article>
 										<h1><i class="fa fa-list-alt"></i>サカナタッチの週間ユーザーランキング</h1>
 										<div class="desc">
-											サカナタッチ全ユーザーのランキングを毎週集計発表します！キミは何番目かな！？トップを目指すのだ！！<br>
+											サカナタッチ全ユーザーのランキングを毎週集計発表します！！<br>
 											右上の「週間ランキング」をクリック！	
 										</div>
 									</article>
@@ -55,13 +55,22 @@
 								<img class="ranking_tit" src="../assets/img/ranking/tit_webview_ranking.png" alt="">
 							</div>
 							<div class="summery inner">
-								<p>どのサカナが一番つかまえられたか！？この一週間で集計してみたよ！</p>
+								<p>今週でいちばんの捕獲王は何匹つかまえた！？キミは全体の何位だろう？</p>
+							</div>
+							<div class="your_lank" ><!--  ng-model="ctrs.yourRank_loadData" -->
+								<p class="your_tit">
+									あなたの現在の順位
+								</p>
+								<div class="rank_box" ng-class="{'r1': ctrs.yourRank.userData.rank == 1, 'r2': ctrs.yourRank.userData.rank == 2, 'r3': ctrs.yourRank.userData.rank == 3, 'add-trophy': ctrs.yourRank.userData.rank <= 3}">
+									<div class="count"><small>YourRank</small> {{ctrs.yourRank.userData.rank}}</div>
+									<div class="capture-value"><i class="fa fa-trophy"></i>{{ctrs.yourRank.userData.value}}<span>匹</span></div>
+								</div>
 							</div>
 							<ul>
-								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:10" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}">
-									<div class="count">Rank. {{result.rank}}</div>
-									<div class="capture-value">{{result.value}}<span>匹</span></div>
-									<i class="fa fa-trophy"></i>
+								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:10" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}" class="rank_box">
+									<div class="count"><small>Rank</small> {{result.rank}}</div>
+									
+									<div class="capture-value"><i class="fa fa-trophy"></i>{{result.value}}<span>匹</span></div>
 								</li>
 							</ul>
 						</div>

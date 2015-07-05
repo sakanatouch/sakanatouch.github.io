@@ -792,40 +792,66 @@ header img {
       display: inline-block; }
     #ranking .ranking_list_view .count, #ranking .ranking_list_view .capture-value {
       display: inline-block;
-      font-size: 140%;
+      font-size: 200%;
       text-shadow: 0px 0px 1px #444A6B, 0px 0px 2px rgba(0, 0, 0, 0.8); }
       #ranking .ranking_list_view .count span, #ranking .ranking_list_view .capture-value span {
         font-size: 60%;
         margin: 0 .5em;
         font-weight: bold; }
+      #ranking .ranking_list_view .count small, #ranking .ranking_list_view .capture-value small {
+        font-size: 80%; }
     #ranking .ranking_list_view .count {
       margin-right: 1em; }
     #ranking .ranking_list_view li {
       background-color: #00629e; }
+    #ranking .ranking_list_view .fa-trophy {
+      margin-right: 10px; }
     #ranking .ranking_list_view .r1 {
-      font-size: 160%;
+      font-size: 140%;
       background-color: #0081d1; }
       #ranking .ranking_list_view .r1 .fa-trophy {
-        font-size: 180%;
+        font-size: 120%;
         color: #FFE02F;
         -webkit-animation: grow 1s infinite;
         animation: grow 1s infinite; }
     #ranking .ranking_list_view .r2 {
-      font-size: 150%;
+      font-size: 140%;
       background-color: #0078c2; }
       #ranking .ranking_list_view .r2 .fa-trophy {
-        font-size: 140%;
+        font-size: 110%;
         color: #BBCACE;
         -webkit-animation: grow 1s infinite;
         animation: grow 1s infinite; }
     #ranking .ranking_list_view .r3 {
-      font-size: 120%;
+      font-size: 140%;
       background-color: #006bad; }
       #ranking .ranking_list_view .r3 .fa-trophy {
-        font-size: 120%;
+        font-size: 100%;
         color: #C27400;
         -webkit-animation: grow 1s infinite;
         animation: grow 1s infinite; }
+    #ranking .ranking_list_view .your_lank {
+      padding: 1rem 1rem;
+      background-color: #0078c2;
+      margin: .5em .5em 1em;
+      font-size: 120%;
+      border-radius: 8px; }
+      #ranking .ranking_list_view .your_lank .your_tit {
+        margin: 0; }
+      #ranking .ranking_list_view .your_lank .capture-value, #ranking .ranking_list_view .your_lank .count {
+        line-height: 1; }
+      #ranking .ranking_list_view .your_lank .r1, #ranking .ranking_list_view .your_lank .r2, #ranking .ranking_list_view .your_lank .r3 {
+        font-size: 100%;
+        background-color: transparent; }
+    #ranking .ranking_list_view .rank_box {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
   #ranking .related ul {
     border-top: none; }
   #ranking .related li {

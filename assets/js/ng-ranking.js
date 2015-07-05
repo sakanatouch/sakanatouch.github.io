@@ -1,5 +1,5 @@
 var app = angular.module('sakanatouch-ranking', [])
-app.controller('RankingCtrl', ["$http", "hoge", "loadData", function ($http, hoge, loadData) {
+app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData", function ($http, hoge, loadData, yourRank_loadData) {
 	var self = this;
 	self.up = false;
 	self.change = function(){
@@ -14,11 +14,20 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", function ($http, hog
 	self.say = function(){
 		hoge.say();
 	}
+	// http://sakana-touch.herokuapp.com/users?token=3c781217-a618-450a-948d-5ae8fc302aca&date=2015/06/20
 	self.rankingCatchList = loadData.rankingCatchList;
 	loadData.getCount_A("count.json");
+
+	//自身のランクを取得
 	
-	self.rankingFishkindList = loadData.rankingFishkindList;
-	loadData.getCount_A("kind.json");
+	this.yourRank = yourRank_loadData;
+	/*self.yourRank = yourRank_loadData.userData.rank
+	self.yourValue = yourRank_loadData.userData.value
+	self.yourFishes = yourRank_loadData.userData.fishes*/
+	yourRank_loadData.getData("user_lank.json")
+	
+	/*self.rankingFishkindList = loadData.rankingFishkindList;
+	loadData.getCount_A("kind.json");*/
 	
 	self.ranking_view_classname = "catch_view";
 	self.viewChange = function (cname) {
@@ -31,7 +40,7 @@ app.service("hoge",[function(){
 }]);
 
 app.service("loadData",["$http",function($http){
-	var self =this;
+	var self = this;
 	this.rankingCatchList = [];
 	this.rankingFishkindList = [];
 	this.getCount_A = function (url) {
@@ -50,3 +59,26 @@ app.service("loadData",["$http",function($http){
 		})
 	}
 }]);
+
+app.service("yourRank_loadData",["$http",function($http){
+	var self = this;
+	/*this.yourRank = null;
+	this.yourValue = null;
+	this.yourFishes = [];*/
+	this.userData = {}
+	this.getData = function (url) {
+		$http.get(url)
+		.success(function (res) {
+			//console.log(res)
+			/*self.yourRank = res.rank
+			self.yourValue = res.value;
+			self.yourFishes = res.fishes;*/
+			self.userData = res
+		})
+	}
+}]);
+
+
+
+
+
