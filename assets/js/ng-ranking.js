@@ -1,4 +1,9 @@
 var app = angular.module('sakanatouch-ranking', [])
+
+app.config(['$httpProvider', function ($httpProvider) {
+	$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;application/json;charset=utf-8';
+}]);
+
 app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData", function ($http, hoge, loadData, yourRank_loadData) {
 	var self = this;
 	self.up = false;
@@ -38,7 +43,7 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	dd.setTime(dd.getTime()-1000*60*60*24*7); 
 	var today = dd.getFullYear() + "/" + dd.getMonth() + "/" + dd.getDate();
 	var url = "http://sakana-touch.herokuapp.com/users?date="+today+"&token=" + getQuerystring("token");
-	console.log(url)
+	//console.log(url)
 	yourRank_loadData.getData(url); // "user_lank.json"
 	
 	/*self.rankingFishkindList = loadData.rankingFishkindList;
@@ -75,19 +80,13 @@ app.service("loadData",["$http",function($http){
 	}
 }]);
 
+
 app.service("yourRank_loadData",["$http",function($http){
 	var self = this;
-	/*this.yourRank = null;
-	this.yourValue = null;
-	this.yourFishes = [];*/
 	this.userData = {}
 	this.getData = function (url) {
 		$http.get(url)
 		.success(function (res) {
-			//console.log(res)
-			/*self.yourRank = res.rank
-			self.yourValue = res.value;
-			self.yourFishes = res.fishes;*/
 			self.userData = res
 		})
 	}
