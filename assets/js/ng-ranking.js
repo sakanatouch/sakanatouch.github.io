@@ -24,7 +24,21 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	/*self.yourRank = yourRank_loadData.userData.rank
 	self.yourValue = yourRank_loadData.userData.value
 	self.yourFishes = yourRank_loadData.userData.fishes*/
-	yourRank_loadData.getData("user_lank.json")
+	function getQuerystring(key, default_) {
+	   if (default_==null) default_="";
+	   key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	   var regex = new RegExp("[\\?&]"+key+"=([^&#]*)");
+	   var qs = regex.exec(window.location.href);
+	   if(qs == null)
+	    return default_;
+	   else
+	    return qs[1];
+	}
+	var dd = new Date();
+	var today = dd.getFullYear() + "/" + dd.getMonth() + "/" + dd.getDate();
+	var url = "http://sakana-touch.herokuapp.com/users?date="+today+"&token=" + getQuerystring("token");
+	console.log(url)
+	yourRank_loadData.getData(url); // "user_lank.json"
 	
 	/*self.rankingFishkindList = loadData.rankingFishkindList;
 	loadData.getCount_A("kind.json");*/
