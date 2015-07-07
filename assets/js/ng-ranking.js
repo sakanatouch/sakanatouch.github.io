@@ -35,6 +35,7 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	    return qs[1];
 	}
 	var dd = new Date();
+	dd.setTime(dd.getTime()-1000*60*60*24*7); 
 	var today = dd.getFullYear() + "/" + dd.getMonth() + "/" + dd.getDate();
 	var url = "http://sakana-touch.herokuapp.com/users?date="+today+"&token=" + getQuerystring("token");
 	console.log(url)
