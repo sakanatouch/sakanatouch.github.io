@@ -856,9 +856,14 @@ header img {
     border-top: none; }
   #ranking .related li {
     background-color: transparent; }
+    #ranking .related li a {
+      color: yellow;
+      text-decoration: underline; }
     #ranking .related li h1 {
       margin-bottom: 0; }
       #ranking .related li h1 i {
         margin-right: .5em; }
+    #ranking .related li img {
+      max-width: 100%; }
     #ranking .related li .desc {
       font-size: 90%; }
