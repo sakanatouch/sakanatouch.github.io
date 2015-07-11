@@ -194,6 +194,10 @@ header {
 		}
 		.count {
 			margin-right: 1em;
+			&::after {
+				content: "位";
+				font-size: 60%;
+			}
 		}
 		li {
 			background-color: darken($blue, 10%);
@@ -202,7 +206,7 @@ header {
 			margin-right: 10px;
 		}
 		.r1 {
-			font-size: 140%;
+			font-size: 120%;
 			background-color: darken($blue, 0);
 			.fa-trophy {
 				font-size: 120%;
@@ -211,7 +215,7 @@ header {
 			}
 		}
 		.r2 {
-			font-size: 140%;
+			font-size: 110%;
 			background-color: darken($blue, 3%);
 			.fa-trophy {
 				font-size: 110%;
@@ -220,7 +224,7 @@ header {
 			}
 		}
 		.r3 {
-			font-size: 140%;
+			font-size: 100%;
 			background-color: darken($blue, 7%);
 			.fa-trophy {
 				font-size: 100%;
@@ -232,7 +236,7 @@ header {
 			padding: 1rem 1rem;
 			background-color: darken($blue, 3%);
 			margin: .5em .5em 1em;
-			font-size: 120%;
+			font-size: 90%;
 			border-radius: 8px;
 			.your_tit {
 				margin: 0;
@@ -248,6 +252,14 @@ header {
 		.rank_box {
 			display: flex;
 			justify-content: space-between;
+		}
+		.summery {
+			p {
+				margin: 0;
+			}
+			.days {
+				color: #F7DCAB;
+			}
 		}
 	}
 	.related {

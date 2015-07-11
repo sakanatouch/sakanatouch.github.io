@@ -73,21 +73,18 @@
 								<img class="ranking_tit" src="../assets/img/ranking/tit_webview_ranking.png" alt="">
 							</div>
 							<div class="summery inner">
-								<p>今週つかまえたユーザーランキング上位10位を発表！キミは全体の何位だろう？</p>
+								<p>今週つかまえたユーザーランキング上位10位を発表！<br>めざせ！トップ10！</p>
 								<p class="days">集計期間 {{ctrs.startDay}} 〜 {{ctrs.endDay}}</p>
 							</div>
 							<div class="your_lank" ><!--  ng-model="ctrs.yourRank_loadData" -->
-								<p class="your_tit">
-									キミの現在の順位
-								</p>
 								<div class="rank_box" ng-class="{'r1': ctrs.yourRank.userData.rank == 1, 'r2': ctrs.yourRank.userData.rank == 2, 'r3': ctrs.yourRank.userData.rank == 3, 'add-trophy': ctrs.yourRank.userData.rank <= 3}">
-									<div class="count"><small>YourRank</small> {{ctrs.yourRank.userData.rank}}</div>
+									<div class="count"><small>あなたの順位</small> {{ctrs.yourRank.userData.rank}}</div>
 									<div class="capture-value"><i class="fa fa-trophy"></i>{{ctrs.yourRank.userData.value}}<span>匹</span></div>
 								</div>
 							</div>
 							<ul>
 								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:10" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}" class="rank_box">
-									<div class="count"><small>Rank</small> {{result.rank}}</div>
+									<div class="count">{{result.rank}}</div>
 									
 									<div class="capture-value"><i class="fa fa-trophy"></i>{{result.value}}<span>匹</span></div>
 								</li>

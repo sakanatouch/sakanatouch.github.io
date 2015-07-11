@@ -802,12 +802,15 @@ header img {
         font-size: 80%; }
     #ranking .ranking_list_view .count {
       margin-right: 1em; }
+      #ranking .ranking_list_view .count::after {
+        content: "位";
+        font-size: 60%; }
     #ranking .ranking_list_view li {
       background-color: #00629e; }
     #ranking .ranking_list_view .fa-trophy {
       margin-right: 10px; }
     #ranking .ranking_list_view .r1 {
-      font-size: 140%;
+      font-size: 120%;
       background-color: #0081d1; }
       #ranking .ranking_list_view .r1 .fa-trophy {
         font-size: 120%;
@@ -815,7 +818,7 @@ header img {
         -webkit-animation: grow 1s infinite;
         animation: grow 1s infinite; }
     #ranking .ranking_list_view .r2 {
-      font-size: 140%;
+      font-size: 110%;
       background-color: #0078c2; }
       #ranking .ranking_list_view .r2 .fa-trophy {
         font-size: 110%;
@@ -823,7 +826,7 @@ header img {
         -webkit-animation: grow 1s infinite;
         animation: grow 1s infinite; }
     #ranking .ranking_list_view .r3 {
-      font-size: 140%;
+      font-size: 100%;
       background-color: #006bad; }
       #ranking .ranking_list_view .r3 .fa-trophy {
         font-size: 100%;
@@ -834,7 +837,7 @@ header img {
       padding: 1rem 1rem;
       background-color: #0078c2;
       margin: .5em .5em 1em;
-      font-size: 120%;
+      font-size: 90%;
       border-radius: 8px; }
       #ranking .ranking_list_view .your_lank .your_tit {
         margin: 0; }
@@ -852,6 +855,10 @@ header img {
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between; }
+    #ranking .ranking_list_view .summery p {
+      margin: 0; }
+    #ranking .ranking_list_view .summery .days {
+      color: #F7DCAB; }
   #ranking .related ul {
     border-top: none; }
   #ranking .related li {
