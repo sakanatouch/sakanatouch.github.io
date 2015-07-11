@@ -806,7 +806,8 @@ header img {
         content: "位";
         font-size: 60%; }
     #ranking .ranking_list_view li {
-      background-color: #00629e; }
+      background-color: #00629e;
+      font-weight: bold; }
     #ranking .ranking_list_view .fa-trophy {
       margin-right: 10px; }
     #ranking .ranking_list_view .r1 {
@@ -838,7 +839,8 @@ header img {
       background-color: #0078c2;
       margin: .5em .5em 1em;
       font-size: 90%;
-      border-radius: 8px; }
+      border-radius: 8px;
+      font-weight: bold; }
       #ranking .ranking_list_view .your_lank .your_tit {
         margin: 0; }
       #ranking .ranking_list_view .your_lank .capture-value, #ranking .ranking_list_view .your_lank .count {

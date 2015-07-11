@@ -201,6 +201,7 @@ header {
 		}
 		li {
 			background-color: darken($blue, 10%);
+			font-weight: bold;
 		}
 		.fa-trophy {
 			margin-right: 10px;
@@ -238,6 +239,7 @@ header {
 			margin: .5em .5em 1em;
 			font-size: 90%;
 			border-radius: 8px;
+			font-weight: bold;
 			.your_tit {
 				margin: 0;
 			}
