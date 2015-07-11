@@ -7,6 +7,11 @@ app.config(['$httpProvider', function ($httpProvider) {
 app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData", function ($http, hoge, loadData, yourRank_loadData) {
 	var self = this;
 	self.up = false;
+
+	var dd = new Date();
+	dd.setTime(dd.getTime()-1000*60*60*24*7);
+	var today = dd.getFullYear() + "/" + dd.getMonth() + "/" + dd.getDate(); 
+
 	self.change = function(){
 		self.up = !self.up;
 	};
@@ -19,16 +24,6 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	self.say = function(){
 		hoge.say();
 	}
-	// http://sakana-touch.herokuapp.com/users?token=3c781217-a618-450a-948d-5ae8fc302aca&date=2015/06/20
-	self.rankingCatchList = loadData.rankingCatchList;
-	loadData.getCount_A("count.json");
-
-	//自身のランクを取得
-	
-	this.yourRank = yourRank_loadData;
-	/*self.yourRank = yourRank_loadData.userData.rank
-	self.yourValue = yourRank_loadData.userData.value
-	self.yourFishes = yourRank_loadData.userData.fishes*/
 	function getQuerystring(key, default_) {
 	   if (default_==null) default_="";
 	   key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
@@ -39,15 +34,16 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	   else
 	    return qs[1];
 	}
-	var dd = new Date();
-	dd.setTime(dd.getTime()-1000*60*60*24*7); 
-	var today = dd.getFullYear() + "/" + dd.getMonth() + "/" + dd.getDate();
+	//全体のランクを取得
+	self.rankingCatchList = loadData.rankingCatchList;
+	var lankAPIurl = "http://sakana-touch.herokuapp.com/rankings/count?date="+today+"&token=" + getQuerystring("token");;
+	loadData.getCount_A(lankAPIurl);
+
+	//自身のランクを取得
+	this.yourRank = yourRank_loadData;
 	var url = "http://sakana-touch.herokuapp.com/users?date="+today+"&token=" + getQuerystring("token");
 	//console.log(url)
 	yourRank_loadData.getData(url); // "user_lank.json"
-	
-	/*self.rankingFishkindList = loadData.rankingFishkindList;
-	loadData.getCount_A("kind.json");*/
 	
 	self.ranking_view_classname = "catch_view";
 	self.viewChange = function (cname) {
