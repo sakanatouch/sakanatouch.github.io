@@ -73,11 +73,12 @@
 								<img class="ranking_tit" src="../assets/img/ranking/tit_webview_ranking.png" alt="">
 							</div>
 							<div class="summery inner">
-								<p>今週でいちばんの捕獲王は何匹つかまえた！？キミは全体の何位だろう？</p>
+								<p>今週つかまえたユーザーランキング上位10位を発表！キミは全体の何位だろう？</p>
+								<p class="days">集計期間 {{ctrs.startDay}} 〜 {{ctrs.endDay}}</p>
 							</div>
 							<div class="your_lank" ><!--  ng-model="ctrs.yourRank_loadData" -->
 								<p class="your_tit">
-									あなたの現在の順位
+									キミの現在の順位
 								</p>
 								<div class="rank_box" ng-class="{'r1': ctrs.yourRank.userData.rank == 1, 'r2': ctrs.yourRank.userData.rank == 2, 'r3': ctrs.yourRank.userData.rank == 3, 'add-trophy': ctrs.yourRank.userData.rank <= 3}">
 									<div class="count"><small>YourRank</small> {{ctrs.yourRank.userData.rank}}</div>

@@ -7,11 +7,15 @@ app.config(['$httpProvider', function ($httpProvider) {
 app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData", function ($http, hoge, loadData, yourRank_loadData) {
 	var self = this;
 	self.up = false;
-
 	var dd = new Date();
 	dd.setTime(dd.getTime()-1000*60*60*24*7);
-	var today = dd.getFullYear() + "/" + dd.getMonth() + "/" + dd.getDate(); 
-
+	var today = dd.getFullYear() + "/" + Number(dd.getMonth()+1) + "/" + dd.getDate();
+	var owl = new Date(dd)
+	owl.setDate(dd.getDate()+6)
+	var oneWeekLater = owl.getFullYear() + "/" + Number(owl.getMonth()+1) + "/" + owl.getDate();
+	self.startDay = today;
+	self.endDay = oneWeekLater;
+	console.log(self.startDay, self.endDay)
 	self.change = function(){
 		self.up = !self.up;
 	};
@@ -40,17 +44,15 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	loadData.getCount_A(lankAPIurl);
 
 	//自身のランクを取得
-	this.yourRank = yourRank_loadData;
+	self.yourRank = yourRank_loadData;
 	var url = "http://sakana-touch.herokuapp.com/users?date="+today+"&token=" + getQuerystring("token");
-	//console.log(url)
-	yourRank_loadData.getData(url); // "user_lank.json"
-	
+	yourRank_loadData.getData(url);
 	self.ranking_view_classname = "catch_view";
 	self.viewChange = function (cname) {
 		self.ranking_view_classname = cname;
 	}
-	
 }]);
+
 app.service("hoge",[function(){
 	this.say = function(){console.log("a");}
 }]);
@@ -62,7 +64,6 @@ app.service("loadData",["$http",function($http){
 	this.getCount_A = function (url) {
 		$http.get(url)
 		.success(function (res) {
-			//console.log(res.ranking);
 			angular.forEach(res.ranking,function(data){
 				if (url.indexOf("count") != -1) {
 					self.rankingCatchList.push(data)
@@ -76,7 +77,6 @@ app.service("loadData",["$http",function($http){
 	}
 }]);
 
-
 app.service("yourRank_loadData",["$http",function($http){
 	var self = this;
 	this.userData = {}
@@ -87,8 +87,3 @@ app.service("yourRank_loadData",["$http",function($http){
 		})
 	}
 }]);
-
-
-
-
-
