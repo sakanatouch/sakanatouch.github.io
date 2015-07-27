@@ -86,7 +86,6 @@
 							<ul>
 								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:10" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}" class="rank_box">
 									<div class="count">{{result.rank}}</div>
-									
 									<div class="capture-value"><i class="fa fa-trophy"></i>{{result.value}}<span>匹</span></div>
 								</li>
 							</ul>
@@ -95,53 +94,53 @@
 							
 							<div class="summery inner">
 								<div class="user_header">
-									<div class="icon">
+									<!-- <div class="icon">
 										<img src="img/498708.rsz.jpg" alt="">
-									</div>
-									<h2>LuckOfWise(英吉)</h2>
+									</div> -->
+									<h2>{{ctrs.yourRank.userData.nickname}}</h2>
 								</div>
 								<dl class="user_info_input">
 									<dt>ニックネーム</dt>
 									<dd>
-										<input name="user_name" type="text" placeholder="例）サカナ太郎">
+										<input name="user_name" type="text" placeholder="例）サカナ太郎" value="{{ctrs.yourRank.userData.nickname}}">
 									</dd>
-									<dt>アイコン</dt>
+									<!-- <dt>アイコン</dt>
 									<dd>
 										<input type="file" accept="image/*" id="input_icon">
-									</dd>
+									</dd> -->
 									<dt>プロフィール</dt>
 									<dd>
-										<textarea name="user_info" placeholder="自己紹介をどうぞ"></textarea>
+										<textarea name="user_info" placeholder="自己紹介をどうぞ">{{ctrs.yourRank.userData.profile}}</textarea>
 									</dd>
 								</dl>
 								<table>
 									<tr>
 										<th>累計捕獲数</th>
 										<td>
-											<p>{{ctrs.yourRank.userData.rank}}匹</p>
+											<p>{{ctrs.yourRank.userData.total_count}}匹</p>
 										</td>
 									</tr>
 									<tr>
 										<th>捕獲した生物</th>
-										<td>34種類</td>
+										<td>{{ctrs.yourRank.userData.total_type_count}}種類</td>
 									</tr>
 									<tr>
 										<th>最高ランク</th>
 										<td>
-											<p>12位</p>
+											<p>{{ctrs.yourRank.userData.max_rank}}位</p>
 										</td>
 									</tr>
 									<tr>
 										<th>所持金</th>
-										<td>12000ギョールド</td>
+										<td>{{ctrs.yourRank.userData.amount}}ギョールド</td>
 									</tr>
 									<tr>
 										<th>水槽数</th>
-										<td>12台</td>
+										<td>{{ctrs.yourRank.userData.tank_count}}台</td>
 									</tr>
 									<tr>
 										<th>クリアミッション数</th>
-										<td>22ミッション</td>
+										<td>{{ctrs.yourRank.userData.clear_mission_count}}ミッション</td>
 									</tr>
 								</table>
 							</div>
