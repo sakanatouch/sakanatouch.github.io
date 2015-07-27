@@ -97,12 +97,12 @@
 									<!-- <div class="icon">
 										<img src="img/498708.rsz.jpg" alt="">
 									</div> -->
-									<h2>{{ctrs.yourRank.userData.nickname}}</h2>
+									<h2>{{input_user_nickname}}</h2>
 								</div>
 								<dl class="user_info_input">
 									<dt>ニックネーム</dt>
 									<dd>
-										<input name="user_name" type="text" placeholder="例）サカナ太郎" value="{{ctrs.yourRank.userData.nickname}}">
+										<input ng-model="input_user_nickname" name="user_name" type="text" placeholder="例）サカナ太郎" value="{{ctrs.yourRank.userData.nickname}}">
 									</dd>
 									<!-- <dt>アイコン</dt>
 									<dd>
