@@ -40,7 +40,7 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	}
 	//全体のランクを取得
 	self.rankingCatchList = loadData.rankingCatchList;
-	var lankAPIurl = "http://sakana-touch.herokuapp.com/rankings/count?date="+today+"&token=" + getQuerystring("token");;
+	var lankAPIurl = "http://sakana-touch.herokuapp.com/rankings/count?date="+today+"&token=" + getQuerystring("token");
 	loadData.getCount_A(lankAPIurl);
 
 	//自身のランクを取得
@@ -51,6 +51,13 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	self.viewChange = function (cname) {
 		self.ranking_view_classname = cname;
 	}
+
+	// ニックネームがonchangeされた
+	self.nameChange = function () {
+		var url = "http://sakana-touch.herokuapp.com/users?token=" + getQuerystring("token") + "&nickname=" + this.value;
+		yourRank_loadData.getData(url);
+	}
+
 }]);
 
 app.service("hoge",[function(){
