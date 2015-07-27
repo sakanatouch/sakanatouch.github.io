@@ -54,7 +54,7 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 
 	// ニックネームがonchangeされた
 	self.nameChange = function () {
-		var url = "http://sakana-touch.herokuapp.com/users?token=" + getQuerystring("token") + "&nickname=" + this.value;
+		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&nickname=" + this.value;
 		yourRank_loadData.getData(url);
 	}
 
