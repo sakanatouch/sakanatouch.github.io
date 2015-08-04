@@ -18,6 +18,7 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	// self.userName = "";
 	// self.userProfile = "";
 	//console.log(self.startDay, self.endDay)
+
 	self.change = function(){
 		self.up = !self.up;
 	};
@@ -54,8 +55,16 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 		self.ranking_view_classname = cname;
 	}
 
+	//ニックネーム、プロフィール取得。
+	initUserData();
+	function initUserData(){
+		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") +"";
+		yourRank_loadData.getData(url);
+	}
+
 	// ニックネームが変更されたら
 	self.nameChange = function () {
+		// console.log(self.yourRank.userData.nickname);
 		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&nickname=" + self.yourRank.userData.nickname;
 		yourRank_loadData.getData(url);
 	}
