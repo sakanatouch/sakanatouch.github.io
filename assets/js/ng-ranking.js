@@ -63,16 +63,16 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	}
 
 	// ニックネームが変更されたら
-	self.nameChange = function () {
-		var _nickname = ""+self.yourRank.userData.nickname+"";
-		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&nickname=" + _nickname;
-		yourRank_loadData.postData(url);
-	}
+	// self.nameChange = function () {
+	// 	// var _nickname = ""+self.yourRank.userData.nickname+"";
+	// 	var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&nickname=" + self.yourRank.userData.ni;
+	// 	yourRank_loadData.postData(url);
+	// }
 
-	// ニックネームが変更されたら
-	self.profileChange = function () {
-		var _profile = ""+self.yourRank.userData.profile+"";
-		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&profile=" + _profile;
+	// プロフィールが変更されたら
+	self.userDataChange = function () {
+		// var _profile = ""+self.yourRank.userData.profile+"";
+		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&profile=" + self.yourRank.userData.profile + "&nickname=" + self.yourRank.userData.nickname;
 		yourRank_loadData.postData(url);
 	}
 
@@ -114,7 +114,7 @@ app.service("yourRank_loadData",["$http",function($http){
 	this.postData = function (url) {
 		$http.post(url)
 		.success(function (res) {
-			self.userData = res;
+			// self.userData = res;
 		})
 	};
 }]);

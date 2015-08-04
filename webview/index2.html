@@ -103,7 +103,7 @@
 								<dl class="user_info_input">
 									<dt>ニックネーム</dt>
 									<dd>
-										<input ng-blur="ctrs.nameChange()" ng-model="ctrs.yourRank.userData.nickname" name="user_name" type="text" placeholder="例）サカナ太郎">
+										<input ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.nickname" name="user_name" type="text" placeholder="例）サカナ太郎">
 									</dd>
 									<!-- <dt>アイコン</dt>
 									<dd>
@@ -113,7 +113,7 @@
 									<dd>
 										<!-- <textarea name="user_info"  ng-blur="ctrs.profileChange()" placeholder="自己紹介をどうぞ">{{ctrs.yourRank.userData.profile}}</textarea>
 										{{ctrs.yourRank.userData.profile}} -->
-										<textarea name="user_info"  ng-blur="ctrs.profileChange()" ng-model="ctrs.yourRank.userData.profile" placeholder="自己紹介をどうぞ"></textarea>
+										<textarea name="user_info"  ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.profile" placeholder="自己紹介をどうぞ"></textarea>
 									</dd>
 								</dl>
 								<div>{{ctrs.yourRank.userData}}</div>
