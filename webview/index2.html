@@ -83,7 +83,6 @@
 									<div class="capture-value"><i class="fa fa-trophy"></i>{{ctrs.yourRank.userData.value}}<span>匹</span></div>
 								</div>
 							</div>
-							{{ctrs.yourRank.userData}}
 							<ul>
 								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:10" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}" class="rank_box">
 									<div class="count">{{result.rank}}</div>
@@ -117,6 +116,7 @@
 										<textarea name="user_info"  ng-blur="ctrs.profileChange()" ng-model="ctrs.yourRank.userData.profile" placeholder="自己紹介をどうぞ"></textarea>
 									</dd>
 								</dl>
+								<div>{{ctrs.yourRank.userData}}</div>
 								<table>
 									<tr>
 										<th>累計捕獲数</th>
