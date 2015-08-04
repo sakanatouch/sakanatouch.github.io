@@ -66,14 +66,14 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	self.nameChange = function () {
 		var _nickname = ""+self.yourRank.userData.nickname+"";
 		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&nickname=" + _nickname;
-		yourRank_loadData.getData(url);
+		yourRank_loadData.postData(url);
 	}
 
 	// ニックネームが変更されたら
 	self.profileChange = function () {
 		var _profile = ""+self.yourRank.userData.profile+"";
 		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&profile=" + _profile;
-		yourRank_loadData.getData(url);
+		yourRank_loadData.postData(url);
 	}
 
 }]);
@@ -107,6 +107,12 @@ app.service("yourRank_loadData",["$http",function($http){
 	this.userData = {};
 	this.getData = function (url) {
 		$http.get(url)
+		.success(function (res) {
+			self.userData = res;
+		})
+	};
+	this.postData = function (url) {
+		$http.post(url)
 		.success(function (res) {
 			self.userData = res;
 		})
