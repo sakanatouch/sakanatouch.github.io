@@ -20,7 +20,7 @@
 					<h1><img src="../assets/img/webview/news_tit.png" alt=""></h1>
 					<a id="closebtn" href='unity:close'><img src="/assets/img/webview/btn_header_close.png" alt="close btn"><span>とじる</span></a>
 				</header>
-				
+
 				<nav class="ranking_tab">
 					<button class="catch" ng-click="ctrs.viewChange('catch_view')"><i class="fa fa-newspaper-o"></i>新着</button>
 					<button class="kind" ng-click="ctrs.viewChange('kind_view')"><i class="fa fa-trophy"></i>順位</button>
@@ -36,7 +36,7 @@
 										<h1><i class="fa fa-list-alt"></i>【新機能!】週間ユーザーランキング</h1>
 										<div class="desc">
 											サカナタッチ全ユーザーのランキングを毎週集計発表します！！<br>
-											右上の「週間ランキング」をクリック！	
+											右上の「週間ランキング」をクリック！
 										</div>
 									</article>
 								</li>
@@ -91,18 +91,19 @@
 							</ul>
 						</div>
 						<div class="ranking_list_view list_view user_setting">
-							
+
 							<div class="summery inner">
 								<div class="user_header">
 									<!-- <div class="icon">
 										<img src="img/498708.rsz.jpg" alt="">
 									</div> -->
-									<h2>{{input_user_nickname}} {{ctrs.yourRank.userData.nickname}}</h2>
+									<h2 ng-bind="ctrs.yourRank.userData.nickname"></h2>
+									<!-- <h2>{{input_user_nickname}} {{ctrs.yourRank.userData.nickname}}</h2> -->
 								</div>
 								<dl class="user_info_input">
 									<dt>ニックネーム</dt>
 									<dd>
-										<input ng-change="nameChange()" ng-model="input_user_nickname" name="user_name" type="text" placeholder="例）サカナ太郎" value="{{ctrs.yourRank.userData.nickname}}">
+										<input ng-blur="ctrs.nameChange()" ng-model="ctrs.yourRank.userData.nickname" name="user_name" type="text" placeholder="例）サカナ太郎">
 									</dd>
 									<!-- <dt>アイコン</dt>
 									<dd>
@@ -110,8 +111,9 @@
 									</dd> -->
 									<dt>プロフィール</dt>
 									<dd>
-										<textarea name="user_info" placeholder="自己紹介をどうぞ">{{ctrs.yourRank.userData.profile}}</textarea>
-										{{ctrs.yourRank.userData.profile}}
+										<!-- <textarea name="user_info"  ng-blur="ctrs.profileChange()" placeholder="自己紹介をどうぞ">{{ctrs.yourRank.userData.profile}}</textarea>
+										{{ctrs.yourRank.userData.profile}} -->
+										<textarea name="user_info"  ng-blur="ctrs.profileChange()" ng-model="ctrs.yourRank.userData.profile" placeholder="自己紹介をどうぞ"></textarea>
 									</dd>
 								</dl>
 								<table>
@@ -145,15 +147,15 @@
 									</tr>
 								</table>
 							</div>
-							
+
 						</div>
 					</div><!-- ranking_all_wrap_inner -->
 				</div><!-- ranking_all_wrap -->
-				
+
 			</div>
 		</main>
-		
+
 	</div>
-	
+
 </body>
 </html>

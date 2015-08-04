@@ -15,6 +15,8 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	var oneWeekLater = owl.getFullYear() + "/" + Number(owl.getMonth()+1) + "/" + owl.getDate();
 	self.startDay = today;
 	self.endDay = oneWeekLater;
+	// self.userName = "";
+	// self.userProfile = "";
 	//console.log(self.startDay, self.endDay)
 	self.change = function(){
 		self.up = !self.up;
@@ -52,9 +54,15 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 		self.ranking_view_classname = cname;
 	}
 
-	// ニックネームがonchangeされた
+	// ニックネームが変更されたら
 	self.nameChange = function () {
-		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&nickname=" + this.value;
+		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&nickname=" + self.yourRank.nickname;
+		yourRank_loadData.getData(url);
+	}
+
+	// ニックネームが変更されたら
+	self.profileChange = function () {
+		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&profile=" + self.yourRank.profile;
 		yourRank_loadData.getData(url);
 	}
 
@@ -76,10 +84,10 @@ app.service("loadData",["$http",function($http){
 					self.rankingCatchList.push(data)
 				} else {
 					self.rankingFishkindList.push(data)
-				} 
-				
+				}
+
 			})
-			
+
 		})
 	}
 }]);
