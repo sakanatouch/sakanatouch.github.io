@@ -140,11 +140,25 @@ app.directive("userNickName",[function(){
 					scope.nickNameCtr.isEdit = false;
 				});
 			});
+			input.on("keypress",function(){
+				var text = scope.ctrs.yourRank.userData.nickname;
+				var maxLength = 7;
+				if(text.length > maxLength){
+						scope.$apply(function(){
+						var _text = scope.ctrs.yourRank.userData.nickname.substring(0,maxLength);
+						scope.ctrs.yourRank.userData.nickname = _text;
+				});
+
+				}
+			});
 		},
 		controller: [function(){
 			// this.name =
 			var self = this;
+			var max_length = 8;
+
 			this.isEdit = false;
+
 		}],
 		controllerAs : "nickNameCtr"
 	};
