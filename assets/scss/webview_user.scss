@@ -215,7 +215,7 @@ header {
 		}
 		li {
 			background-color: darken($blue, 10%);
-			
+
 		}
 		.fa-trophy {
 			margin-right: 10px;
@@ -338,6 +338,33 @@ header {
 				}
 			}
 		}
+		.user_nick_name{
+			h2{
+				text-align: center;
+				font-size: 29px;
+				margin-top: 5px;
+				margin-bottom: -5px;
+				position: relative;
+				i{
+					opacity: 0.7;
+					font-size: 31px;
+					padding-right: 4px;
+					vertical-align: middle;
+					position: absolute;
+					left: 0;
+					top: 7px;
+				}
+				span{
+					font-size: 12px;
+				}
+			}
+		}
+		.user_profile{
+			i{
+				font-size: 32px;
+			    opacity: 0.7;
+			}
+		}
 		dd {
 			margin-left: 0;
 			margin-bottom: 1em;
@@ -372,18 +399,3 @@ header {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

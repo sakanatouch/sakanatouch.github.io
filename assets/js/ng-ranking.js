@@ -118,3 +118,63 @@ app.service("yourRank_loadData",["$http",function($http){
 		})
 	};
 }]);
+
+
+//ニックネームディレクティブ
+app.directive("userNickName",[function(){
+	return {
+		restrict : "AE",
+		templateUrl : "user_nick_name_tmp",
+		replace: true,
+		link: function(scope,element,attr,controller,transclude){
+			// console.log(element)
+			var editBtn = element.find("i");
+			var input = element.find("input");
+			editBtn.on("touchstart",function(){
+				scope.$apply(function(){
+					scope.nickNameCtr.isEdit = true;
+				});
+			});
+			input.on("blur",function(){
+				scope.$apply(function(){
+					scope.nickNameCtr.isEdit = false;
+				});
+			});
+		},
+		controller: [function(){
+			// this.name =
+			var self = this;
+			this.isEdit = false;
+		}],
+		controllerAs : "nickNameCtr"
+	};
+}]);
+//プロフィールディレクティブ
+app.directive("userProfile",[function(){
+	return {
+		restrict : "AE",
+		templateUrl : "user_profile_tmp",
+		replace: true,
+		link: function(scope,element,attr,controller,transclude){
+			// console.log(element)
+			var editBtn = element.find("i");
+			var textarea = element.find("textarea");
+			editBtn.on("touchstart",function(){
+				scope.$apply(function(){
+					scope.profileCtr.isEdit = true;
+				});
+			});
+			textarea.on("blur",function(){
+				scope.$apply(function(){
+					scope.profileCtr.isEdit = false;
+				});
+			});
+		},
+		controller: [function(){
+			// this.name =
+			var self = this;
+			this.isEdit = false;
+		}],
+		controllerAs : "profileCtr"
+	};
+}]);

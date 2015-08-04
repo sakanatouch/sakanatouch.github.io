@@ -934,6 +934,25 @@ header img {
         width: 60px;
         height: 60%;
         border-radius: 50%; }
+  #ranking .user_setting .user_nick_name h2 {
+    text-align: center;
+    font-size: 29px;
+    margin-top: 5px;
+    margin-bottom: -5px;
+    position: relative; }
+    #ranking .user_setting .user_nick_name h2 i {
+      opacity: 0.7;
+      font-size: 31px;
+      padding-right: 4px;
+      vertical-align: middle;
+      position: absolute;
+      left: 0;
+      top: 7px; }
+    #ranking .user_setting .user_nick_name h2 span {
+      font-size: 12px; }
+  #ranking .user_setting .user_profile i {
+    font-size: 32px;
+    opacity: 0.7; }
   #ranking .user_setting dd {
     margin-left: 0;
     margin-bottom: 1em; }
