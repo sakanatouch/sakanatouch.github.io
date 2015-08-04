@@ -56,13 +56,13 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 
 	// ニックネームが変更されたら
 	self.nameChange = function () {
-		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&nickname=" + self.yourRank.nickname;
+		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&nickname=" + self.yourRank.userData.nickname;
 		yourRank_loadData.getData(url);
 	}
 
 	// ニックネームが変更されたら
 	self.profileChange = function () {
-		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&profile=" + self.yourRank.profile;
+		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&profile=" + self.yourRank.userData.profile;
 		yourRank_loadData.getData(url);
 	}
 
