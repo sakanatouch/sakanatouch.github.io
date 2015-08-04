@@ -64,14 +64,15 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 
 	// ニックネームが変更されたら
 	self.nameChange = function () {
-		// console.log(self.yourRank.userData.nickname);
-		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&nickname=" + self.yourRank.userData.nickname;
+		var _nickname = ""+self.yourRank.userData.nickname+"";
+		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&nickname=" + _nickname;
 		yourRank_loadData.getData(url);
 	}
 
 	// ニックネームが変更されたら
 	self.profileChange = function () {
-		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&profile=" + self.yourRank.userData.profile;
+		var _profile = ""+self.yourRank.userData.profile+"";
+		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") + "&profile=" + _profile;
 		yourRank_loadData.getData(url);
 	}
 
@@ -103,11 +104,11 @@ app.service("loadData",["$http",function($http){
 
 app.service("yourRank_loadData",["$http",function($http){
 	var self = this;
-	this.userData = {}
+	this.userData = {};
 	this.getData = function (url) {
 		$http.get(url)
 		.success(function (res) {
-			self.userData = res
+			self.userData = res;
 		})
-	}
+	};
 }]);
