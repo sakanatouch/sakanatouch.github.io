@@ -160,7 +160,7 @@
 	<script type="text/ng-template" id="user_nick_name_tmp">
 		<dd  class="user_nick_name">
 			<h2  ng-show="!nickNameCtr.isEdit"><i class="fa fa-pencil-square-o"></i>{{ctrs.yourRank.userData.nickname}}<span>さん</span></h2>
-			<input  ng-show="nickNameCtr.isEdit" ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.nickname" ng-change="nickNameCtr.checkLength(ctrs.yourRank.userData.nickname)" name="user_name" type="text">
+			<input  ng-show="nickNameCtr.isEdit" ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.nickname"  name="user_name" type="text">
 		</dd>
 	</script>
 	<script type="text/ng-template" id="user_profile_tmp">
