@@ -57,12 +57,12 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 		self.ranking_view_classname = cname;
 	}
 
-	//ニックネーム、プロフィール取得。
-	initUserData();
-	function initUserData(){
-		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") +"";
-		yourRank_loadData.getData(url);
-	}
+	// //ニックネーム、プロフィール取得。2015.0805コメントアウト。L５０でやっていた
+	// initUserData();
+	// function initUserData(){
+	// 	var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") +"";
+	// 	yourRank_loadData.getData(url);
+	// }
 
 	// ニックネームが変更されたら
 	// self.nameChange = function () {
@@ -103,7 +103,7 @@ app.service("loadData",["$http",function($http){
 		})
 	}
 }]);
-
+//ユーザーデータへのアクセス
 app.service("yourRank_loadData",["$http",function($http){
 	var self = this;
 	this.userData = {};
