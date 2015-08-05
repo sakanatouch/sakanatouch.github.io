@@ -934,25 +934,36 @@ header img {
         width: 60px;
         height: 60%;
         border-radius: 50%; }
+  #ranking .user_setting .user_nick_name dt i {
+    font-size: 18px; }
   #ranking .user_setting .user_nick_name h2 {
-    text-align: center;
+    text-align: left;
     font-size: 29px;
     margin-top: 5px;
     margin-bottom: -5px;
     position: relative; }
-    #ranking .user_setting .user_nick_name h2 i {
-      opacity: 0.7;
-      font-size: 31px;
-      padding-right: 4px;
-      vertical-align: middle;
-      position: absolute;
-      left: 0;
-      top: 7px; }
     #ranking .user_setting .user_nick_name h2 span {
       font-size: 12px; }
-  #ranking .user_setting .user_profile i {
-    font-size: 32px;
-    opacity: 0.7; }
+  #ranking .user_setting .user_nick_name input[name=user_name] {
+    background-color: #0373C3;
+    height: 46px;
+    text-align: left;
+    font-size: 29px; }
+  #ranking .user_setting .user_profile {
+    margin-top: 22px; }
+    #ranking .user_setting .user_profile dt i {
+      padding-left: 10px;
+      font-size: 18px; }
+    #ranking .user_setting .user_profile dd {
+      min-height: 100px; }
+      #ranking .user_setting .user_profile dd p {
+        padding: 0.5em;
+        white-space: pre-line;
+        word-break: break-all; }
+      #ranking .user_setting .user_profile dd textarea[name=user_info] {
+        background-color: #0373C3;
+        padding: 0.5em;
+        min-height: 100px; }
   #ranking .user_setting dd {
     margin-left: 0;
     margin-bottom: 1em; }
@@ -962,11 +973,12 @@ header img {
     border-bottom: 1px solid white;
     width: 100%;
     font-size: 100%;
-    padding-bottom: .3em;
     color: white; }
-  #ranking .user_setting textarea[name=user_info] {
-    height: 10em; }
+  #ranking .user_setting .user_info_header {
+    margin-top: 8px;
+    font-size: 16px; }
   #ranking .user_setting table {
+    margin-top: 8px;
     width: 100%;
     border-collapse: collapse; }
   #ranking .user_setting th {

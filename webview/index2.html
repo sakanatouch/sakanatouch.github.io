@@ -94,29 +94,14 @@
 
 							<div class="summery inner">
 								<div class="user_header">
-									<!-- <div class="icon">
-										<img src="img/498708.rsz.jpg" alt="">
-									</div> -->
-									<!-- <h2 ng-bind="ctrs.yourRank.userData.nickname"></h2> -->
-									<!-- <h2>{{input_user_nickname}} {{ctrs.yourRank.userData.nickname}}</h2> -->
 								</div>
 								<dl class="user_info_input">
-									<dt>ニックネーム</dt>
-									<dd user-nick-name></dd>
-									<!-- <dt>アイコン</dt>
-									<dd>
-										<input type="file" accept="image/*" id="input_icon">
-									</dd> -->
-									<dt>プロフィール</dt>
-									<dd user-profile></dd>
-									<!-- <dd class="user_profile">
-										<p>
-											こんにちわーーーーーーーー。はろはろー
-										</p>
-										<i class="fa fa-pencil-square-o"></i>
-										<textarea name="user_info"  ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.profile"></textarea>
-									</dd> -->
+									<div user-nick-name></div>
+									<div user-profile></div>
 								</dl>
+								<p class="user_info_header">
+									情報
+								</p>
 								<table>
 									<tr>
 										<th>累計捕獲数</th>
@@ -157,20 +142,26 @@
 		</main>
 
 	</div>
+
+
 	<script type="text/ng-template" id="user_nick_name_tmp">
-		<dd  class="user_nick_name">
-			<h2  ng-show="!nickNameCtr.isEdit"><i class="fa fa-pencil-square-o"></i>{{ctrs.yourRank.userData.nickname}}<span>さん</span></h2>
-			<input  ng-show="nickNameCtr.isEdit" ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.nickname"  name="user_name" type="text">
+	<div  class="user_nick_name">
+		<dt>ニックネーム（８字以内）<i class="fa fa-pencil"></i></dt>
+		<dd>
+			<h2  ng-show="!nickNameCtr.isEdit">{{ctrs.yourRank.userData.nickname}}<span>さん</span></h2>
+			<input  ng-show="nickNameCtr.isEdit" ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.nickname" name="user_name" type="text">
 		</dd>
+	</div>
 	</script>
 	<script type="text/ng-template" id="user_profile_tmp">
-	<dd class="user_profile">
-		<p  ng-show="!profileCtr.isEdit">
-			{{ctrs.yourRank.userData.profile}}
-		</p>
-		<textarea  ng-show="profileCtr.isEdit"  name="user_info"  ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.profile"></textarea>
-		<i  ng-show="!profileCtr.isEdit" class="fa fa-pencil-square-o"></i>
-	</dd>
+	<div class="user_profile">
+		<dt>プロフィール<i  ng-show="!profileCtr.isEdit" class="fa fa-pencil"></i></dt>
+		<dd>
+			<p ng-show="!profileCtr.isEdit" ng-bind="ctrs.yourRank.userData.profile">
+			</p>
+			<textarea  ng-show="profileCtr.isEdit"  name="user_info"  ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.profile"></textarea>
+		</dd>
+	</div>
 	</script>
 
 </body>
