@@ -122,26 +122,28 @@ app.directive("userNickName",[function(){
 		restrict : "AE",
 		templateUrl : "user_nick_name_tmp",
 		replace: true,
-		link: function(scope,element,attr,controller,transclude){
-			var h2 = element.find("h2");
-			var dt = element.find("dt");
-			var input = element.find("input");
-			dt.on("touchstart",function(){
+		link: function(scope,iElement,attr,controller,transclude){
+			var h2 = iElement.find("h2");
+			var dt = iElement.find("dt");
+			var input = iElement.find("input");
+			dt.on("click",function(){
 				scope.$apply(function(){
 					scope.nickNameCtr.isEdit = true;
 				});
+				input[0].focus();
 			});
-			h2.on("touchstart",function(){
+			h2.on("click",function(){
 				scope.$apply(function(){
 					scope.nickNameCtr.isEdit = true;
 				});
+				input[0].focus();
 			});
 			input.on("blur",function(){
 				scope.$apply(function(){
 					scope.nickNameCtr.isEdit = false;
 				});
 			});
-			input.on("change",function(){
+			input.on("keydown",function(){
 				var text = scope.ctrs.yourRank.userData.nickname;
 				var maxLength = 7;
 				if(text.length > maxLength){
@@ -165,23 +167,23 @@ app.directive("userProfile",[function(){
 		restrict : "AE",
 		templateUrl : "user_profile_tmp",
 		replace: true,
-		link: function(scope,element,attr,controller,transclude){
-			var dt = element.find("dt");
-			var p = element.find("p");
-			var textarea = element.find("textarea");
-			dt.on("touchstart",function(){
+		link: function(scope,iElement,attr,controller,transclude){
+			var dt = iElement.find("dt");
+			var p = iElement.find("p");
+			var textarea = iElement.find("textarea");
+			dt.on("click",function(){
 				scope.$apply(function(){
-					console.log("aaaaaaaaa");
 					scope.profileCtr.isEdit = true;
 				});
+				textarea[0].focus();
 			});
-			p.on("touchstart",function(){
+			p.on("click",function(){
 				scope.$apply(function(){
 					scope.profileCtr.isEdit = true;
 				});
+				textarea[0].focus();
 			});
 			textarea.on("blur",function(){
-				console.log("aaaaaaaaa");
 				scope.$apply(function(){
 					scope.profileCtr.isEdit = false;
 				});
