@@ -145,8 +145,9 @@ app.directive("userNickName",[function(){
 			});
 			input.on("keyup",function(){
 				var text = scope.ctrs.yourRank.userData.nickname;
+				var length = text.length;
 				var maxLength = 7;
-				if(text.length > maxLength){
+				if(length > maxLength){
 						scope.$apply(function(){
 						var _text = scope.ctrs.yourRank.userData.nickname.substring(0,maxLength);
 						scope.ctrs.yourRank.userData.nickname = _text;
