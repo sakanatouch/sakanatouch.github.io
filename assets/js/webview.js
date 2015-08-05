@@ -61,7 +61,7 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	initUserData();
 	function initUserData(){
 		var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") +"";
-		//yourRank_loadData.getData(url);
+		yourRank_loadData.getData(url);
 	}
 
 	// ニックネームが変更されたら
