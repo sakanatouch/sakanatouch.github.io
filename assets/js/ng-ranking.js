@@ -48,8 +48,10 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 
 	//自身のランクを取得
 	self.yourRank = yourRank_loadData;
-	var url = "http://sakana-touch.herokuapp.com/users?date="+today+"&token=" + getQuerystring("token");
-	yourRank_loadData.getData(url);
+	var my_api_url = "http://sakana-touch.herokuapp.com/users?date="+today+"&token=" + getQuerystring("token");
+	yourRank_loadData.getData(my_api_url);
+
+	//タブのアクティブ状態表示
 	self.ranking_view_classname = "catch_view";
 	self.viewChange = function (cname) {
 		self.ranking_view_classname = cname;
