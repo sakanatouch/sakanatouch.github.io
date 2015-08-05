@@ -124,9 +124,15 @@ app.directive("userNickName",[function(){
 		replace: true,
 		link: function(scope,element,attr,controller,transclude){
 			// console.log(element)
-			var editBtn = element.find("i");
+			var h2 = element.find("h2");
+			var dt = element.find("dt");
 			var input = element.find("input");
-			editBtn.on("touchstart",function(){
+			dt.on("touchstart",function(){
+				scope.$apply(function(){
+					scope.nickNameCtr.isEdit = true;
+				});
+			});
+			h2.on("touchstart",function(){
 				scope.$apply(function(){
 					scope.nickNameCtr.isEdit = true;
 				});
@@ -144,17 +150,13 @@ app.directive("userNickName",[function(){
 						var _text = scope.ctrs.yourRank.userData.nickname.substring(0,maxLength);
 						scope.ctrs.yourRank.userData.nickname = _text;
 				});
-
 				}
 			});
 		},
 		controller: [function(){
 			// this.name =
 			var self = this;
-			var max_length = 8;
-
 			this.isEdit = false;
-
 		}],
 		controllerAs : "nickNameCtr"
 	};
@@ -167,9 +169,16 @@ app.directive("userProfile",[function(){
 		replace: true,
 		link: function(scope,element,attr,controller,transclude){
 			// console.log(element)
-			var editBtn = element.find("i");
+			var dt = element.find("dt");
+			var p = element.find("p");
+			console.log(p);
 			var textarea = element.find("textarea");
-			editBtn.on("touchstart",function(){
+			dt.on("touchstart",function(){
+				scope.$apply(function(){
+					scope.profileCtr.isEdit = true;
+				});
+			});
+			p.on("touchstart",function(){
 				scope.$apply(function(){
 					scope.profileCtr.isEdit = true;
 				});
