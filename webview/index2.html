@@ -145,23 +145,23 @@
 
 
 	<script type="text/ng-template" id="user_nick_name_tmp">
-	<div  class="user_nick_name">
-		<dt>ニックネーム（８字以内）<i class="fa fa-pencil"></i></dt>
-		<dd>
-			<h2  ng-show="!nickNameCtr.isEdit">{{ctrs.yourRank.userData.nickname}}<span>さん</span></h2>
-			<input  ng-show="nickNameCtr.isEdit" ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.nickname" name="user_name" type="text">
-		</dd>
-	</div>
+		<div class="user_nick_name">
+			<dt>ニックネーム（８字以内）<i class="fa fa-pencil"></i></dt>
+			<dd>
+				<h2 ng-show="!nickNameCtr.isEdit">{{ctrs.yourRank.userData.nickname}}<span>さん</span></h2>
+				<input  ng-show="nickNameCtr.isEdit" ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.nickname" name="user_name" type="text">
+			</dd>
+		</div>
 	</script>
 	<script type="text/ng-template" id="user_profile_tmp">
-	<div class="user_profile">
-		<dt>プロフィール<i class="fa fa-pencil"></i></dt>
-		<dd>
-			<p ng-show="!profileCtr.isEdit" ng-bind="ctrs.yourRank.userData.profile">
-			</p>
-			<textarea  ng-show="profileCtr.isEdit"  name="user_info"  ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.profile"></textarea>
-		</dd>
-	</div>
+		<div class="user_profile">
+			<dt>プロフィール<i class="fa fa-pencil"></i></dt>
+			<dd>
+				<p ng-show="!profileCtr.isEdit" ng-bind="ctrs.yourRank.userData.profile">
+				</p>
+				<textarea  ng-show="profileCtr.isEdit"  name="user_info"  ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.profile"></textarea>
+			</dd>
+		</div>
 	</script>
 
 </body>
