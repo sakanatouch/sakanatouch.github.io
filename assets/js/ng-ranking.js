@@ -143,7 +143,7 @@ app.directive("userNickName",[function(){
 					scope.nickNameCtr.isEdit = false;
 				});
 			});
-			input.on("keydown",function(){
+			input.on("keyup",function(){
 				var text = scope.ctrs.yourRank.userData.nickname;
 				var maxLength = 7;
 				if(text.length > maxLength){
