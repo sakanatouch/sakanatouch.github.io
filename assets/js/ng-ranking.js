@@ -146,7 +146,7 @@ app.directive("userNickName",[function(){
 			input.on("keydown",function(){
 				var text = scope.ctrs.yourRank.userData.nickname;
 				var length = text.length;
-				var maxLength = 7;
+				var maxLength = 8;
 				if(length > maxLength){
 						scope.$apply(function(){
 						var _text = scope.ctrs.yourRank.userData.nickname.substring(0,maxLength);
@@ -157,7 +157,7 @@ app.directive("userNickName",[function(){
 			input.on("change",function(){
 				var text = scope.ctrs.yourRank.userData.nickname;
 				var length = text.length;
-				var maxLength = 7;
+				var maxLength = 8;
 				if(length > maxLength){
 						scope.$apply(function(){
 						var _text = scope.ctrs.yourRank.userData.nickname.substring(0,maxLength);
