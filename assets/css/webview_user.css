@@ -688,7 +688,7 @@ header img {
   #news .list_view li {
     list-style-type: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: .5rem 1rem;
+    padding: .5rem .5rem;
     vertical-align: middle; }
     #news .list_view li a {
       text-decoration: none;
@@ -721,7 +721,7 @@ header img {
   #ranking .list_view li {
     list-style-type: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: .5rem 1rem;
+    padding: .5rem .5rem;
     vertical-align: middle; }
     #ranking .list_view li a {
       text-decoration: none;
@@ -827,12 +827,12 @@ header img {
       display: block;
       line-height: 32px; }
     #ranking .ranking_list_view .fa-trophy {
-      margin-right: 10px; }
+      margin-right: 5px; }
     #ranking .ranking_list_view .r1 {
       font-size: 120%;
       background-color: #0081d1; }
       #ranking .ranking_list_view .r1 .nick-name {
-        font-size: 120%;
+        font-size: 115%;
         line-height: 40px; }
       #ranking .ranking_list_view .r1 .fa-trophy {
         font-size: 120%;
