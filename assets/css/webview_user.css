@@ -964,7 +964,9 @@ header img {
     background-color: #0373C3;
     height: 46px;
     text-align: left;
-    font-size: 29px; }
+    font-size: 29px;
+    font-weight: bold;
+    padding-bottom: 0; }
   #ranking .user_setting .user_profile {
     margin-top: 22px; }
     #ranking .user_setting .user_profile dt i {
