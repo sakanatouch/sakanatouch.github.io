@@ -155,7 +155,10 @@
 		<div class="user_nick_name">
 			<dt>ニックネーム（８字以内）<i class="fa fa-pencil"></i></dt>
 			<dd>
-				<h2 ng-show="!nickNameCtr.isEdit">{{ctrs.yourRank.userData.nickname}}<span>さん</span></h2>
+				<div ng-show="!nickNameCtr.isEdit">
+					<h2 ng-show="ctrs.yourRank.userData.nickname">{{ctrs.yourRank.userData.nickname}}</h2>
+					<h2 ng-show="!ctrs.yourRank.userData.nickname">名無しの漁師</h2>
+				</div>
 				<input  ng-show="nickNameCtr.isEdit" ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.nickname" name="user_name" type="text" maxlength="8">
 			</dd>
 		</div>
