@@ -143,7 +143,18 @@ app.directive("userNickName",[function(){
 					scope.nickNameCtr.isEdit = false;
 				});
 			});
-			input.on("keyup",function(){
+			input.on("keydown",function(){
+				var text = scope.ctrs.yourRank.userData.nickname;
+				var length = text.length;
+				var maxLength = 7;
+				if(length > maxLength){
+						scope.$apply(function(){
+						var _text = scope.ctrs.yourRank.userData.nickname.substring(0,maxLength);
+						scope.ctrs.yourRank.userData.nickname = _text;
+				});
+				}
+			});
+			input.on("change",function(){
 				var text = scope.ctrs.yourRank.userData.nickname;
 				var length = text.length;
 				var maxLength = 7;
