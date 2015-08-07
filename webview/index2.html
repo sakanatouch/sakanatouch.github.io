@@ -87,6 +87,12 @@
 							<ul>
 								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:10" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}" class="rank_box">
 									<div class="count">{{result.rank}}</div>
+									<div ng-show="result.nickname" class="nick-name">
+										{{result.nickname}}
+									</div>
+									<div ng-hide="result.nickname" class="nick-name">
+										名無しの漁師
+									</div>
 									<div class="capture-value"><i class="fa fa-trophy"></i>{{result.value}}<span>匹</span></div>
 								</li>
 							</ul>
@@ -100,9 +106,9 @@
 									<div user-nick-name></div>
 									<div user-profile></div>
 								</dl>
-								<p class="user_info_header">
+								<!-- <p class="user_info_header">
 									情報
-								</p>
+								</p> -->
 								<table>
 									<tr>
 										<th>累計捕獲数</th>
