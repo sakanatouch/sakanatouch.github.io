@@ -432,4 +432,15 @@ header {
 			background-color: rgba(255,255,255,.1);
 		}
 	}
+	.seisokuchi_map {
+		.map_wrapper, .distance_wrapper {
+			img {
+				max-width: 100%;
+			}
+		}
+		.content {
+			padding: 0 1em;
+			margin: 0 0 1em;
+		}
+	}
 }

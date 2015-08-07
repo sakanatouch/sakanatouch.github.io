@@ -998,3 +998,8 @@ header img {
     line-height: 1; }
   #ranking .user_setting tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.1); }
+  #ranking .seisokuchi_map .map_wrapper img, #ranking .seisokuchi_map .distance_wrapper img {
+    max-width: 100%; }
+  #ranking .seisokuchi_map .content {
+    padding: 0 1em;
+    margin: 0 0 1em; }
