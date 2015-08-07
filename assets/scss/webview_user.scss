@@ -214,6 +214,8 @@ header {
 		}
 		.count {
 			// margin-right: 1em;
+			flex-grow: 1;
+			flex-basis: 2em;
 			&::after {
 				content: "位";
 				font-size: 60%;
@@ -228,6 +230,7 @@ header {
 			text-shadow: 0 0 1px rgba(0,0,0,0.8);
 			display: block;
 			line-height: 32px;
+			flex-grow: 2;
 		}
 		.fa-trophy {
 			margin-right: 5px;

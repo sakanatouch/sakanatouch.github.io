@@ -816,16 +816,28 @@ header img {
         font-weight: bold; }
       #ranking .ranking_list_view .count small, #ranking .ranking_list_view .capture-value small {
         font-size: 80%; }
-    #ranking .ranking_list_view .count::after {
-      content: "位";
-      font-size: 60%; }
+    #ranking .ranking_list_view .count {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      -webkit-flex-basis: 2em;
+      -ms-flex-preferred-size: 2em;
+      flex-basis: 2em; }
+      #ranking .ranking_list_view .count::after {
+        content: "位";
+        font-size: 60%; }
     #ranking .ranking_list_view li {
       background-color: #00629e; }
     #ranking .ranking_list_view .nick-name {
       font-weight: bold;
       text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
       display: block;
-      line-height: 32px; }
+      line-height: 32px;
+      -webkit-box-flex: 2;
+      -webkit-flex-grow: 2;
+      -ms-flex-positive: 2;
+      flex-grow: 2; }
     #ranking .ranking_list_view .fa-trophy {
       margin-right: 5px; }
     #ranking .ranking_list_view .r1 {
