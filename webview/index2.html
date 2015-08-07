@@ -8,7 +8,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
 	<!--<script src="../assets/js/webview.js"></script>-->
    <script src="../assets/js/ng-ranking.js"></script>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../assets/css/webview_user.css">
 
 </head>
@@ -23,9 +23,10 @@
 				</header>
 
 				<nav class="ranking_tab">
-					<button class="catch" ng-click="ctrs.viewChange('catch_view')"><i class="fa fa-newspaper-o"></i>新着</button>
-					<button class="kind" ng-click="ctrs.viewChange('kind_view')"><i class="fa fa-trophy"></i>順位</button>
-					<button class="user" ng-click="ctrs.viewChange('user_view')"><i class="fa fa-user"></i>あなた</button>
+					<button class="catch" ng-click="ctrs.viewChange('catch_view')"><i class="fa fa-newspaper-o"></i><span>新着</span></button>
+					<button class="kind" ng-click="ctrs.viewChange('kind_view')"><i class="fa fa-trophy"></i><span>順位</span></button>
+					<button class="user" ng-click="ctrs.viewChange('user_view')"><i class="fa fa-user"></i><span>あなた</span></button>
+					<button class="map" ng-click="ctrs.viewChange('map_view')"><i class="fa fa-map"></i><span>マップ</span></button>
 				</nav>
 
 				<div class="ranking_all_wrap">
@@ -142,6 +143,23 @@
 							</div>
 
 						</div>
+						<div class="ranking_list_view seisokuchi_map">
+							<div class="map_wrapper">
+								<img src="img/seisokuchi_map.png" alt="">
+								<div class="content">
+									<p>サカナタッチの世界では、そのエリアでしか出現しないサカナだって生息しているぞ。<br>日本全国のサカナタッチユーザーのみなさんが捕獲してくれたおかげで、今各地にこんな種類のサカナが生息していることがわかった！</p>
+									<p>ぜひ、旅行や出張のときはサカナタッチでその場所しかいないサカナをつかまえてほしい！検討を祈る！</p>
+								</div>
+							</div>
+							<div class="distance_wrapper">
+								<img src="img/distance_map.png" alt="">
+								<div class="content">
+									<p>ホームからの距離が、離れれば離れるほど新しいサカナをつかまえられるサカナタッチの世界。<br>今わかっている距離による生息地情報が徐々に明らかになってきたぞ。</p>
+									<p>意外だけど、オタリアのような大型って遠くにいると思いきや、近かったんだね。灯台下暗しって感じ。</p>
+									<p>注意してほしいのは、これらのサカナたちにも「レア度」があって、必ずその距離にいたら出てくる、とは限らないから、出てこなくても頑張って探してね。</p>
+								</div>
+							</div>
+						</div>	
 					</div><!-- ranking_all_wrap_inner -->
 				</div><!-- ranking_all_wrap -->
 

@@ -748,13 +748,17 @@ header img {
       font-weight: bold;
       color: white;
       background-color: #00629e;
-      font-size: 110%;
+      font-size: 90%;
       margin: 0;
       position: relative; }
       #ranking .ranking_tab button i {
-        font-size: 180%;
+        font-size: 140%;
         vertical-align: middle;
-        margin-right: .5em; }
+        display: block;
+        margin-bottom: 3px; }
+      #ranking .ranking_tab button span {
+        display: block;
+        font-size: 80%; }
       #ranking .ranking_tab button::after {
         content: "";
         display: block;
@@ -789,19 +793,23 @@ header img {
       -webkit-justify-content: start;
       -ms-flex-pack: start;
       justify-content: start;
-      width: 300%;
+      width: 400%;
       -webkit-transition: .3s;
       transition: .3s; }
   #ranking.kind_view .ranking_all_wrap_inner {
-    -webkit-transform: translateX(-33.333%);
-    -ms-transform: translateX(-33.333%);
-    transform: translateX(-33.333%); }
+    -webkit-transform: translateX(-25%);
+    -ms-transform: translateX(-25%);
+    transform: translateX(-25%); }
   #ranking.user_view .ranking_all_wrap_inner {
-    -webkit-transform: translateX(-66.666%);
-    -ms-transform: translateX(-66.666%);
-    transform: translateX(-66.666%); }
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  #ranking.map_view .ranking_all_wrap_inner {
+    -webkit-transform: translateX(-75%);
+    -ms-transform: translateX(-75%);
+    transform: translateX(-75%); }
   #ranking .ranking_list_view {
-    width: 33.333%; }
+    width: 25%; }
     #ranking .ranking_list_view .fa-trophy {
       display: none; }
     #ranking .ranking_list_view .add-trophy .fa-trophy {
@@ -1019,3 +1027,8 @@ header img {
     line-height: 1; }
   #ranking .user_setting tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.1); }
+  #ranking .seisokuchi_map .map_wrapper img, #ranking .seisokuchi_map .distance_wrapper img {
+    max-width: 100%; }
+  #ranking .seisokuchi_map .content {
+    padding: 0 1em;
+    margin: 0 0 1em; }

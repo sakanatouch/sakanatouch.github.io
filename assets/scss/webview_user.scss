@@ -130,13 +130,18 @@ header {
 			font-weight: bold;
 			color: white;
 			background-color: darken($blue, 10%);
-			font-size: 110%;
+			font-size: 90%;
 			margin: 0;
 			position: relative;
 			i {
-				font-size: 180%;
+				font-size: 140%;
 				vertical-align: middle;
-				margin-right: .5em;
+				display: block;
+				margin-bottom: 3px;
+			}
+			span {
+				display: block;
+				font-size: 80%;
 			}
 			&::after {
 				content: "";
@@ -175,25 +180,30 @@ header {
 		.ranking_all_wrap_inner {
 			display: flex;
 			justify-content: start;
-			width: 300%;
+			width: 400%;
 			transition: .3s;
 		}
 	}
 	&.kind_view {
 		.ranking_all_wrap_inner {
-			transform: translateX(-33.333%)
+			transform: translateX(-25%)
 		}
 	}
 	&.user_view {
 		.ranking_all_wrap_inner {
-			transform: translateX(-66.666%)
+			transform: translateX(-50%)
+		}
+	}
+	&.map_view {
+		.ranking_all_wrap_inner {
+			transform: translateX(-75%)
 		}
 	}
 	.ranking_list_view {
 		.fa-trophy {
 			display: none;
 		}
-		width: 33.333%;
+		width: 25%;
 		.add-trophy {
 			.fa-trophy {
 				display: inline-block;
@@ -449,6 +459,17 @@ header {
 		}
 		tr:nth-child(even) {
 			background-color: rgba(255,255,255,.1);
+		}
+	}
+	.seisokuchi_map {
+		.map_wrapper, .distance_wrapper {
+			img {
+				max-width: 100%;
+			}
+		}
+		.content {
+			padding: 0 1em;
+			margin: 0 0 1em;
 		}
 	}
 }
