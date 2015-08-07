@@ -773,6 +773,10 @@ header img {
     background-color: #0081d1; }
     #ranking.kind_view .ranking_tab .kind::after {
       display: none; }
+  #ranking.user_view .ranking_tab .user {
+    background-color: #0081d1; }
+    #ranking.user_view .ranking_tab .user::after {
+      display: none; }
   #ranking .ranking_all_wrap {
     width: 100%;
     overflow: hidden; }

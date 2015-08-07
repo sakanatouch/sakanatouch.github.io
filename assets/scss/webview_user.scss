@@ -163,6 +163,12 @@ header {
 			display: none;
 		}
 	}
+	&.user_view .ranking_tab .user {
+		background-color: darken($blue, 0);
+		&::after {
+			display: none;
+		}
+	}
 	.ranking_all_wrap {
 		width: 100%;
 		overflow: hidden;
