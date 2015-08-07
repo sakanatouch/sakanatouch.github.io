@@ -986,7 +986,6 @@ header img {
   #ranking .user_setting input[name=user_name], #ranking .user_setting textarea[name=user_info] {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid white;
     width: 100%;
     font-size: 100%;
     color: white; }
