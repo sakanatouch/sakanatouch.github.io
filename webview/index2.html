@@ -23,10 +23,10 @@
 				</header>
 
 				<nav class="ranking_tab">
-					<button class="catch" ng-mouseup="ctrs.viewChange('catch_view')"><i class="fa fa-newspaper-o"></i><span>新着</span></button>
-					<button class="kind" ng-mouseup="ctrs.viewChange('kind_view')"><i class="fa fa-trophy"></i><span>順位</span></button>
-					<button class="user" ng-mouseup="ctrs.viewChange('user_view')"><i class="fa fa-user"></i><span>あなた</span></button>
-					<button class="map" ng-mouseup="ctrs.viewChange('map_view')"><i class="fa fa-map"></i><span>マップ</span></button>
+					<button class="catch" ng-click="ctrs.viewChange('catch_view')"><i class="fa fa-newspaper-o"></i><span>新着</span></button>
+					<button class="kind" ng-click="ctrs.viewChange('kind_view')"><i class="fa fa-trophy"></i><span>順位</span></button>
+					<button class="user" ng-click="ctrs.viewChange('user_view')"><i class="fa fa-user"></i><span>あなた</span></button>
+					<button class="map" ng-click="ctrs.viewChange('map_view')"><i class="fa fa-map"></i><span>マップ</span></button>
 				</nav>
 
 				<div class="ranking_all_wrap">
@@ -76,7 +76,7 @@
 								<img class="ranking_tit" src="../assets/img/ranking/tit_webview_ranking.png" alt="">
 							</div>
 							<div class="summery inner">
-								<p>今週つかまえたユーザーランキング上位10位を発表！<br>めざせ！トップ10！</p>
+								<p>今週つかまえたユーザーランキング上位20位を発表！<br>めざせ！トップ20！</p>
 								<p class="days">集計期間 {{ctrs.startDay}} 〜 {{ctrs.endDay}}</p>
 							</div>
 							<div class="your_lank" ><!--  ng-model="ctrs.yourRank_loadData" -->
