@@ -9,15 +9,29 @@
 			margin: 0;
 			padding: 0;
 			border-top: 1px solid rgba(0, 0, 0, .2);
-		}
-		li {
-			list-style-type: none;
-			border-bottom: 1px solid rgba(0, 0, 0, .2);
-			padding: .5rem .5rem;
-			vertical-align: middle;
-			a {
-				text-decoration: none;
-				color: white;
+
+			&>li {
+				list-style-type: none;
+				border-bottom: 1px solid rgba(0, 0, 0, .2);
+				padding: .5rem .5rem;
+				vertical-align: middle;
+				a {
+					text-decoration: none;
+					color: white;
+				}
+				ol {
+					margin: 1em 0;
+					li {
+						border: none;
+						background-color: transparent;
+						list-style-type: decimal;
+						overflow: visible;
+						margin-bottom: .5em;
+						&:nth-child(even) {
+							background-color: transparent;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -329,45 +343,52 @@ header {
 	.related {
 		ul {
 			border-top: none;
-		}
-		li {
-			background-color: transparent;
-			overflow: hidden;
-			&:nth-child(even) {
-				background-color: rgba(255, 255, 255, .1)
-			}
-			a {
-				color: yellow;
-				text-decoration: underline;
-				i {
-					margin-right: .5em;
+			li {
+				background-color: transparent;
+				overflow: hidden;
+				&:nth-child(even) {
+					background-color: rgba(255, 255, 255, .1)
 				}
-			}
-			h1 {
-				font-size: 110%;
-				margin-bottom: .75em;
-				i {
-					margin-right: .5em;
-					display: inline-flex;
-					background-color: #0C59CE;
-					border-radius: 50%;
-					width: 30px;
-					height: 30px;
-					color: white;
-					justify-content: center;
-					align-items: center;
+				a {
+					color: yellow;
+					text-decoration: underline;
+					i {
+						margin-right: .5em;
+					}
 				}
-			}
-			img {
-				max-width: 100%;
-				&.left {
-					float: left;
-					width: 40%;
-					margin-right: 1em;
+				h1 {
+					font-size: 110%;
+					margin-bottom: .05em;
+					i {
+						margin-right: .5em;
+						display: inline-flex;
+						background-color: #0C59CE;
+						border-radius: 50%;
+						width: 30px;
+						height: 30px;
+						color: white;
+						justify-content: center;
+						align-items: center;
+					}
 				}
-			}
-			.desc {
-				font-size: 100%;
+				time {
+					font-size: .6em;
+					color: #ccc;
+					display: block;
+					margin-bottom: .5em;
+				}
+				img {
+					max-width: 100%;
+					margin-bottom: .5em;
+					&.left {
+						float: left;
+						width: 40%;
+						margin-right: 1em;
+					}
+				}
+				.desc {
+					font-size: 100%;
+				}
 			}
 		}
 	}

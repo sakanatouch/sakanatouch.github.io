@@ -691,14 +691,24 @@ header img {
     margin: 0;
     padding: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.2); }
-  #news .list_view li {
-    list-style-type: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: .5rem .5rem;
-    vertical-align: middle; }
-    #news .list_view li a {
-      text-decoration: none;
-      color: white; }
+    #news .list_view ul > li {
+      list-style-type: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding: .5rem .5rem;
+      vertical-align: middle; }
+      #news .list_view ul > li a {
+        text-decoration: none;
+        color: white; }
+      #news .list_view ul > li ol {
+        margin: 1em 0; }
+        #news .list_view ul > li ol li {
+          border: none;
+          background-color: transparent;
+          list-style-type: decimal;
+          overflow: visible;
+          margin-bottom: .5em; }
+          #news .list_view ul > li ol li:nth-child(even) {
+            background-color: transparent; }
   #news .fa {
     display: none;
     position: absolute;
@@ -724,14 +734,24 @@ header img {
     margin: 0;
     padding: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.2); }
-  #ranking .list_view li {
-    list-style-type: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: .5rem .5rem;
-    vertical-align: middle; }
-    #ranking .list_view li a {
-      text-decoration: none;
-      color: white; }
+    #ranking .list_view ul > li {
+      list-style-type: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding: .5rem .5rem;
+      vertical-align: middle; }
+      #ranking .list_view ul > li a {
+        text-decoration: none;
+        color: white; }
+      #ranking .list_view ul > li ol {
+        margin: 1em 0; }
+        #ranking .list_view ul > li ol li {
+          border: none;
+          background-color: transparent;
+          list-style-type: decimal;
+          overflow: visible;
+          margin-bottom: .5em; }
+          #ranking .list_view ul > li ol li:nth-child(even) {
+            background-color: transparent; }
   #ranking .ranking_header .ranking_tit {
     width: 100%; }
   #ranking .ranking_tab {
@@ -920,46 +940,52 @@ header img {
       color: #F7DCAB; }
   #ranking .related ul {
     border-top: none; }
-  #ranking .related li {
-    background-color: transparent;
-    overflow: hidden; }
-    #ranking .related li:nth-child(even) {
-      background-color: rgba(255, 255, 255, 0.1); }
-    #ranking .related li a {
-      color: yellow;
-      text-decoration: underline; }
-      #ranking .related li a i {
-        margin-right: .5em; }
-    #ranking .related li h1 {
-      font-size: 110%;
-      margin-bottom: .75em; }
-      #ranking .related li h1 i {
-        margin-right: .5em;
-        display: -webkit-inline-box;
-        display: -webkit-inline-flex;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        background-color: #0C59CE;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        color: white;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center; }
-    #ranking .related li img {
-      max-width: 100%; }
-      #ranking .related li img.left {
-        float: left;
-        width: 40%;
-        margin-right: 1em; }
-    #ranking .related li .desc {
-      font-size: 100%; }
+    #ranking .related ul li {
+      background-color: transparent;
+      overflow: hidden; }
+      #ranking .related ul li:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.1); }
+      #ranking .related ul li a {
+        color: yellow;
+        text-decoration: underline; }
+        #ranking .related ul li a i {
+          margin-right: .5em; }
+      #ranking .related ul li h1 {
+        font-size: 110%;
+        margin-bottom: .05em; }
+        #ranking .related ul li h1 i {
+          margin-right: .5em;
+          display: -webkit-inline-box;
+          display: -webkit-inline-flex;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          background-color: #0C59CE;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          color: white;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center; }
+      #ranking .related ul li time {
+        font-size: .6em;
+        color: #ccc;
+        display: block;
+        margin-bottom: .5em; }
+      #ranking .related ul li img {
+        max-width: 100%;
+        margin-bottom: .5em; }
+        #ranking .related ul li img.left {
+          float: left;
+          width: 40%;
+          margin-right: 1em; }
+      #ranking .related ul li .desc {
+        font-size: 100%; }
   #ranking .user_setting .user_header {
     margin-top: 1.4em;
     display: -webkit-box;
