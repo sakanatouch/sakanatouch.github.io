@@ -58,7 +58,7 @@ app.controller('RankingCtrl', ["$http", "hoge", "loadData", "yourRank_loadData",
 	}
 
 	// //ニックネーム、プロフィール取得。
-	// 2015.0805コメントアウト。L５０でやっていた
+	// 2015.08.05コメントアウト。L５０でやっていた
 	// initUserData();
 	// function initUserData(){
 	// 	var url = "http://sakana-touch.herokuapp.com/users.json?token=" + getQuerystring("token") +"";
@@ -126,13 +126,13 @@ app.directive("userNickName",[function(){
 			var h2 = iElement.find("h2");
 			var dt = iElement.find("dt");
 			var input = iElement.find("input");
-			dt.on("click",function(){
+			dt.on("touchend",function(){
 				scope.$apply(function(){
 					scope.nickNameCtr.isEdit = true;
 				});
 				input[0].focus();
 			});
-			h2.on("click",function(){
+			h2.on("touchend",function(){
 				scope.$apply(function(){
 					scope.nickNameCtr.isEdit = true;
 				});
@@ -183,13 +183,13 @@ app.directive("userProfile",[function(){
 			var dt = iElement.find("dt");
 			var p = iElement.find("p");
 			var textarea = iElement.find("textarea");
-			dt.on("click",function(){
+			dt.on("touchend",function(){
 				scope.$apply(function(){
 					scope.profileCtr.isEdit = true;
 				});
 				textarea[0].focus();
 			});
-			p.on("click",function(){
+			p.on("touchend",function(){
 				scope.$apply(function(){
 					scope.profileCtr.isEdit = true;
 				});
