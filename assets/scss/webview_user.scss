@@ -66,7 +66,7 @@ html, body {
     -webkit-user-select: none;
 }
 #ranking {
-	border: 5px solid darken($blue, 25%);
+	// border: 5px solid darken($blue, 25%);
 	box-shadow: inset 0 0 2px rgba(0, 0, 0, .7);
 }
 
@@ -129,6 +129,7 @@ header {
 }
 
 #ranking {
+	height: 100%;
 	@include webview;
 	.ranking_header {
 		.ranking_tit {
@@ -202,34 +203,61 @@ header {
 	}
 	.ranking_all_wrap {
 		width: 100%;
-		overflow: hidden;
+		height: 100%;
+		position: relative;
+
+		// overflow: hidden;
 		.ranking_all_wrap_inner {
-			display: flex;
-			justify-content: start;
-			width: 400%;
-			transition: .3s;
+			// display: flex;
+			// justify-content: start;
+			// transition: .3s;
+		}
+	}
+	&.catch_view {
+		// .ranking_all_wrap_inner {
+		// 	display: block;
+		// 	// transform: translateX(-25%)
+		// }
+		.related{
+			display: block;
 		}
 	}
 	&.kind_view {
-		.ranking_all_wrap_inner {
-			transform: translateX(-25%)
+		// .ranking_all_wrap_inner {
+		// 	display: block;
+		// 	// transform: translateX(-25%)
+		// }
+		.week_ranking{
+			display: block;
 		}
 	}
 	&.user_view {
-		.ranking_all_wrap_inner {
-			transform: translateX(-50%)
+		// .ranking_all_wrap_inner {
+		// 	display: block;
+		// 	// transform: translateX(-50%)
+		// }
+		.user_setting{
+			display: block;
 		}
 	}
 	&.map_view {
-		.ranking_all_wrap_inner {
-			transform: translateX(-75%)
+		// .ranking_all_wrap_inner {
+		// 	// transform: translateX(-75%)
+		// }
+		.seisokuchi_map{
+			display: block;
 		}
 	}
 	.ranking_list_view {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #0081d1;
+		display: none;
 		.fa-trophy {
 			display: none;
 		}
-		width: 25%;
+		// width: 25%;
 		.add-trophy {
 			.fa-trophy {
 				display: inline-block;
