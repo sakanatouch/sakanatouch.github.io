@@ -778,9 +778,7 @@ header img {
       background-color: #00629e;
       font-size: 90%;
       margin: 0;
-      position: relative;
-      -webkit-transition: .2s ease 0s;
-      transition: .2s ease 0s; }
+      position: relative; }
       #ranking .ranking_tab button i {
         font-size: 140%;
         vertical-align: middle;
