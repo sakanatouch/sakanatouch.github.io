@@ -157,6 +157,12 @@ header {
 			transition: box-shadow .1s ease 0s;
 			&.active{
 				box-shadow: 2px 2px 2px rgba(0,0,0,0.4) inset;
+				i{
+					transform: scale(0.9);
+				}
+				span{
+					transform: scale(0.9);
+				}
 			}
 			i {
 				font-size: 140%;

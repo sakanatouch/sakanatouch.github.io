@@ -784,6 +784,14 @@ header img {
       #ranking .ranking_tab button.active {
         -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4) inset;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4) inset; }
+        #ranking .ranking_tab button.active i {
+          -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+          transform: scale(0.9); }
+        #ranking .ranking_tab button.active span {
+          -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+          transform: scale(0.9); }
       #ranking .ranking_tab button i {
         font-size: 140%;
         vertical-align: middle;
