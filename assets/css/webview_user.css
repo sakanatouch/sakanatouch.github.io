@@ -700,6 +700,7 @@ header img {
         text-decoration: none;
         color: white; }
       #news .list_view ul > li ol {
+        clear: both;
         margin: 1em 0; }
         #news .list_view ul > li ol li {
           border: none;
@@ -743,6 +744,7 @@ header img {
         text-decoration: none;
         color: white; }
       #ranking .list_view ul > li ol {
+        clear: both;
         margin: 1em 0; }
         #ranking .list_view ul > li ol li {
           border: none;
