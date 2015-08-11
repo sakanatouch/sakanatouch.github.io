@@ -115,7 +115,20 @@ app.service("yourRank_loadData",["$http",function($http){
 	};
 }]);
 
-
+//tabactiveディレクティブ
+app.directive("sakanaActive",[function(){
+	return {
+		restrict: "A",
+		link: function(scope,iElement,attr,controller,transclude){
+			iElement.on("touchstart", function(){
+				iElement.addClass("active");
+			})
+			iElement.on("touchend", function(){
+				iElement.removeClass("active");
+			})
+		}
+	};
+}])
 //ニックネームディレクティブ
 app.directive("userNickName",[function(){
 	return {
