@@ -110,12 +110,12 @@
 							</div>
 							<div class="your_lank" ><!--  ng-model="ctrs.yourRank_loadData" -->
 								<div class="rank_box" ng-class="{'r1': ctrs.yourRank.userData.rank == 1, 'r2': ctrs.yourRank.userData.rank == 2, 'r3': ctrs.yourRank.userData.rank == 3, 'add-trophy': ctrs.yourRank.userData.rank <= 3}">
-									<div class="count"><small>あなたの順位</small> {{ctrs.yourRank.userData.rank}}</div>
-									<div class="capture-value"><i class="fa fa-trophy"></i>{{ctrs.yourRank.userData.value}}<span>匹</span></div>
+									<div class="count"><small>あなたの順位</small> {{::ctrs.yourRank.userData.rank}}</div>
+									<div class="capture-value"><i class="fa fa-trophy"></i>{{::ctrs.yourRank.userData.value}}<span>匹</span></div>
 								</div>
 							</div>
 							<ul>
-								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:20" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}" class="rank_box">
+								<li ng-repeat="::result in ctrs.rankingCatchList | limitTo:20" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}" class="rank_box">
 									<div class="count">{{result.rank}}</div>
 									<div ng-show="result.nickname" class="nick-name">
 										{{result.nickname}}
