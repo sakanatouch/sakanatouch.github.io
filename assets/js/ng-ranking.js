@@ -1,4 +1,4 @@
-var app = angular.module('sakanatouch-ranking', [])
+var app = angular.module('sakanatouch-ranking', [ 'ngTouch'])
 
 app.config(['$httpProvider', function ($httpProvider) {
 	$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;application/json;charset=utf-8';
