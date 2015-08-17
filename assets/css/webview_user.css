@@ -913,6 +913,8 @@ header img {
         color: #C27400;
         -webkit-animation: grow 1s infinite;
         animation: grow 1s infinite; }
+    #ranking .ranking_list_view .ry {
+      background-color: #f57506; }
     #ranking .ranking_list_view .your_lank {
       padding: 1rem 1rem;
       background-color: #0078c2;

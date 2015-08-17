@@ -115,7 +115,7 @@
 								</div>
 							</div>
 							<ul>
-								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:20" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}" class="rank_box">
+								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:20" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3, 'ry': result.user_id == ctrs.yourRank.userData.user_id}" class="rank_box">
 									<div class="count">{{result.rank}}</div>
 									<div ng-show="result.nickname" class="nick-name">
 										{{result.nickname}}
