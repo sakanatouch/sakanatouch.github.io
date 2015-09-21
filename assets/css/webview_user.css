@@ -415,7 +415,7 @@ footer {
     .catchcopy_btn a img {
       width: 100%; }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
@@ -1072,3 +1072,19 @@ header img {
   #ranking .seisokuchi_map .content {
     padding: 0 1em;
     margin: 0 0 1em; }
+
+@media screen and (min-width: 760px) {
+  body {
+    font-size: 140%; }
+  #ranking .ranking_tab button span, #ranking .ranking_tab button .fa {
+    display: inline-block;
+    margin: 0 .6em; }
+  #ranking .related ul li img.left {
+    width: 25%; }
+  #ranking .ranking_list_view {
+    width: 100%; }
+  .ranking_list_view.list_view.user_setting {
+    width: 100%; }
+  #closebtn {
+    top: 2em;
+    right: 2em; } }

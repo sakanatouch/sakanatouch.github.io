@@ -547,3 +547,34 @@ header {
 		}
 	}
 }
+
+@media screen and (min-width: 760px) {
+	body {
+		font-size: 140%;
+	}
+	#ranking {
+		.ranking_tab {
+			button {
+				span, .fa {
+					display: inline-block;
+					margin: 0 .6em;
+				}
+			}
+		}
+		.related {
+			ul li img.left {
+				width: 25%;
+			}
+		}
+		.ranking_list_view {
+			width: 100%;
+		}
+	}
+	.ranking_list_view.list_view.user_setting {
+		width: 100%;
+	}
+	#closebtn {
+		top: 2em;
+		right: 2em;
+	}
+}
