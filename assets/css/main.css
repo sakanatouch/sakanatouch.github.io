@@ -83,7 +83,6 @@ header {
   width: 100%;
   background-color: rgba(0, 129, 209, 0.8);
   border-bottom: 3px solid #0081d1;
-  -webkit-box-shadow: 0 1px 3px gray;
   box-shadow: 0 1px 3px gray;
   z-index: 101; }
   header .inner {
@@ -183,7 +182,6 @@ header {
           -webkit-transform: scale(1.02);
           -ms-transform: scale(1.02);
           transform: scale(1.02);
-          -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); }
 
 .wideslider ul, .wideslider li {
@@ -194,9 +192,9 @@ header {
   width: 200px; }
 
 .title_visual {
-  -webkit-transform: scale(.5);
-  -ms-transform: scale(.5);
-  transform: scale(.5);
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
   width: 960px;
   margin: auto;
   position: relative;
@@ -246,6 +244,7 @@ main > section .inner {
   margin: auto;
   margin-bottom: 2.5rem;
   padding-bottom: 2.5rem; }
+
 main > section h1 {
   /* border: 1px solid #5467ac;
 			padding: .5em;
@@ -258,6 +257,7 @@ main > section h1 {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 1em; }
+
 main > section .promo_image {
   width: 300px;
   height: 300px;
@@ -268,21 +268,25 @@ main > section .promo_image {
     position: relative;
     left: -25%;
     height: 100%; }
+
 main .get_to_touch figure img {
   border-radius: 10px;
   border: 10px solid #999; }
+
 main .bg_blue {
   background: #0081d1 url(/assets/img/bg_slope_white.gif) top center no-repeat; }
   main .bg_blue .inner {
     padding-top: 120px;
     margin-bottom: 0;
     color: white; }
+
 main .bg_white {
   background: #fff url(/assets/img/bg_slope_blue.gif) top center no-repeat; }
   main .bg_white .inner {
     padding-top: 120px;
     margin-bottom: 0;
     padding-bottom: 0; }
+
 main .dictionary {
   overflow: hidden;
   list-style-type: none;
@@ -417,7 +421,6 @@ footer {
 
 @media screen and (max-width: 768px) {
   * {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box; }
   body, h1, h2 {
     font-size: 100%; }
@@ -430,7 +433,6 @@ footer {
     position: relative;
     line-height: 1;
     border-bottom: none;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     background-color: #0081d1; }
     header .inner {
@@ -540,7 +542,6 @@ footer {
   .promo_visual {
     width: 100%; }
   .get_to_touch figure img {
-    -webkit-box-shadow: none;
     box-shadow: none;
     width: 80%;
     height: auto; }
@@ -597,7 +598,6 @@ footer {
     width: 100% !important;
     margin: auto; }
   .common_articles {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: .5rem;
     width: 100%; }

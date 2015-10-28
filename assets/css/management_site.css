@@ -22,7 +22,8 @@ main {
     display: block;
     clear: both;
     width: 100%; }
-  main #news .banner, main #event .banner {
+  main #news .banner,
+  main #event .banner {
     width: 47%;
     float: left;
     background: #E7EDF7;
@@ -30,23 +31,26 @@ main {
     text-decoration: none;
     color: #000;
     display: block;
-    -webkit-box-shadow: 0px 1px 15px black;
     box-shadow: 0px 1px 15px black;
     -webkit-transition: .3s;
     transition: .3s; }
-    main #news .banner img, main #event .banner img {
+    main #news .banner img,
+    main #event .banner img {
       display: block;
       width: 100%;
       height: auto;
       border-radius: 10px 10px 0 0; }
-    main #news .banner:nth-child(even), main #event .banner:nth-child(even) {
+    main #news .banner:nth-child(even),
+    main #event .banner:nth-child(even) {
       margin: 0 1% 20px 2%; }
-    main #news .banner:nth-child(odd), main #event .banner:nth-child(odd) {
+    main #news .banner:nth-child(odd),
+    main #event .banner:nth-child(odd) {
       margin: 0 2% 20px 1%; }
-    main #news .banner:hover, main #event .banner:hover {
-      -webkit-box-shadow: 0px 0px 0px transparent;
+    main #news .banner:hover,
+    main #event .banner:hover {
       box-shadow: 0px 0px 0px transparent; }
-  main #news:after, main #event:after {
+  main #news:after,
+  main #event:after {
     content: "";
     display: block;
     clear: both;
@@ -64,7 +68,6 @@ main {
       margin: 1%;
       display: block;
       border-radius: 10px;
-      -webkit-box-shadow: 0px 1px 15px black;
       box-shadow: 0px 1px 15px black;
       -webkit-transition: .3s;
       transition: .3s; }
@@ -72,7 +75,6 @@ main {
         width: 100%;
         border-radius: 10px; }
       main #other .banner:hover {
-        -webkit-box-shadow: 0px 0px 0px transparent;
         box-shadow: 0px 0px 0px transparent; }
 
 #article {
@@ -96,10 +98,10 @@ main {
     display: block;
     margin: auto;
     padding: 1em 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden; }
-    #article #meta #day, #article #meta #title {
+    #article #meta #day,
+    #article #meta #title {
       display: inline-block; }
   #article h3 {
     border-bottom: dotted 1px #0081d1; }
@@ -117,11 +119,13 @@ main {
     font-size: 100%; }
   main {
     width: 100%; }
-    main #news .banner, main #event .banner {
+    main #news .banner,
+    main #event .banner {
       width: 100%;
       float: none;
       margin: auto; }
-      main #news .banner p, main #event .banner p {
+      main #news .banner p,
+      main #event .banner p {
         padding: 0 10px 10px 10px; }
     main #other .banner {
       width: 47%; }
@@ -130,7 +134,8 @@ main {
     padding: 0; }
   #article #meta {
     padding: auto 0; }
-    #article #meta #day, #article #meta #title {
+    #article #meta #day,
+    #article #meta #title {
       float: none;
       display: inline-block;
       margin: 0; }
