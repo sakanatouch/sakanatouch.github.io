@@ -25,8 +25,8 @@
 				<nav class="ranking_tab">
 					<button sakana-active class="catch" ng-click="ctrs.viewChange('catch_view')"><i class="fa fa-newspaper-o"></i><span>新着</span></button>
 					<button sakana-active class="kind" ng-click="ctrs.viewChange('kind_view')"><i class="fa fa-trophy"></i><span>順位</span></button>
+					<button sakana-active class="map" ng-click="ctrs.viewChange('map_view')"><i class="fa fa-map"></i><span>イベント</span></button>
 					<button sakana-active class="user" ng-click="ctrs.viewChange('user_view')"><i class="fa fa-user"></i><span>あなた</span></button>
-					<button sakana-active class="map" ng-click="ctrs.viewChange('map_view')"><i class="fa fa-map"></i><span>マップ</span></button>
 				</nav>
 				<div class="ranking_all_wrap">
 					<div class="ranking_all_wrap_inner">
@@ -34,7 +34,19 @@
 							<ul>
 								<li>
 									<article>
-										<h1>[NEW!] 「なかむら」さん2冠達成！上位3位全て1000オーバーに拍手！</h1><time>2015/10/26</time>
+										<h1>[イベント開催!] 期間限定！あの人気のかわいい「メンダコ」が全国の水族館に出現する！！！</h1><time>2015/10/29</time>
+										<div class="desc">
+											全国49ヶ所の水族館に出現！あのかわいらしい「メンダコ」を捕まえろ！！
+											<p>期間限定：2015/11/1（日）〜2015/11/15（日）</p>
+											<img src="img/events/anim_mendako.gif" class="left" alt="">
+											<p>巷でカワイイ！と人気の深海生物「メンダコ」がサカナタッチに出現！！捕獲可能な場所は全国49ヶ所の水族館！<br>超レア生物なので、この期間を過ぎるといなくなってしまいます。実際の水族館の水槽を眺めるついでに、サカナタッチでメンダコを探してね！！</p>
+											<p>水族館の詳細などくわしい情報はこの上にある「<a href="#" ng-click="ctrs.viewChange('map_view')"><i class="fa fa-map"></i>イベント</a>」のボタンをタッチしてね！！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>「なかむら」さん2冠達成！上位3位全て1000オーバーに拍手！</h1><time>2015/10/26</time>
 										<div class="desc">
 											<p><strong>「なかむら」</strong>さん、1332匹で2週連続1位達成おめでとう！！この記録、来週も続くか楽しみです！</p>
 											<p>2位もキープ！<strong>「いいねこ。」</strong>さんの1028匹。いいねこ。さんも1000オーバー！と前回より上々の結果！</p>
@@ -161,7 +173,7 @@
 										</div>
 									</article>
 								</li>
-
+<!-- 
 								<li>
 									<article>
 										<h1>あなたのニックネーム</h1><time>2015/8/15</time>
@@ -187,7 +199,7 @@
 											サカナタッチの新着情報がここで読めるよ！これからもどんどん新機能が追加されていくから期待していてね！！
 										</div>
 									</article>
-								</li>
+								</li> -->
 								<li>
 									<article>
 										<h1>レビュー募集！！！</h1><time>2015/7/20</time>
@@ -197,7 +209,7 @@
 										</div>
 									</article>
 								</li>
-								<!-- <li>
+								<li>
 									<article>
 										<h1>メンダコ、都市伝説</h1><time>2015/7/20</time>
 										<div class="desc">
@@ -205,7 +217,7 @@
 											<p>サカナタッチではまだ見たこともないような生物がいるんだよ！<br>探せるかな！？</p>
 										</div>
 									</article>
-								</li> -->
+								</li>
 							</ul>
 						</div>
 						<div class="ranking_list_view list_view week_ranking">
@@ -281,21 +293,70 @@
 							</div>
 
 						</div>
-						<div class="ranking_list_view seisokuchi_map">
-							<div class="map_wrapper">
-								<img src="img/seisokuchi_map.png" alt="">
-								<div class="content">
-									<p>サカナタッチの世界では、そのエリアでしか出現しないサカナだって生息しているぞ。<br>日本全国のサカナタッチユーザーのみなさんが捕獲してくれたおかげで、今各地にこんな種類のサカナが生息していることがわかった！</p>
-									<p>ぜひ、旅行や出張のときはサカナタッチでその場所しかいないサカナをつかまえてほしい！健闘を祈る！</p>
-								</div>
-							</div>
-							<div class="distance_wrapper">
-								<img src="img/distance_map.png" alt="">
-								<div class="content">
-									<p>ホームからの距離が、離れれば離れるほど新しいサカナをつかまえられるサカナタッチの世界。<br>今わかっている距離による生息地情報が徐々に明らかになってきたぞ。</p>
-									<p>意外だけど、オタリアのような大型って遠くにいると思いきや、近かったんだね。灯台下暗しって感じ。</p>
-									<p>注意してほしいのは、これらのサカナたちにも「レア度」があって、必ずその距離にいたら出てくる、とは限らないから、出てこなくても頑張って探してね。</p>
-								</div>
+						<div class=" seisokuchi_map">
+							<div class="inner">
+								<h2 class="fz120">【 期間限定！「メンダコ」イベント開催！ 】<br>全国49ヶ所の水族館に出現！あのかわいらしい「メンダコ」を捕まえろ！！</h2>
+								<p>期間限定：2015/11/1（日）〜2015/11/15（日）</p>
+								<img src="img/events/anim_mendako.gif" class="left" alt="">
+								巷でカワイイ！と人気の深海生物「メンダコ」がサカナタッチに出現！！捕獲可能な場所は全国の下記の水族館！<br>超レア生物なので、この期間を過ぎるといなくなってしまいます。実際の水族館の水槽を眺めるついでに、サカナタッチでメンダコを探してね！！
+								<h3>お願い</h3>
+								<ul>
+									<li><strong>レアなので根気強く探してね！</strong><br>メンダコの出現率はマンボウやカクレクマノミと同程度！そんな簡単には出現しないから時間に余裕をもって根気強く探してね</li>
+									<li><strong>Twitterでシェア！</strong><br>捕まえたらぜひ、Twitterで<strong>#サカナタッチ</strong>とハッシュタグをつけて画像を投稿してもらえたら運営側としてはとても嬉しいです！水槽の右上のTwitterアイコンから投稿できます。</li>
+								</ul>
+								<h3>出現水族館（全国49ヶ所）</h3>
+								<p>以下の水族館でサカナタッチを起動！「サカナをさがす」画面からメンダコをさがして捕まえるのだ！！！</p>
+								<ul class="aquarium_list">
+									<li>旭山動物園（北海道）</li>
+									<li>おたる水族館（北海道）</li>
+									<li>青森県営浅虫水族館（青森県）</li>
+									<li>もぐらんぴあまちなか水族館（岩手県）</li>
+									<li>仙台うみの杜水族館（宮城県）</li>
+									<li>男鹿水族館GAO（秋田県）</li>
+									<li>鶴岡市立 加茂水族館（山形県）</li>
+									<li>アクアマリンふくしま（福島県）</li>
+									<li>アクアワールド（茨城県）</li>
+									<li>山方淡水魚館（栃木県）</li>
+									<li>さいたま水族館（埼玉県）</li>
+									<li>鴨川シーワールド（千葉県）</li>
+									<li>サンシャイン水族館（東京都）</li>
+									<li>葛西臨海水族園（東京都）</li>
+									<li>すみだ水族館（東京都）</li>
+									<li>八景島シーパラダイス（神奈川県）</li>
+									<li>新江ノ島水族館（神奈川県）</li>
+									<li>マリンピア日本海（新潟県）</li>
+									<li>魚津水族館(富山県)</li>
+									<li>のとじま水族館（石川県）</li>
+									<li>越前松島水族館（福井県）</li>
+									<li>富士湧水の里水族館（山梨県）</li>
+									<li>蓼科アミューズメント水族館（長野県）</li>
+									<li>アクア・トト ぎふ（岐阜県）</li>
+									<li>沼津港深海水族館（静岡県）</li>
+									<li>名古屋港水族館（愛知県）</li>
+									<li>竹島水族館（愛知県）</li>
+									<li>鳥羽水族館（三重県）</li>
+									<li>志摩マリンランド（三重県）</li>
+									<li>琵琶湖博物館（滋賀県）</li>
+									<li>京都水族館（京都府）</li>
+									<li>海遊館（大阪府）</li>
+									<li>須磨海浜水族園	（兵庫県）</li>
+									<li>かにっこ館（鳥取県）</li>
+									<li>しまね海洋館アクアス（島根県）</li>
+									<li>渋川マリン水族館（岡山県）</li>
+									<li>宮島水族館 みやじマリン（広島県）</li>
+									<li>海響館（山口県）</li>
+									<li>うみがめ博物館カレッタ（徳島県）</li>
+									<li>新屋島水族館（香川県）</li>
+									<li>虹の森公園おさかな館（愛媛県）</li>
+									<li>足摺海洋館（高知県）</li>
+									<li>マリンワールド海の中道（福岡県）</li>
+									<li>長崎ペンギン水族館（長崎県）</li>
+									<li>大分マリーンパレス水族館 うみたまご（大分県）</li>	
+									<li>わくわく海中水族館（熊本県）</li>
+									<li>高千穂峡淡水魚水族館（宮崎県）</li>
+									<li>いおワールドかごしま水族館（鹿児島県）</li>
+									<li>美ら海水族館（沖縄県）</li>
+								</ul>	
 							</div>
 						</div>
 					</div><!-- ranking_all_wrap_inner -->
