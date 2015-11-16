@@ -6,9 +6,11 @@
 	<meta name="description" content="">
 	<title>Document</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
-	<script src="../assets/js/ng-ranking.js"></script>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../assets/css/webview.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular-touch.min.js" charset="utf-8"></script>
+	<!--<script src="../assets/js/webview.js"></script>-->
+   <script src="../assets/js/ng-ranking.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../assets/css/webview_user.css">
 
 </head>
 <body ng-controller="RankingCtrl as ctrs">
@@ -20,83 +22,476 @@
 					<h1><img src="../assets/img/webview/news_tit.png" alt=""></h1>
 					<a id="closebtn" href='unity:close'><img src="/assets/img/webview/btn_header_close.png" alt="close btn"><span>とじる</span></a>
 				</header>
-				
 				<nav class="ranking_tab">
-					<button class="catch" ng-click="ctrs.viewChange('catch_view')"><i class="fa fa-newspaper-o"></i>新着</button>
-					<button class="kind" ng-click="ctrs.viewChange('kind_view')"><i class="fa fa-trophy"></i>週間ランキング</button>
+					<button sakana-active class="catch" ng-click="ctrs.viewChange('catch_view')"><i class="fa fa-newspaper-o"></i><span>新着</span></button>
+					<button sakana-active class="kind" ng-click="ctrs.viewChange('kind_view')"><i class="fa fa-trophy"></i><span>順位</span></button>
+					<button sakana-active class="map" ng-click="ctrs.viewChange('map_view')"><i class="fa fa-map"></i><span>イベント</span></button>
+					<button sakana-active class="user" ng-click="ctrs.viewChange('user_view')"><i class="fa fa-user"></i><span>あなた</span></button>
 				</nav>
-
 				<div class="ranking_all_wrap">
 					<div class="ranking_all_wrap_inner">
 						<div class="ranking_list_view list_view related">
 							<ul>
 								<li>
 									<article>
-										<h1><i class="fa fa-list-alt"></i>【新機能!】週間ユーザーランキング</h1>
+										<h1>伝説となるか！？史上初3000オーバー！2週連続1位は「蒼き鋼 イオナ」さんだ！</h1><time>2015/11/16</time>
 										<div class="desc">
-											サカナタッチ全ユーザーのランキングを毎週集計発表します！！<br>
-											右上の「週間ランキング」をクリック！	
+											<p>こ、これはもう……正直運営側もどう表現していいのかわかりません！！<strong>「蒼き鋼 イオナ」</strong>さん先週の初登場ダントツから2週連続1位！史上最大捕獲数3245匹！いったいこの方どこまで登りつめるのだろうか！？1日に換算すると463匹も捕まえていることになる…そして「蒼き鋼 イオナ」さんはTwitterでメンダコを50匹以上も捕まえたことを報告しています。きっと鋼のような心で漁に挑んでいるに違いない。。果たして来週はこの数字を超えるのか？いや、、まさかこれ以上はさすがに…。うーむ。。。</p>
+											<p>そして2位！初登場だね！<strong>「ネコバス」</strong>さんの1158匹！いやいや、1位が凄すぎたから分かりにくいけど1000オーバーを達成するのも大変なのは運営側もよくわかっていますよ！！ネコバスさんの努力に拍手！</p>
+											<p>3位はこちらも初登場<strong>「ダックス！！」</strong>さん、949匹！もうすぐで1000オーバーだった、惜しい！次はぜひ！！</p>
+											<p>それにしても、週明けに「蒼き鋼 イオナ」3245匹の数字を見て「システム大丈夫か？」と心配になるくらいだったですよ（苦笑）<br>さて、メンダコイベントが終了しました！みなさんどれだけ捕まえたのかな？<br>ランキング上位はまた<a href="#" ng-click="ctrs.viewChange('map_view')">&nbsp;ここ&nbsp;</a>で発表しますね！</p>
+											<p>あと、Twitterでメンダコを乗っけてくれた人、ありがとう！ちゃんと運営側は見てますよ！！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>メンダコイベント、いよいよ15日までで終了！まだの人は急ごう！</h1><time>2015/11/11</time>
+										<div class="desc">
+											<p>全国50ヶ所の水族館に出現するレア生物、メンダコが採れるのは11/15（日）まで！もう会えないかもしれないメンダコをキミの水槽にも！水族館へGO！</p>
+											<p>メンダコが出現する水族館は<a href="#" ng-click="ctrs.viewChange('map_view')">&nbsp;ここ&nbsp;</a>から確認してね！！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>うおーーっ！な、何が起こったんだ！？1位は「蒼き鋼 イオナ」さん！！</h1><time>2015/11/9</time>
+										<div class="desc">
+											<p><strong>「蒼き鋼 イオナ」</strong>さん初登場のダントツ1位、その数なんと2435匹！とてつもない数字で運営側がビビってしまった！！！一体どんな人？どういう漁師さん？</p>
+											<p>そして遂に2位にダウン！<strong>「なかむら」</strong>さんの2222匹。4週連続はならずか！…しかしこの数字もすごい、そしてゾロ目！！</p>
+											<p>3位<strong>「いいねこ。」</strong>さん、1502匹！な、なかなか1位が険しいね、頑張っているのは運営側も知ってますが、、いや、今週は特に数字が異常だ、、</p>
+											<p>それにしても一体どうした！？今回はなんと2,000オーバーが二人も！恐ろしい数字だ、それにしても首位を脅かす「蒼き鋼 イオナ」さんとは一体…！？<br>来週はどうなるんだ？運営はうれしいというより………こわい！！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>「なかむら」さん3冠だーーっ！！史上初の4週連続王者となるか！？</h1><time>2015/11/3</time>
+										<div class="desc">
+											<p><strong>「なかむら」</strong>さん、3週連続1位の1576匹！すでにこの3連続記録は初めてです。来週、なかむらさんは4週、つまり通算1ヶ月の王者になるか！？期待大の漁師さん！</p>
+											<p>またも2位をキープ！<strong>「いいねこ。」</strong>さんの1438匹。いいねこ。さんは<!-- <a target="_blank" href="https://twitter.com/ashikaga_iine/status/660844527846973440"> -->Twitterでもつぶやいてた<!-- </a> -->けど悔しいね！まだチャンスはあるけど、1位のなかむらさんにすごいと言っているところが、なんとなくスポーツマン精神な感じ！1位を獲って欲しい！</p>
+											<p>3位初登場<strong>「もえきち」</strong>さん、1267匹！「もえ」はどっちでしょう？「燃え？」「萌え？」どちらにしても漁師の心に「もえ」が大切ということなのかっ！？</p>
+											<p>すごいのは4位まで（前回3位のごんちゃんさん）全員が1000オーバーなんです！これは先週より意味すごいことです。うれしいなあー。</p>
+											<p>さて、11/1から始まった初のサカナタッチイベント。キミはもうメンダコをつかまえたかい？ぜひ水族館に足を運んでリアルなおサカナを見ながらサカナタッチでも遊んでほしいな！上位に入れなかった漁師さんもこのイベントを機に1000オーバーを目指してみないかい！！？？</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>[NEW!] 全国50ヶ所に！水族館にメンダコ出現イベント、スタート！！</h1><time>2015/11/1</time>
+										<div class="desc">
+											<p>本日より開催！全国の水族館にメンダコが出現！</p>
+											<img src="img/events/mendako_get.jpg" class="left" alt="">
+											<p>「エプソンアクアパーク品川」を追加して全国50ヶ所の水族館に出現！メンダコを捕まえよう！</p>
+											<p>水族館の詳細などくわしい情報は<a href="#" ng-click="ctrs.viewChange('map_view')">こちら</a>」で確認してね！！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>[イベント開催!] 期間限定！あの人気のかわいい「メンダコ」が全国の水族館に出現する！！！</h1><time>2015/10/29</time>
+										<div class="desc">
+											全国49ヶ所の水族館に出現！あのかわいらしい「メンダコ」を捕まえろ！！
+											<p>期間限定：2015/11/1（日）〜2015/11/15（日）</p>
+											<img src="img/events/anim_mendako.gif" class="left" alt="">
+											<p>巷でカワイイ！と人気の深海生物「メンダコ」がサカナタッチに出現！！捕獲可能な場所は全国49ヶ所の水族館！<br>超レア生物なので、この期間を過ぎるといなくなってしまいます。実際の水族館の水槽を眺めるついでに、サカナタッチでメンダコを探してね！！</p>
+											<p>水族館の詳細などくわしい情報はこの上にある「<a href="#" ng-click="ctrs.viewChange('map_view')"><i class="fa fa-map"></i>イベント</a>」のボタンをタッチしてね！！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>「なかむら」さん2冠達成！上位3位全て1000オーバーに拍手！</h1><time>2015/10/26</time>
+										<div class="desc">
+											<p><strong>「なかむら」</strong>さん、1332匹で2週連続1位達成おめでとう！！この記録、来週も続くか楽しみです！</p>
+											<p>2位もキープ！<strong>「いいねこ。」</strong>さんの1028匹。いいねこ。さんも1000オーバー！と前回より上々の結果！</p>
+											<p>3位初登場<strong>「ごんちゃん」</strong>さん、1012匹！またもや僅差、というより今回は上位がずべて僅差！もう誰が1位になってもおかしくない！！</p>
+											<p>今週はなんと！上位3位がすべて1000オーバーを果たすという大快挙！3人の漁師さんに運営側から大きな拍手です！！<br>さてさて、そろそろなんですが、新しいサイドミッションがここで展開される予定！乞うご期待！！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>新星来る「なかむら」さん初登場1位！</h1><time>2015/10/21</time>
+										<div class="desc">
+											<p>今週の一位は初登場<strong>「なかむら」</strong>さん、初めて苗字っぽい（中村・中邑・仲村など漢字にすると色々！！）ニックネームの漁師さん、1週間で1403匹ですよ！どんな捕まえ方してるんだろ？ほんとすごい。</p>
+											<p>2位も初登場<strong>「いいねこ。」</strong>さんの932匹。関係ないけどこれ書いてる私、ねこが好きです。</p>
+											<p>3位が909位の<strong>「null」</strong>さん、こちらもすごい！2位との差、惜しい、で、もう一度ニックネーム登録をお試しください〜！</p>
+											<p>どうやったら1週間で1000オーバーしちゃうのか？運営側も漁師さんの絶え間ない努力に脱帽。。さて、これを書いている今日はオリオン座流星群のピークらしいです。今夜は星でも見ようかな。来週のランキングも楽しみにしているよ！！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>「放浪釣師」さん3冠達成！</h1><time>2015/10/13</time>
+										<div class="desc">
+											<p>10月の最強釣り師はもうこの人に決まりか！？1064匹捕獲の<strong>「放浪釣師」</strong>さん、3週連続はサカナタッチ初記録、おめでとう！</p>
+											<p>2位に初登場<strong>「LSDEYD」</strong>さんの850匹。たった1週間でよくもこんなに釣っていただきました！初登場でこの数字はすごいね！</p>
+											<p>3位が831位の<strong>「名無しの漁師」</strong>さん、大変お手数ですがニックネームを是非っ！今週も2位と3位が僅差となりました。このように「もうちょっと」で上位を狙えるばず！</p>
+											<p>うーん、、、「放浪釣師」さんはまさかこのままだと1ヶ月連続一位を獲得するのか？それとも別の誰かが…</p>
+											<p>よく考えると見たことのない人が次々とベスト20にランクインしている。これだけ動きが激しいのはある意味、サカナタッチが多くの人に愛されているんだなー、と、勝手に都合よく解釈してしまう運営側。みんなありがとう！！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>新しいツワモノ「放浪釣師」さん2週連続1位！</h1><time>2015/10/5</time>
+										<div class="desc">
+											<p>2週続けて10月の最強釣り師はこの人か！？1257匹捕獲の<strong>「放浪釣師」</strong>さん！2冠達成おめでとう！やはり放浪してるのかも！！</p>
+											<p>2位に<strong>「null」</strong>さんの729匹。す、すいませんが一度名前を付け直してもらえると助かります。</p>
+											<p>3位が初登場！！<strong>「よねかじ」</strong>さん、720匹、2位と僅差でした、次は2位、いや一位を狙ってね！！</p>
+											<p>さて、来週は3週連続「放浪釣師」さんがトップを勝ち取るか？それとも…！？非常に接戦が予想される毎週のランキングにキミもチャレンジしてみないか！？では、検討を祈る！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>またも2000オーバーが！「放浪釣師」さんトップ更新！！</h1><time>2015/9/28</time>
+										<div class="desc">
+											<p>ランキングが激変！今までの上位がいない！？新しい漁師の誕生か！？一位は2076匹捕獲の<strong>「放浪釣師」</strong>さん！名前通り全国放浪してサカナタッチを使ってくれていた…なんてことはないか…。</p>
+											<p>2位も上位初浮上<strong>「ノーチラス号」</strong>さん、原子力で航行しながら捕獲か！？1082匹、この数字もすごい！。</p>
+											<p>3位…<strong>「null」</strong>さん、592匹…なんだけどこれってプログラムミスかな、、nullさんいっぱいいるし。</p>
+											<p>もしも「名前を入れたのにnullなんて…」と思った方はぜひサカナタッチ公式Twitter（@sakanatouch）をフォローしてメッセージを投げてね！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>今週の1位は「ライトホーク」さん！入れ替わりが激しいランキング更新！</h1><time>2015/9/21</time>
+										<div class="desc">
+											<p>2週連続の1位をキープ！<strong>「ライトホーク」</strong>さん！1361匹！おめでとう！！</p>
+											<p>2位にランクアップ<strong>「にゃーのにゃー」</strong>さん、751匹と先週より頑張った！</p>
+											<p>3位の<strong>「大漁節」</strong>さん、700匹。いかにも漁船って感じのネーミングをありがとう！</p>
+											<p>入れ替わりが激しいですね、キミも上位ランクのチャンスは充分にある！<br>みんなの水槽がそろそろ見てみたいな〜</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>図鑑にサカナの出現条件を公開！！</h1><time>2015/9/15</time>
+										<div class="desc">
+											<img src="img/fig_new_dictionary.jpg" class="left" alt="">
+											<p>本日アップデート版が公開されました！<br>このバージョンで、まだつかまえていないサカナの捕獲条件までもが表示されます！！！<br>たとえば「九州地方」とか「10km〜20km」といったホームからの距離なども表示されます。（ただし、あなたがつかまえていないサカナに関しては？マークで表示されます）<br>まだ、あなたがつかまえられていないサカナの情報を知れるチャンス！！</p>
+											<p><a href="https://itunes.apple.com/jp/app/sakanatatchi-yuwoatsumete/id983560663?l=ja&mt=8">必ずこちらから新バージョンをダウンロードしてね！&nbsp;</a><i class="fa fa-external-link"></i></p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>今週のランキング発表！</h1><time>2015/9/14</time>
+										<div class="desc">
+											<p>今週の1位は先週2位だった<strong>「ライトホーク」</strong>さん！1737匹でワンランクアップ、ついに1位を獲得！おめでとう！！</p>
+											<p>2位に浮上した<strong>「天草の母ちゃん。」</strong>さん、天草というから熊本の方なのかな？（そういえば今日阿蘇山が噴火してた、大丈夫かな…？）869匹、いやほんと1週間でこの数字はホントすごいですね！</p>
+											<p>3位の<strong>「にゃーのにゃー」</strong>さん、猫好きなんでしょうか？猫はよく魚を食うから？違うか。。</p>
+											<p>それにしてもだんだんみなさんニックネームをつけてくれてありがとう！！<br>サカナタッチで世界一（？）の漁師を目指してね！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>酸素ボンベ</h1><time>2015/9/5</time>
+										<div class="desc">
+											<img src="img/img_oxgen_bombe.png" class="left" alt="">
+											<p>サカナタッチ初のアイテム！「サカナをさがす」画面でエネルギーが切れたら酸素ボンベを使うことで全回復するようになった！</p>
+											<p>料金は5,000ギョールドとちょっとお高めだけど、よろず屋ナッチの店で買えるのでよろしくおねがいします！！</p>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article>
+										<h1>ランキング更新したら…すごい漁師が！</h1><time>2015/9/5</time>
+										<div class="desc">
+											<p>今週の1位は、なんと！！！すげーーー。2155匹もつかまえた<strong>「ゆうpompon」</strong>さん。こんな数つかまえられる人はスタッフでも見たことないです！</p>
+											<p>でも2位の<strong>「ライトホーク」</strong>さんでも1517匹、これもすごくて並の漁師じゃないことは火を見るより明らか！</p>
+											<p>4位<strong>「海女直」</strong>さんは前回2週連続で1位を独占していたツワモノ、いずれもすごい漁師です。他のみなさんも負けじと頑張ってね！</p>
+										</div>
+									</article>
+								</li>
+<!-- 								<li>
+									<article>
+										<h1>放流機能がつきました！</h1><time>2015/8/15</time>
+										<div class="desc">
+											<img src="img/news_release_fish.png" alt="">
+											<img src="img/ss_release.jpg" class="left" alt="">
+											近くにいる<strong>友達にサカナをプレゼント</strong>できる放流機能がつきました！<br>
+											レアなサカナを交換しあってもっと多くのサカナを飼おう。
+											<ol>
+												<li>今一緒にいる友達にサカナタッチを立ち上げてもらって、待機してもらおう</li>
+												<li>水槽のサカナをタッチしたらウインドウが立ち上がるので、「放流する」ボタンをタッチ</li>
+												<li>
+													放流ボタンを押したら一緒にいる友達に「放流したよ！」と伝えてあげる
+												</li>
+												<li>
+													友達は「サカナをさがす」ボタンを押して、放流したサカナを見つけよう！<strong>グズグズしてると逃げられちゃう</strong>からスピードが求められるぞ！！
+												</li>
+											</ol>
 										</div>
 									</article>
 								</li>
 
 								<li>
 									<article>
-										<h1><i class="fa fa-list-alt"></i>【新機能!】おしらせ機能がつきました</h1>
+										<h1>あなたのニックネーム</h1><time>2015/8/15</time>
 										<div class="desc">
-											サカナタッチの新着情報がここで読めるよ！これからもどんどん新機能が追加されていくから期待していてね！！
+											あなたのニックネームやプロフィールを入力できます、このページ上部の「あなた」のタブをタッチ。<br>捕獲数上位ユーザーはユーザーランキングにニックネームが表示されます！
 										</div>
 									</article>
 								</li>
 								<li>
 									<article>
-										<h1><i class="fa fa-list-alt"></i>レビュー募集！！！</h1>
+										<h1>週間ユーザーランキング</h1><time>2015/7/20</time>
+										<div class="desc">
+											サカナタッチ全ユーザーのランキングを毎週集計発表します！！<br>
+											右上の「週間ランキング」をクリック！
+										</div>
+									</article>
+								</li>
+
+								<li>
+									<article>
+										<h1>おしらせ機能がつきました</h1><time>2015/7/20</time>
+										<div class="desc">
+											サカナタッチの新着情報がここで読めるよ！これからもどんどん新機能が追加されていくから期待していてね！！
+										</div>
+									</article>
+								</li> -->
+								<li>
+									<article>
+										<h1>レビュー募集！！！</h1><time>2015/7/20</time>
 										<div class="desc">
 											みんな楽しんでくれているかな？よかったらアプリのレビューを書いてね！！
 											<p><a href="https://itunes.apple.com/jp/app/sakanatatchi-yuwoatsumete/id983560663?l=ja&mt=8"><i class="fa fa-external-link"></i>サカナタッチのレビューを書いてみる</a></p>
 										</div>
 									</article>
 								</li>
-								<li>
+								<!-- <li>
 									<article>
-										<h1><i class="fa fa-list-alt"></i>メンダコ、都市伝説</h1>
+										<h1>メンダコ、都市伝説</h1><time>2015/7/20</time>
 										<div class="desc">
 											<img src="img/mendako.png" class="left" alt="">
 											<p>サカナタッチではまだ見たこともないような生物がいるんだよ！<br>探せるかな！？</p>
 										</div>
 									</article>
-								</li>
+								</li> -->
 							</ul>
 						</div>
-						<div class="ranking_list_view list_view">
+						<div class="ranking_list_view list_view week_ranking">
 							<div class="ranking_header">
 								<img class="ranking_tit" src="../assets/img/ranking/tit_webview_ranking.png" alt="">
 							</div>
 							<div class="summery inner">
-								<p>今週つかまえたユーザーランキング上位10位を発表！<br>めざせ！トップ10！</p>
+								<p>今週つかまえたユーザーランキング上位20位を発表！<br>めざせ！トップ20！</p>
 								<p class="days">集計期間 {{ctrs.startDay}} 〜 {{ctrs.endDay}}</p>
 							</div>
 							<div class="your_lank" ><!--  ng-model="ctrs.yourRank_loadData" -->
 								<div class="rank_box" ng-class="{'r1': ctrs.yourRank.userData.rank == 1, 'r2': ctrs.yourRank.userData.rank == 2, 'r3': ctrs.yourRank.userData.rank == 3, 'add-trophy': ctrs.yourRank.userData.rank <= 3}">
-									<div class="count"><small>あなたの順位</small> {{ctrs.yourRank.userData.rank}}</div>
-									<div class="capture-value"><i class="fa fa-trophy"></i>{{ctrs.yourRank.userData.value}}<span>匹</span></div>
+									<div class="count"><small>あなたの順位</small> {{::ctrs.yourRank.userData.rank}}</div>
+									<div class="capture-value"><i class="fa fa-trophy"></i>{{::ctrs.yourRank.userData.value}}<span>匹</span></div>
 								</div>
 							</div>
 							<ul>
-								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:10" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3}" class="rank_box">
+								<li ng-repeat="result in ctrs.rankingCatchList | limitTo:20" ng-class="{'r1': result.rank == 1, 'r2': result.rank == 2, 'r3': result.rank == 3, 'add-trophy': result.rank <= 3, 'ry': result.user_id == ctrs.yourRank.userData.user_id}" class="rank_box">
 									<div class="count">{{result.rank}}</div>
-									
+									<div ng-show="result.nickname" class="nick-name">
+										{{result.nickname}}
+									</div>
+									<div ng-hide="result.nickname" class="nick-name">
+										名無しの漁師
+									</div>
 									<div class="capture-value"><i class="fa fa-trophy"></i>{{result.value}}<span>匹</span></div>
 								</li>
 							</ul>
 						</div>
+						<div class="ranking_list_view list_view user_setting">
+
+							<div class="summery inner">
+								<div class="user_header">
+									<p>捕獲数上位ユーザーはニックネームがランキングに表示されるよ。ぜひ登録してね！<br>（本名やメールアドレス、住所など、本人が特定される情報はなるべく避けてね）</p>
+								</div>
+								<dl class="user_info_input">
+									<div user-nick-name></div>
+									<div user-profile></div>
+								</dl>
+								<!-- <p class="user_info_header">
+									情報
+								</p> -->
+								<table>
+									<tr>
+										<th>累計捕獲数</th>
+										<td>
+											<p>{{ctrs.yourRank.userData.total_count}}匹</p>
+										</td>
+									</tr>
+									<tr>
+										<th>捕獲した生物</th>
+										<td>{{ctrs.yourRank.userData.total_type_count}}種類</td>
+									</tr>
+									<tr>
+										<th>最高ランク</th>
+										<td>
+											<p>{{ctrs.yourRank.userData.max_rank}}位</p>
+										</td>
+									</tr>
+									<tr>
+										<th>所持金</th>
+										<td>{{ctrs.yourRank.userData.amount}}G</td>
+									</tr>
+									<tr>
+										<th>水槽数</th>
+										<td>{{ctrs.yourRank.userData.tank_count}}台</td>
+									</tr>
+									<tr>
+										<th>クリアミッション数</th>
+										<td>{{ctrs.yourRank.userData.clear_mission_count}}ミッション</td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+						<div class=" seisokuchi_map">
+							<div class="inner">
+								<h2 class="fz120">「メンダコイベント」終了！</h2>
+								<p>約2週間の間、全国50ヶ所に出現したあのレアキャラ「メンダコ」を捕まえるイベント、キミは参加したかな？<br>中には50匹以上も捕まえた人もいて、大勢の方に参加していただいてうれしく思います。</p>
+								<h3>上位5位発表！！</h3>
+								<p>メンダコを捕まえた上位5位の発表です！</p>
+								<ol>
+									<li>蒼き鋼 イオナ （59匹）</li>
+									<li>もえきち（35匹）</li>
+									<li>null（30匹）</li>
+									<li>null（23匹）</li>	
+									<li>首こりがつらい（21匹）</li>
+								</ol>
+								<p>1位の「<strong>蒼き鋼 イオナ</strong>」さんはなんと週間ランキングで史上最大数の3245匹を記録した伝説の漁師さん、ご本人はTwitterでも報告している通り、メンダコだけで50匹も捕まえたらしいですが記録は59匹になっています、ダントツ1位！</p>
+								<p>2位「<strong>もえきち</strong>」さん、以前は上位にランクされていた方ですが、メンダコの方で頑張ってもらいました！</p>
+								<p>3位、4位の「<strong>null</strong>」さん、ありがとう！もう一度ニックネームの付け直しをできたら、、お願いしたいっ！！</p>
+								<p>5位の「<strong>首こりがつらい</strong>」さんも週間ランキングでは良く見かけています、サカナタッチでいつも遊んでくれていてありがとう！！</p>
+
+								<h3>Twitterでも！</h3>
+								<p>色々な方がTwitterで報告してくださっています！こちらも感謝！<br>次のイベントではもっと増えて欲しいなあー。</p>
+
+								<figure>
+									<figcaption>
+										▼ ヤマヤマ (@kzk0623) さん
+									</figcaption>
+									<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">メンダコフィーバー#サカナタッチ&#10;<a href="https://t.co/wjw5lxCaSU">https://t.co/wjw5lxCaSU</a> <a href="https://t.co/lhcupZxBo1">pic.twitter.com/lhcupZxBo1</a></p>&mdash; ヤマヤマ (@kzk0623) <a href="https://twitter.com/kzk0623/status/665003834595381248">2015, 11月 13</a></blockquote>
+									<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+								</figure>
+
+								<figure>
+									<figcaption>
+										▼ 蒼き鋼 イオナ (@5nzLcwnSb88HE6w) さん
+									</figcaption>
+									<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%82%B5%E3%82%AB%E3%83%8A%E3%82%BF%E3%83%83%E3%83%81?src=hash">#サカナタッチ</a>&#10;<a href="https://t.co/StoZ5r0PPT">https://t.co/StoZ5r0PPT</a>&#10;サンシャイン水族館で、50匹GETしました。&#10;家族も一緒で楽しかった。 <a href="https://t.co/QyU3oqsOja">pic.twitter.com/QyU3oqsOja</a></p>&mdash; 蒼き鋼 イオナ (@5nzLcwnSb88HE6w) <a href="https://twitter.com/5nzLcwnSb88HE6w/status/663743890327863297">2015, 11月 9</a></blockquote>
+									<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+								</figure>
+
+								<figure>
+									<figcaption>
+										▼ 平林緑萌（男性） (@seikaisha_moegi) 
+									</figcaption>
+									<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">とりあえず30匹集めてみた。 <a href="https://twitter.com/hashtag/%E3%82%B5%E3%82%AB%E3%83%8A%E3%82%BF%E3%83%83%E3%83%81?src=hash">#サカナタッチ</a> <a href="https://t.co/hCLJLka9RQ">pic.twitter.com/hCLJLka9RQ</a></p>&mdash; 平林緑萌（男性） (@seikaisha_moegi) <a href="https://twitter.com/seikaisha_moegi/status/661473922693500928">2015, 11月 3</a></blockquote>
+									<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+								</figure>
+
+								<h3>次は！？</h3>
+								<p>リアルなサカナのいるところに、サカナタッチの世界もあり！</p>	
+								<p>今後もこういったレアな生物が捕まえられるイベントが開催される予定なので、ぜひ、今後もチェックしてね！できたら水族館に行って捕まえて欲しいな！！ではでは、2週にわたって漁師のみなさん、ありがとう！！！</p>	
+								<!-- <h2 class="fz120">【 期間限定！「メンダコ」イベント開催！ 】<br>全国50ヶ所の水族館に出現！あのかわいらしい「メンダコ」を捕まえろ！！</h2>
+								<p>期間限定：2015/11/1（日）〜2015/11/15（日）</p>
+								<img src="img/events/anim_mendako.gif" class="left" alt="">
+								巷でカワイイ！と人気の深海生物「メンダコ」がサカナタッチに出現！！捕獲可能な場所は全国の下記の水族館！<br>超レア生物なので、この期間を過ぎるといなくなってしまいます。実際の水族館の水槽を眺めるついでに、サカナタッチでメンダコを探してね！！
+								<h3>お願い</h3>
+								<ul>
+									<li><strong>レアなので根気強く探してね！</strong><br>メンダコの出現率はマンボウやカクレクマノミと同程度！そんな簡単には出現しないから時間に余裕をもって根気強く探してね</li>
+									<li><strong>Twitterでシェア！</strong><br>捕まえたらぜひ、Twitterで<strong>#サカナタッチ</strong>とハッシュタグをつけて画像を投稿してもらえたら運営側としてはとても嬉しいです！水槽の右上のTwitterアイコンから投稿できます。</li>
+								</ul>
+								<h3>出現水族館（全国50ヶ所）</h3>
+								<p>以下の水族館でサカナタッチを起動！「サカナをさがす」画面からメンダコをさがして捕まえるのだ！！！</p>
+								<ul class="aquarium_list">
+									<li>旭山動物園（北海道）</li>
+									<li>おたる水族館（北海道）</li>
+									<li>青森県営浅虫水族館（青森県）</li>
+									<li>もぐらんぴあまちなか水族館（岩手県）</li>
+									<li>仙台うみの杜水族館（宮城県）</li>
+									<li>男鹿水族館GAO（秋田県）</li>
+									<li>鶴岡市立 加茂水族館（山形県）</li>
+									<li>アクアマリンふくしま（福島県）</li>
+									<li>アクアワールド（茨城県）</li>
+									<li>山方淡水魚館（栃木県）</li>
+									<li>さいたま水族館（埼玉県）</li>
+									<li>鴨川シーワールド（千葉県）</li>
+									<li>エプソンアクアパーク品川（東京都）</li>
+									<li>サンシャイン水族館（東京都）</li>
+									<li>葛西臨海水族園（東京都）</li>
+									<li>すみだ水族館（東京都）</li>
+									<li>八景島シーパラダイス（神奈川県）</li>
+									<li>新江ノ島水族館（神奈川県）</li>
+									<li>マリンピア日本海（新潟県）</li>
+									<li>魚津水族館(富山県)</li>
+									<li>のとじま水族館（石川県）</li>
+									<li>越前松島水族館（福井県）</li>
+									<li>富士湧水の里水族館（山梨県）</li>
+									<li>蓼科アミューズメント水族館（長野県）</li>
+									<li>アクア・トト ぎふ（岐阜県）</li>
+									<li>沼津港深海水族館（静岡県）</li>
+									<li>名古屋港水族館（愛知県）</li>
+									<li>竹島水族館（愛知県）</li>
+									<li>鳥羽水族館（三重県）</li>
+									<li>志摩マリンランド（三重県）</li>
+									<li>琵琶湖博物館（滋賀県）</li>
+									<li>京都水族館（京都府）</li>
+									<li>海遊館（大阪府）</li>
+									<li>須磨海浜水族園	（兵庫県）</li>
+									<li>かにっこ館（鳥取県）</li>
+									<li>しまね海洋館アクアス（島根県）</li>
+									<li>渋川マリン水族館（岡山県）</li>
+									<li>宮島水族館 みやじマリン（広島県）</li>
+									<li>海響館（山口県）</li>
+									<li>うみがめ博物館カレッタ（徳島県）</li>
+									<li>新屋島水族館（香川県）</li>
+									<li>虹の森公園おさかな館（愛媛県）</li>
+									<li>足摺海洋館（高知県）</li>
+									<li>マリンワールド海の中道（福岡県）</li>
+									<li>長崎ペンギン水族館（長崎県）</li>
+									<li>大分マリーンパレス水族館 うみたまご（大分県）</li>	
+									<li>わくわく海中水族館（熊本県）</li>
+									<li>高千穂峡淡水魚水族館（宮崎県）</li>
+									<li>いおワールドかごしま水族館（鹿児島県）</li>
+									<li>美ら海水族館（沖縄県）</li>
+								</ul> -->	
+							</div>
+						</div>
 					</div><!-- ranking_all_wrap_inner -->
 				</div><!-- ranking_all_wrap -->
-				
+
 			</div>
 		</main>
-		
+
 	</div>
-	
+
+
+	<script type="text/ng-template" id="user_nick_name_tmp">
+		<div class="user_nick_name">
+			<dt>ニックネーム（８字以内）<i class="fa fa-pencil"></i></dt>
+			<dd>
+				<div ng-show="!nickNameCtr.isEdit">
+					<h2 ng-show="ctrs.yourRank.userData.nickname">{{ctrs.yourRank.userData.nickname}}</h2>
+					<h2 ng-show="!ctrs.yourRank.userData.nickname">名無しの漁師</h2>
+				</div>
+				<input  ng-show="nickNameCtr.isEdit" ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.nickname" name="user_name" type="text" maxlength="8">
+			</dd>
+		</div>
+	</script>
+	<script type="text/ng-template" id="user_profile_tmp">
+		<div class="user_profile">
+			<dt>プロフィール<i class="fa fa-pencil"></i></dt>
+			<dd>
+				<p ng-show="!profileCtr.isEdit" ng-bind="ctrs.yourRank.userData.profile">
+				</p>
+				<textarea  ng-show="profileCtr.isEdit"  name="user_info"  ng-blur="ctrs.userDataChange()" ng-model="ctrs.yourRank.userData.profile"></textarea>
+			</dd>
+		</div>
+	</script>
+
 </body>
 </html>
