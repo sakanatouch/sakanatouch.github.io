@@ -644,7 +644,8 @@ html, body {
   height: 100%;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
-  -webkit-user-select: none; }
+  -webkit-user-select: none;
+  background-color: #0081d1; }
 
 *:not(input) {
   -webkit-user-select: none; }
