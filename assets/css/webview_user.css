@@ -1104,3 +1104,8 @@ main .inner {
   #closebtn {
     top: 2em;
     right: 2em; } }
+
+.normal_list {
+  padding-left: 1em; }
+  .normal_list li {
+    background-color: none !important; }
